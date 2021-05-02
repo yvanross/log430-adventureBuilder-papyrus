@@ -44,7 +44,6 @@ To configure data storage such that it supports different database vendors, we d
         <body>This component represents an external application hosted by an airline partner company. The application provides a SOAP web service to book air travel.
 </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_UjrjIKImEeuQ_fGpHvaisg" name="airlineBookingProviderPort" type="_km7K0KIGEeuZV_N0fPslHQ" aggregation="composite"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_EY_cMKIxEeuQ_fGpHvaisg" name="iAirlineBookingService" type="_km7K0KIGEeuZV_N0fPslHQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_EzpX4KIxEeuQ_fGpHvaisg" name="airlineBookingAdapter" type="__hN18KIlEeuQ_fGpHvaisg"/>
       <packagedElement xmi:type="uml:Realization" xmi:id="_Ffpm8KqwEeuRiIRzpnEATQ" client="_EzpX4KIxEeuQ_fGpHvaisg" supplier="_EY_cMKIxEeuQ_fGpHvaisg"/>
@@ -98,32 +97,17 @@ The UML activity diagram below shows the processing of a purchase order. It uses
 TODO: implement activity diagram https://wiki.sei.cmu.edu/confluence/display/SAD/Top+Level+SOA+View
 </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoUqtIEeuzU4l5X74wYQ" name="SmtpPort" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoU6tIEeuzU4l5X74wYQ" name="IWebServiceBrokerPort" aggregation="composite">
-        <type xmi:type="uml:Interface" href="../../AdventureBuilder/models/AdventureBuilderModel.uml#_WHhQAKBbEeuTlOifvX46DQ"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoVKtIEeuzU4l5X74wYQ" name="JdbcPort" type="_noKotqtIEeuzU4l5X74wYQ" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoVatIEeuzU4l5X74wYQ" name="DataAccessIntegrityPort" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoVqtIEeuzU4l5X74wYQ" name="OpcOrderTrackingServicePort" type="_noKocqtIEeuzU4l5X74wYQ" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoV6tIEeuzU4l5X74wYQ" name="OpcPurchaseOrderServicePort" type="_noKobqtIEeuzU4l5X74wYQ" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoWKtIEeuzU4l5X74wYQ" name="AirlinePoServicePort" aggregation="composite">
-        <type xmi:type="uml:Interface" href="../../AdventureBuilder/models/AdventureBuilderModel.uml#_km7K0KIGEeuZV_N0fPslHQ"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoWatIEeuzU4l5X74wYQ" name="LodgingPoServicePort" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoWqtIEeuzU4l5X74wYQ" name="activityBookingServicePort" aggregation="composite">
-        <type xmi:type="uml:Interface" href="../../AdventureBuilder/models/AdventureBuilderModel.uml#_cto4YKIcEeuQ_fGpHvaisg"/>
-      </ownedAttribute>
-      <nestedClassifier xmi:type="uml:Actor" xmi:id="_noKoW6tIEeuzU4l5X74wYQ" name="Vacationer">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_noKoXKtIEeuzU4l5X74wYQ">
-          <body>The user can visit the Adventure Builder Web site and browse the catalog of travel packages, which include flights to specific destinations, lodging options, and activities that can be purchased in advance. Activities include mountain biking, fishing, surfing classes, hot air balloon tours, and scuba diving. The user can select transportation, accommodation, and various activities to build his/her own adventure trip.
-
-The user can place an order for a vacation package. To process this order, the system has to interact with several external entities. A bank will approve the customer payment, airline companies will provide the flights, lodging providers will book the hotel rooms, and businesses that provide vacation activities will schedule the activities selected by the customer.
-
-After an order is placed, the user can return to check the status of his/her order. This is necessary because some interactions with external entities are processed in the background and may take hours or days to complete.
-
-The internal system periodically interacts with its business partners (transportation, lodging, and activity providers) to update the catalog with the most recent offerings.</body>
-        </ownedComment>
-      </nestedClassifier>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoUqtIEeuzU4l5X74wYQ" name="portSmtp" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoU6tIEeuzU4l5X74wYQ" name="PortIWebServiceBroker" type="_WHhQAKBbEeuTlOifvX46DQ" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoVKtIEeuzU4l5X74wYQ" name="PortJdbc" type="_noKotqtIEeuzU4l5X74wYQ" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoVatIEeuzU4l5X74wYQ" name="PortDataAccessIntegrity" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoVqtIEeuzU4l5X74wYQ" name="PortOpcOrderTrackingService" type="_noKocqtIEeuzU4l5X74wYQ" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoV6tIEeuzU4l5X74wYQ" name="PortOpcPurchaseOrderService" type="_noKobqtIEeuzU4l5X74wYQ" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoWKtIEeuzU4l5X74wYQ" name="PortAirlinePoService" type="_km7K0KIGEeuZV_N0fPslHQ" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoWatIEeuzU4l5X74wYQ" name="PortLodgingPoService" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoWqtIEeuzU4l5X74wYQ" name="PortActivityBookingService" type="_cto4YKIcEeuQ_fGpHvaisg" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_UjrjIKImEeuQ_fGpHvaisg" name="airlineBookingProviderPort" type="_km7K0KIGEeuZV_N0fPslHQ" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_A5c0cKtLEeu0lKn_g5KS9g" name="PortCreditCardService" aggregation="composite"/>
       <packagedElement xmi:type="uml:Component" xmi:id="_noKoXatIEeuzU4l5X74wYQ" name="CRMBean">
         <ownedComment xmi:type="uml:Comment" xmi:id="_noKoXqtIEeuzU4l5X74wYQ">
           <body>This component is used for customer relationship management. For this application it is only used to communicate with the user. It reads messages from a queue, creates the corresponding email messages according to templates and I18N requirements, and sent them to users.</body>
@@ -134,6 +118,7 @@ The internal system periodically interacts with its business partners (transport
           </ownedParameter>
         </ownedOperation>
         <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoYatIEeuzU4l5X74wYQ" client="_noKoXatIEeuzU4l5X74wYQ" supplier="_noKoUqtIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_7VFM8KtKEeu0lKn_g5KS9g" client="_noKoXatIEeuzU4l5X74wYQ" supplier="_noKoUKtIEeuzU4l5X74wYQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_noKoYqtIEeuzU4l5X74wYQ" name="BrokerRequestorBean">
         <ownedComment xmi:type="uml:Comment" xmi:id="_noKoY6tIEeuzU4l5X74wYQ">
@@ -146,6 +131,10 @@ The internal system periodically interacts with its business partners (transport
         <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoZatIEeuzU4l5X74wYQ" client="_noKoYqtIEeuzU4l5X74wYQ" supplier="_noKoVatIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKoZqtIEeuzU4l5X74wYQ" client="_noKoYqtIEeuzU4l5X74wYQ" supplier="_noKoWKtIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKoZ6tIEeuzU4l5X74wYQ" client="_noKoYqtIEeuzU4l5X74wYQ" supplier="_noKoWatIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_O66kEKtLEeu0lKn_g5KS9g" client="_noKoYqtIEeuzU4l5X74wYQ" supplier="_noKoWatIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_Py-NcKtLEeu0lKn_g5KS9g" client="_noKoYqtIEeuzU4l5X74wYQ" supplier="_noKoWqtIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_UWc_sKtLEeu0lKn_g5KS9g" client="_noKoYqtIEeuzU4l5X74wYQ" supplier="_noKoVatIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_E4hcoKtMEeu0lKn_g5KS9g" client="_noKoYqtIEeuzU4l5X74wYQ" supplier="_noKoWKtIEeuzU4l5X74wYQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_noKoaKtIEeuzU4l5X74wYQ" name="OrderFillerBean">
         <ownedComment xmi:type="uml:Comment" xmi:id="_noKoaatIEeuzU4l5X74wYQ">
@@ -153,7 +142,7 @@ The internal system periodically interacts with its business partners (transport
    - It provides an interface called sendPO that is used by the workflowmanager to send purchaseorders.
    - It requires an interface sendRequest that it uses to send purchaseorders to each individual supplier.</body>
         </ownedComment>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoaqtIEeuzU4l5X74wYQ" client="_noKoaKtIEeuzU4l5X74wYQ" supplier="_noKokKtIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_Lx6LwKtLEeu0lKn_g5KS9g" name="JMS BrokerRequestoreBean" client="_noKoaKtIEeuzU4l5X74wYQ" supplier="_noKoYqtIEeuzU4l5X74wYQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_noKoa6tIEeuzU4l5X74wYQ" name="POEndpointBean">
         <ownedComment xmi:type="uml:Comment" xmi:id="_noKobKtIEeuzU4l5X74wYQ">
@@ -161,7 +150,7 @@ The internal system periodically interacts with its business partners (transport
         </ownedComment>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_noKobatIEeuzU4l5X74wYQ" name="submitPurchaseOrder"/>
         <nestedClassifier xmi:type="uml:Interface" xmi:id="_noKobqtIEeuzU4l5X74wYQ" name="IOPCPurchaseOrderService"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_noKob6tIEeuzU4l5X74wYQ" name="IWorkflowMgrQueue" client="_noKoa6tIEeuzU4l5X74wYQ" supplier="_noKolqtIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_H1_6YKtMEeu0lKn_g5KS9g" client="_noKoa6tIEeuzU4l5X74wYQ" supplier="_noKouqtIEeuzU4l5X74wYQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_noKocKtIEeuzU4l5X74wYQ" name="OTEndpointBean">
         <ownedComment xmi:type="uml:Comment" xmi:id="_noKocatIEeuzU4l5X74wYQ">
@@ -169,6 +158,8 @@ The internal system periodically interacts with its business partners (transport
         </ownedComment>
         <nestedClassifier xmi:type="uml:Interface" xmi:id="_noKocqtIEeuzU4l5X74wYQ" name="IOPCOrderTrackingService"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKoc6tIEeuzU4l5X74wYQ" client="_noKocKtIEeuzU4l5X74wYQ" supplier="_noKod6tIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_1_L0YKtMEeu0lKn_g5KS9g" client="_noKocKtIEeuzU4l5X74wYQ" supplier="_noKodKtIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_GLxXwKtNEeu0lKn_g5KS9g" client="_noKocKtIEeuzU4l5X74wYQ" supplier="_noKofqtIEeuzU4l5X74wYQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_noKodKtIEeuzU4l5X74wYQ" name="processManagerBean">
         <ownedComment xmi:type="uml:Comment" xmi:id="_noKodatIEeuzU4l5X74wYQ">
@@ -187,6 +178,7 @@ The internal system periodically interacts with its business partners (transport
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_noKoe6tIEeuzU4l5X74wYQ" client="_noKoeatIEeuzU4l5X74wYQ" supplier="_noKofKtIEeuzU4l5X74wYQ" contract="_noKofKtIEeuzU4l5X74wYQ"/>
         <nestedClassifier xmi:type="uml:Interface" xmi:id="_noKofKtIEeuzU4l5X74wYQ" name="IManagerBean"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKofatIEeuzU4l5X74wYQ" client="_noKoeatIEeuzU4l5X74wYQ" supplier="_noKoVKtIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_QXjrwKtMEeu0lKn_g5KS9g" client="_noKoeatIEeuzU4l5X74wYQ" supplier="_noKoVKtIEeuzU4l5X74wYQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_noKofqtIEeuzU4l5X74wYQ" name="PurchaseOrderBean">
         <ownedComment xmi:type="uml:Comment" xmi:id="_noKof6tIEeuzU4l5X74wYQ">
@@ -200,6 +192,7 @@ The internal system periodically interacts with its business partners (transport
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKohatIEeuzU4l5X74wYQ" client="_noKofqtIEeuzU4l5X74wYQ" supplier="_noKoiKtIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKohqtIEeuzU4l5X74wYQ" client="_noKofqtIEeuzU4l5X74wYQ" supplier="_noKomqtIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKoh6tIEeuzU4l5X74wYQ" client="_noKofqtIEeuzU4l5X74wYQ" supplier="_noKorKtIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_VrQaAKtMEeu0lKn_g5KS9g" client="_noKofqtIEeuzU4l5X74wYQ" supplier="_noKoVKtIEeuzU4l5X74wYQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_noKoiKtIEeuzU4l5X74wYQ" name="TransportationBean">
         <ownedComment xmi:type="uml:Comment" xmi:id="_noKoiatIEeuzU4l5X74wYQ">
@@ -208,30 +201,7 @@ The internal system periodically interacts with its business partners (transport
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_noKoiqtIEeuzU4l5X74wYQ" client="_noKoiKtIEeuzU4l5X74wYQ" supplier="_noKoi6tIEeuzU4l5X74wYQ" contract="_noKoi6tIEeuzU4l5X74wYQ"/>
         <nestedClassifier xmi:type="uml:Interface" xmi:id="_noKoi6tIEeuzU4l5X74wYQ" name="ITransportationBean"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKojKtIEeuzU4l5X74wYQ" client="_noKoiKtIEeuzU4l5X74wYQ" supplier="_noKoVKtIEeuzU4l5X74wYQ"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Component" xmi:id="_noKojatIEeuzU4l5X74wYQ" name="CRMQueue">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_noKojqtIEeuzU4l5X74wYQ">
-          <body>Todo</body>
-        </ownedComment>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoj6tIEeuzU4l5X74wYQ" client="_noKojatIEeuzU4l5X74wYQ" supplier="_noKoXatIEeuzU4l5X74wYQ"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Component" xmi:id="_noKokKtIEeuzU4l5X74wYQ" name="WebServiceBrokerQueue">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_noKokatIEeuzU4l5X74wYQ">
-          <body>Todo</body>
-        </ownedComment>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_noKokqtIEeuzU4l5X74wYQ" client="_noKokKtIEeuzU4l5X74wYQ" supplier="_noKoYqtIEeuzU4l5X74wYQ"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Component" xmi:id="_noKok6tIEeuzU4l5X74wYQ" name="OrderFillerQueue">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_noKolKtIEeuzU4l5X74wYQ">
-          <body>Todo</body>
-        </ownedComment>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_noKolatIEeuzU4l5X74wYQ" client="_noKok6tIEeuzU4l5X74wYQ" supplier="_noKoaKtIEeuzU4l5X74wYQ"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Component" xmi:id="_noKolqtIEeuzU4l5X74wYQ" name="WorkflowMgrQueue">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_noKol6tIEeuzU4l5X74wYQ">
-          <body>Todo</body>
-        </ownedComment>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_noKomKtIEeuzU4l5X74wYQ" client="_noKolqtIEeuzU4l5X74wYQ" supplier="_noKouqtIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_SHpwYKtMEeu0lKn_g5KS9g" client="_noKoiKtIEeuzU4l5X74wYQ" supplier="_noKoVKtIEeuzU4l5X74wYQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_noKomatIEeuzU4l5X74wYQ" name="TimerCall" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_noKouKtIEeuzU4l5X74wYQ"/>
       <packagedElement xmi:type="uml:Component" xmi:id="_noKomqtIEeuzU4l5X74wYQ" name="LodgingBean">
@@ -241,6 +211,7 @@ The internal system periodically interacts with its business partners (transport
         </ownedComment>
         <packagedElement xmi:type="uml:Dependency" xmi:id="_noKonKtIEeuzU4l5X74wYQ" client="_noKomqtIEeuzU4l5X74wYQ" supplier="_noKoVKtIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKonatIEeuzU4l5X74wYQ" client="_noKomqtIEeuzU4l5X74wYQ" supplier="_noKoVKtIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_S7sccKtMEeu0lKn_g5KS9g" client="_noKomqtIEeuzU4l5X74wYQ" supplier="_noKoVKtIEeuzU4l5X74wYQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_noKonqtIEeuzU4l5X74wYQ" name="BrokerServiceBean">
         <ownedComment xmi:type="uml:Comment" xmi:id="_noKon6tIEeuzU4l5X74wYQ">
@@ -249,30 +220,15 @@ The internal system periodically interacts with its business partners (transport
    - getInvoice - This interface can provide the invoices that are sent by external suppliers.
    - sendRequest - This interface can be used to contact external suppliers and place orders with them.</body>
         </ownedComment>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_noKooKtIEeuzU4l5X74wYQ" name="brokerServiceBean">
-          <type xmi:type="uml:Class" href="../../AdventureBuilder/models/AdventureBuilderModel.uml#_c_590KIAEeuZV_N0fPslHQ"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_noKooatIEeuzU4l5X74wYQ" name="iWebServiceBroker1">
-          <type xmi:type="uml:Interface" href="../../AdventureBuilder/models/AdventureBuilderModel.uml#_WHhQAKBbEeuTlOifvX46DQ"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_noKooqtIEeuzU4l5X74wYQ" name="iWebServiceBroker2">
-          <type xmi:type="uml:Interface" href="../../AdventureBuilder/models/AdventureBuilderModel.uml#_WHhQAKBbEeuTlOifvX46DQ"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoo6tIEeuzU4l5X74wYQ" name="brokerServicePort" aggregation="composite">
-          <type xmi:type="uml:Interface" href="../../AdventureBuilder/models/AdventureBuilderModel.uml#_WHhQAKBbEeuTlOifvX46DQ"/>
-        </ownedAttribute>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_noKopKtIEeuzU4l5X74wYQ" client="_noKonqtIEeuzU4l5X74wYQ" supplier="_noKopatIEeuzU4l5X74wYQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_noKooKtIEeuzU4l5X74wYQ" name="brokerServiceBean" type="_c_590KIAEeuZV_N0fPslHQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_noKooatIEeuzU4l5X74wYQ" name="iWebServiceBroker1" type="_WHhQAKBbEeuTlOifvX46DQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_noKooqtIEeuzU4l5X74wYQ" name="iWebServiceBroker2" type="_WHhQAKBbEeuTlOifvX46DQ"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoo6tIEeuzU4l5X74wYQ" name="brokerServicePort" type="_WHhQAKBbEeuTlOifvX46DQ" aggregation="composite"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_Gq9qoKtMEeu0lKn_g5KS9g" client="_noKonqtIEeuzU4l5X74wYQ" supplier="_noKouqtIEeuzU4l5X74wYQ"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Component" xmi:id="_noKopatIEeuzU4l5X74wYQ" name="BrowerServiceQueue">
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_noKopqtIEeuzU4l5X74wYQ" client="_noKopatIEeuzU4l5X74wYQ" supplier="_noKolqtIEeuzU4l5X74wYQ"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_noKop6tIEeuzU4l5X74wYQ" name="SMTP" client="_noKoUqtIEeuzU4l5X74wYQ">
-        <supplier xmi:type="uml:Actor" href="../../AdventureBuilder/models/AdventureBuilderModel.uml#_VMQWMJxsEeuSfsyhIF5DRw"/>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_noKop6tIEeuzU4l5X74wYQ" name="SMTP" client="_noKoUqtIEeuzU4l5X74wYQ" supplier="_VMQWMJxsEeuSfsyhIF5DRw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoqKtIEeuzU4l5X74wYQ" client="_noKoU6tIEeuzU4l5X74wYQ" supplier="_noKonqtIEeuzU4l5X74wYQ"/>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoqatIEeuzU4l5X74wYQ" supplier="_noKoUKtIEeuzU4l5X74wYQ">
-        <client xmi:type="uml:Model" href="../../AdventureBuilder/models/AdventureBuilderModel.uml#_RhFsAJxsEeuSfsyhIF5DRw"/>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoqatIEeuzU4l5X74wYQ" client="_RhFsAJxsEeuSfsyhIF5DRw" supplier="_noKoUKtIEeuzU4l5X74wYQ"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoqqtIEeuzU4l5X74wYQ" client="_noKoVqtIEeuzU4l5X74wYQ" supplier="_noKocKtIEeuzU4l5X74wYQ"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoq6tIEeuzU4l5X74wYQ" client="_noKoV6tIEeuzU4l5X74wYQ" supplier="_noKoa6tIEeuzU4l5X74wYQ"/>
       <packagedElement xmi:type="uml:Component" xmi:id="_noKorKtIEeuzU4l5X74wYQ" name="CreditCardBean">
@@ -285,6 +241,7 @@ The internal system periodically interacts with its business partners (transport
         <packagedElement xmi:type="uml:Dependency" xmi:id="_noKosKtIEeuzU4l5X74wYQ" client="_noKorKtIEeuzU4l5X74wYQ" supplier="_noKoUKtIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKosatIEeuzU4l5X74wYQ" client="_noKorKtIEeuzU4l5X74wYQ" supplier="_noKoVKtIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKosqtIEeuzU4l5X74wYQ" client="_noKorKtIEeuzU4l5X74wYQ" supplier="_noKoVKtIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_TfuWkKtMEeu0lKn_g5KS9g" client="_noKorKtIEeuzU4l5X74wYQ" supplier="_noKoVKtIEeuzU4l5X74wYQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_noKos6tIEeuzU4l5X74wYQ" name="ActivityBean">
         <ownedComment xmi:type="uml:Comment" xmi:id="_noKotKtIEeuzU4l5X74wYQ">
@@ -294,6 +251,7 @@ The internal system periodically interacts with its business partners (transport
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_noKotatIEeuzU4l5X74wYQ" client="_noKos6tIEeuzU4l5X74wYQ" supplier="_noKotqtIEeuzU4l5X74wYQ" contract="_noKotqtIEeuzU4l5X74wYQ"/>
         <nestedClassifier xmi:type="uml:Interface" xmi:id="_noKotqtIEeuzU4l5X74wYQ" name="IActivityBean"/>
         <packagedElement xmi:type="uml:Dependency" xmi:id="_noKot6tIEeuzU4l5X74wYQ" client="_noKos6tIEeuzU4l5X74wYQ" supplier="_noKoVKtIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_RICGcKtMEeu0lKn_g5KS9g" client="_noKos6tIEeuzU4l5X74wYQ" supplier="_noKoVKtIEeuzU4l5X74wYQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_noKouKtIEeuzU4l5X74wYQ" name="WorkFlowManagerBean">
         <ownedComment xmi:type="uml:Comment" xmi:id="_noKouatIEeuzU4l5X74wYQ">
@@ -308,34 +266,32 @@ WofkFlowManagerBean is one of the two components in the Adventure Builder system
 The life cycle of a purchase order can be summarized by the following UML state machine diagram.
 https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=146280255</body>
         </ownedComment>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_noKouqtIEeuzU4l5X74wYQ" name="WorkflowManagerBeanPort" type="_noKou6tIEeuzU4l5X74wYQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_noKouqtIEeuzU4l5X74wYQ" name="PortBrokerServiceBean" type="_noKou6tIEeuzU4l5X74wYQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_qUQ60KtLEeu0lKn_g5KS9g" name="PortManagerBean" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_y4EH4KtLEeu0lKn_g5KS9g" name="PortProcessManagerBean" aggregation="composite"/>
         <nestedClassifier xmi:type="uml:Interface" xmi:id="_noKou6tIEeuzU4l5X74wYQ" name="IWorkflowManagerBean"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_noKovKtIEeuzU4l5X74wYQ" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKojatIEeuzU4l5X74wYQ"/>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_noKovatIEeuzU4l5X74wYQ" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKok6tIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKovqtIEeuzU4l5X74wYQ" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKod6tIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKov6tIEeuzU4l5X74wYQ" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKofKtIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKowKtIEeuzU4l5X74wYQ" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKodKtIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKowatIEeuzU4l5X74wYQ" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKofqtIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKowqtIEeuzU4l5X74wYQ" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKoeatIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_9iXj4KtKEeu0lKn_g5KS9g" name="JMS CRMBean" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKoXatIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_E8ZsgKtLEeu0lKn_g5KS9g" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_A5c0cKtLEeu0lKn_g5KS9g"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_Hov-AKtLEeu0lKn_g5KS9g" name="JMS OrderFillerBean" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKoaKtIEeuzU4l5X74wYQ"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_noKow6tIEeuzU4l5X74wYQ" name="jdbc" client="_noKoUKtIEeuzU4l5X74wYQ">
-        <supplier xmi:type="uml:Component" href="../../AdventureBuilder/models/AdventureBuilderModel.uml#_GnNOwKIGEeuZV_N0fPslHQ"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoxKtIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ">
-        <supplier xmi:type="uml:Component" href="../../AdventureBuilder/models/AdventureBuilderModel.uml#_IrKDgKIGEeuZV_N0fPslHQ"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoxatIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ">
-        <supplier xmi:type="uml:Interface" href="../../AdventureBuilder/models/AdventureBuilderModel.uml#_km7K0KIGEeuZV_N0fPslHQ"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoxqtIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ">
-        <supplier xmi:type="uml:UseCase" href="../../AdventureBuilder/models/AdventureBuilderModel.uml#_6D6BIJxxEeuSfsyhIF5DRw"/>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_noKow6tIEeuzU4l5X74wYQ" name="jdbc" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_GnNOwKIGEeuZV_N0fPslHQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoxKtIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_IrKDgKIGEeuZV_N0fPslHQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoxatIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_km7K0KIGEeuZV_N0fPslHQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoxqtIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_6D6BIJxxEeuSfsyhIF5DRw"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_noKox6tIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_noKoWqtIEeuzU4l5X74wYQ"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_noKoyKtIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_noKoWqtIEeuzU4l5X74wYQ"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_noKoyatIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ">
-        <supplier xmi:type="uml:Port" href="../../AdventureBuilder/models/AdventureBuilderModel.uml#_UjrjIKImEeuQ_fGpHvaisg"/>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_noKoyatIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_UjrjIKImEeuQ_fGpHvaisg"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_F1GZoKtMEeu0lKn_g5KS9g" client="_noKoU6tIEeuzU4l5X74wYQ" supplier="_noKonqtIEeuzU4l5X74wYQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_32waAKtMEeu0lKn_g5KS9g" client="_y4EH4KtLEeu0lKn_g5KS9g" supplier="_noKodKtIEeuzU4l5X74wYQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_60sKwKtMEeu0lKn_g5KS9g" client="_qUQ60KtLEeu0lKn_g5KS9g" supplier="_noKoeatIEeuzU4l5X74wYQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_dDevUKtNEeu0lKn_g5KS9g" client="_noKoVqtIEeuzU4l5X74wYQ" supplier="_noKocKtIEeuzU4l5X74wYQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_dvv_cKtNEeu0lKn_g5KS9g" client="_noKoV6tIEeuzU4l5X74wYQ" supplier="_noKoa6tIEeuzU4l5X74wYQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_cmo2cKCFEeuot_tjXed89A" name="UsageLink">
     <packagedElement xmi:type="uml:Usage" xmi:id="_Mc7V0KBiEeuoXNcr0VwHXg" client="_WHhQAKBbEeuTlOifvX46DQ" supplier="_WHhQAKBbEeuTlOifvX46DQ"/>
