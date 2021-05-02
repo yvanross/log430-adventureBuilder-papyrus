@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Requirements="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Requirements http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements">
+  <uml:Model xmi:id="_5SXJgKqVEeuj6cIyI8VRsA" name="models">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_5XBAAKqVEeuj6cIyI8VRsA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_5XQQkKqVEeuj6cIyI8VRsA">
+      <importedPackage xmi:type="uml:Package" href="pathmap://SysML14_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_8qlXoKqXEeuRiIRzpnEATQ" name="Requirement13"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_CW3lAKqYEeuRiIRzpnEATQ" name="Requirement14"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Ezh0sKqYEeuRiIRzpnEATQ" name="Requirement15"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IWgMMKqYEeuRiIRzpnEATQ" name="Requirement16"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_NGRG8KqYEeuRiIRzpnEATQ" name="Requirement17">
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_uf-doKqYEeuRiIRzpnEATQ" name="Requirement1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_z8V_sKqYEeuRiIRzpnEATQ" name="Requirement18">
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_4cDFMKqYEeuRiIRzpnEATQ" name="Requirement1"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_9bW30KqYEeuRiIRzpnEATQ" name="Requirement19"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="__ZibwKqYEeuRiIRzpnEATQ" name="Requirement20">
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_CwXNoKqZEeuRiIRzpnEATQ" name="Requirement1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Fi9REKqZEeuRiIRzpnEATQ" name="Requirement21">
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_I1sNIKqZEeuRiIRzpnEATQ" name="Requirement22"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_RkBPMKqZEeuRiIRzpnEATQ" name="Requirement23"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_gviXIKqZEeuRiIRzpnEATQ" name="Requirement24">
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_kZQP0KqZEeuRiIRzpnEATQ" name="Requirement1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_5sarcKqZEeuRiIRzpnEATQ" name="Analyse">
+      <packagedElement xmi:type="uml:Package" xmi:id="__kkKkKqZEeuRiIRzpnEATQ" name="Requirements"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_5W0ywKqVEeuj6cIyI8VRsA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5W4dIKqVEeuj6cIyI8VRsA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_5W5rQKqVEeuj6cIyI8VRsA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5W5rQaqVEeuj6cIyI8VRsA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_5W9VoKqVEeuj6cIyI8VRsA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5W9VoaqVEeuj6cIyI8VRsA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_5W98sKqVEeuj6cIyI8VRsA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5W98saqVEeuj6cIyI8VRsA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_5W98sqqVEeuj6cIyI8VRsA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5W-jwKqVEeuj6cIyI8VRsA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//constraintblocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_5W-jwaqVEeuj6cIyI8VRsA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5W-jwqqVEeuj6cIyI8VRsA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//deprecatedelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_5W_K0KqVEeuj6cIyI8VRsA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5W_K0aqVEeuj6cIyI8VRsA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_5W_K0qqVEeuj6cIyI8VRsA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5W_x4KqVEeuj6cIyI8VRsA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//portsandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_5W_x4aqVEeuj6cIyI8VRsA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5W_x4qqVEeuj6cIyI8VRsA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_5XAY8KqVEeuj6cIyI8VRsA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5XAY8aqVEeuj6cIyI8VRsA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <Requirements:Requirement xmi:id="_8qvIoKqXEeuRiIRzpnEATQ" base_Class="_8qlXoKqXEeuRiIRzpnEATQ" id="UC1" text=" The user can visit the Adventure Builder Web site and browse the catalog of travel packages, which include flights to specific destinations, lodging options, and activities that can be purchased in advance. Activities include mountain biking, fishing, surfing classes, hot air balloon tours, and scuba diving. The user can select transportation, accommodation, and various activities to build his/her own adventure trip."/>
+  <Requirements:Requirement xmi:id="_CW7PYKqYEeuRiIRzpnEATQ" base_Class="_CW3lAKqYEeuRiIRzpnEATQ" id="UC2" text=" The user can place an order for a vacation package. To process this order, the system has to interact with several external entities. A bank will approve the customer payment, airline companies will provide the flights, lodging providers will book the hotel rooms, and businesses that provide vacation activities will schedule the activities selected by the customer."/>
+  <Requirements:Requirement xmi:id="_EzlfEKqYEeuRiIRzpnEATQ" base_Class="_Ezh0sKqYEeuRiIRzpnEATQ" id="UC3" text=" After an order is placed, the user can return to check the status of his/her order. This is necessary because some interactions with external entities are processed in the background and may take hours or days to complete."/>
+  <Requirements:Requirement xmi:id="_IWjPgKqYEeuRiIRzpnEATQ" base_Class="_IWgMMKqYEeuRiIRzpnEATQ" id="UC4" text="The internal system periodically interacts with its business partners (transportation, lodging, and activity providers) to update the catalog with the most recent offerings."/>
+  <Requirements:Requirement xmi:id="_NGTjMKqYEeuRiIRzpnEATQ" base_Class="_NGRG8KqYEeuRiIRzpnEATQ" id="Modifiability"/>
+  <Requirements:Requirement xmi:id="_ugBg8KqYEeuRiIRzpnEATQ" base_Class="_uf-doKqYEeuRiIRzpnEATQ" id="QAS1" text="A new business partner (airline, lodging, or activity provider) that uses its own web services interface is added to the system in no more than 10 person-days of effort for the implementation. The business goal is easy integration with new business partners."/>
+  <Requirements:Requirement xmi:id="_z8Yb8KqYEeuRiIRzpnEATQ" base_Class="_z8V_sKqYEeuRiIRzpnEATQ" id="Performance"/>
+  <Requirements:Requirement xmi:id="_4cFhcKqYEeuRiIRzpnEATQ" base_Class="_4cDFMKqYEeuRiIRzpnEATQ" id="QAS2" text="A user places an order for an adventure travel package to the Consumer Web site. The user is notified on screen that the order has been successfully submitted and is being processed in less than five seconds."/>
+  <Requirements:Requirement xmi:id="_9bZUEKqYEeuRiIRzpnEATQ" base_Class="_9bW30KqYEeuRiIRzpnEATQ" id="QAS3" text=" Up to 500 users click to see the catalog of adventure packages following a random distribution over 1 minute; the system is under normal operating conditions; the maximal latency to serve the first page of content is under 5 seconds; average latency for same is less than 2 seconds."/>
+  <Requirements:Requirement xmi:id="__Zk4AKqYEeuRiIRzpnEATQ" base_Class="__ZibwKqYEeuRiIRzpnEATQ" id="Reliability"/>
+  <Requirements:Requirement xmi:id="_CwaQ8KqZEeuRiIRzpnEATQ" base_Class="_CwXNoKqZEeuRiIRzpnEATQ" id="QAS4" text="The Consumer Web site sent a purchase order request to the order processing center (OPC). The OPC processed that request but didnât reply to Consumer Web site within five seconds, so the Consumer Web site resends the request to the OPC. The OPC receives the duplicate request, but the consumer is not double-charged, data remains in a consistent state, and the Consumer Web site is notified that the original request was successful in one hundred percent of the times."/>
+  <Requirements:Requirement xmi:id="_FjAUYKqZEeuRiIRzpnEATQ" base_Class="_Fi9REKqZEeuRiIRzpnEATQ" id="Security"/>
+  <Requirements:Requirement xmi:id="_I1upYKqZEeuRiIRzpnEATQ" base_Class="_I1sNIKqZEeuRiIRzpnEATQ" id="QAS5" text=" Credit approval and payment processing are requested for a new order. In one hundred percent of the cases, the transaction is completed securely and cannot be repudiated by either party. The business goals are to provide customers and business partners confidence in security and to meet contractual, legal, and regulatory obligations for secure credit transactions."/>
+  <Requirements:Requirement xmi:id="_RkDrcKqZEeuRiIRzpnEATQ" base_Class="_RkBPMKqZEeuRiIRzpnEATQ" id="QAS6" text="The OPC experiences a flood of calls through the Web Service Broker endpoint that do not correspond to any current orders. In one hundred percent of the times, the system detects the abnormal level of activity, notifies the system administrator, and continues to service requests in a degraded mode."/>
+  <Requirements:Requirement xmi:id="_gvkzYKqZEeuRiIRzpnEATQ" base_Class="_gviXIKqZEeuRiIRzpnEATQ" id="Availability"/>
+  <Requirements:Requirement xmi:id="_kZSsEKqZEeuRiIRzpnEATQ" base_Class="_kZQP0KqZEeuRiIRzpnEATQ" id="QAS7" text="The Consumer Web site is available to the user 24x7. If an instance of OPC application fails, the fault is detected and the system administrator is notified in 30 seconds; the system continues taking order requests; another OPC instance is created; and data remains in consistent state."/>
+</xmi:XMI>
