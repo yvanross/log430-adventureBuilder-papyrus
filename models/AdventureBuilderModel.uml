@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_RhFsAJxsEeuSfsyhIF5DRw" name="AdventureBuilderSystem" URI="">
-  <ownedComment xmi:type="uml:Comment" xmi:id="_-p1m4KEFEeuot_tjXed89A">
-    <body>https://wiki.sei.cmu.edu/confluence/display/SAD/Adventure+Builder+Data+Model
-
-
-Rationale
-   * We have chosen a Service Oriented Architecture for the Adventure Builder because we desire a high degree of interoperability between internal and external entities in the system. This gives us a great deal of flexibility in terms of implementation platforms.
-      * For example, the Airline Provider component may be implemented using Java, PHP, .NET, IBM CICS or any other technology that supports SOAP web services.
-      * Internally, it's possible, for example, to reimplement and deploy Consumer Website using .NET. OPC doesn't have to change because the SOAP Web services communication allows such level of interoperability.
-   * We have also a clear separation between the user interface and the business logic. The Consumer Website (user interface) and OPC (business logic) are two separate applications that together implement the functionality described in the System Overview.
-   * We chose to implement the service registry using a simple data repository because of ease of implementation. Creating a UDDI registry was an alternative that was rejected because it would bring increased complexity with no apparent benefit, given that the repository is only queried internally (using a standard format is more relevant when the registry will be accessed by external players).</body>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_1tligKtWEeu0lKn_g5KS9g" annotatedElement="_RhFsAJxsEeuSfsyhIF5DRw">
+    <body>1-&lt;h1>Rationale&lt;/h1></body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_2TJGoKtWEeu0lKn_g5KS9g" annotatedElement="_RhFsAJxsEeuSfsyhIF5DRw">
+    <body>   * We have chosen a Service Oriented Architecture for the Adventure Builder because we desire a high degree of interoperability between internal and external entities in the system. This gives us a great deal of flexibility in terms of implementation platforms.
+</body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_CMyOIKtXEeu0lKn_g5KS9g" annotatedElement="_RhFsAJxsEeuSfsyhIF5DRw">
+    <body>      * Internally, it's possible, for example, to reimplement and deploy Consumer Website using .NET. OPC doesn't have to change because the SOAP Web services communication allows such level of interoperability.</body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="__BQtUKtWEeu0lKn_g5KS9g" annotatedElement="_RhFsAJxsEeuSfsyhIF5DRw">
+    <body>      * For example, the Airline Provider component may be implemented using Java, PHP, .NET, IBM CICS or any other technology that supports SOAP web services.</body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_HySeEKtXEeu0lKn_g5KS9g" annotatedElement="_RhFsAJxsEeuSfsyhIF5DRw">
+    <body>   * We chose to implement the service registry using a simple data repository because of ease of implementation. Creating a UDDI registry was an alternative that was rejected because it would bring increased complexity with no apparent benefit, given that the repository is only queried internally (using a standard format is more relevant when the registry will be accessed by external players).</body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_hG7LEKtXEeu0lKn_g5KS9g" annotatedElement="_RhFsAJxsEeuSfsyhIF5DRw">
+    <body>2-https://wiki.sei.cmu.edu/confluence/display/SAD/Adventure+Builder+Data+Model</body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_Nkbb0KtXEeu0lKn_g5KS9g" annotatedElement="_RhFsAJxsEeuSfsyhIF5DRw">
+    <body>   * We have also a clear separation between the user interface and the business logic. The Consumer Website (user interface) and OPC (business logic) are two separate applications that together implement the functionality described in the System Overview.</body>
   </ownedComment>
   <packagedElement xmi:type="uml:Model" xmi:id="_FJkKUKF9Eeu26-oh2DfeGg" name="3-C&amp;C">
     <ownedComment xmi:type="uml:Comment" xmi:id="_USJqYKqOEeu804Hdqgji2A">
@@ -22,9 +33,24 @@ Rationale
       </ownedComment>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_hYOysKIxEeuQ_fGpHvaisg" name="bankProviderPort" type="_s6MaAKIxEeuQ_fGpHvaisg" aggregation="composite"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_uTu_0KIxEeuQ_fGpHvaisg" name="iCreditCardService" type="_s6MaAKIxEeuQ_fGpHvaisg"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_wDV8QKIxEeuQ_fGpHvaisg" name="CrediitCardServiceAdapter"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0vbpcKtcEeu0lKn_g5KS9g" name="paypayAdapter" type="_-q6QkKtbEeu0lKn_g5KS9g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0vc3mKtcEeu0lKn_g5KS9g" name="strypeAdapter" type="_AxjM8KtcEeu0lKn_g5KS9g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7yFM0KtcEeu0lKn_g5KS9g" name="strypeAdapter0" type="_AxjM8KtcEeu0lKn_g5KS9g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_K1TUYKtdEeu0lKn_g5KS9g" name="iCreditCardService0" type="_s6MaAKIxEeuQ_fGpHvaisg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_uzqIMKtUEeu0lKn_g5KS9g" client="_A5c0cKtLEeu0lKn_g5KS9g" supplier="_hYOysKIxEeuQ_fGpHvaisg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_Va-lEKIGEeuZV_N0fPslHQ" name="ActivityBookingProvider"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_Va-lEKIGEeuZV_N0fPslHQ" name="ActivityBookingProvider">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_Dl1okKtTEeu0lKn_g5KS9g" annotatedElement="_Va-lEKIGEeuZV_N0fPslHQ">
+        <body>This component represents an external application hosted by an activity provider partner company. The application provides a SOAP web service to book adventure activities, such as hot air ballooning, surf classes, and mountain climbing expeditions.</body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_PdodUKtQEeu0lKn_g5KS9g" name="PortActrivityBookService" type="_TOSEcKtQEeu0lKn_g5KS9g" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_n7ZywKtbEeu0lKn_g5KS9g" name="activityBookingAdapter" type="_FJFo8KIcEeuQ_fGpHvaisg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_osaY8KtbEeu0lKn_g5KS9g" name="iActivityBookingService" type="_cto4YKIcEeuQ_fGpHvaisg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rBkScKtbEeu0lKn_g5KS9g" name="iActivityBookingService0" type="_cto4YKIcEeuQ_fGpHvaisg"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_TOSEcKtQEeu0lKn_g5KS9g" name="IActivityBookingService"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_57kYIKtREeu0lKn_g5KS9g" client="_Va-lEKIGEeuZV_N0fPslHQ" supplier="_noKoU6tIEeuzU4l5X74wYQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_tCi3QKtREeu0lKn_g5KS9g" client="_noKoWqtIEeuzU4l5X74wYQ" supplier="_PdodUKtQEeu0lKn_g5KS9g"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_GnNOwKIGEeuZV_N0fPslHQ" name="AdvendureOPCDB">
       <ownedComment xmi:type="uml:Comment" xmi:id="_jKOt4KIHEeu6gtGP4fC_Vw">
         <body>This relational database stores purchase orders, invoices coming from the external suppliers and related information. The database server is MySQL configured to use the InnoDB engine.
@@ -38,18 +64,31 @@ To configure data storage such that it supports different database vendors, we d
       <ownedComment xmi:type="uml:Comment" xmi:id="_iJHPIKIHEeu6gtGP4fC_Vw">
         <body>This is a relational database that stores the adventure builder catalog containing various adventure packages. It also stores information about users for user authentication and authorization. The database server is MySQL Cluster 7.0 configured to use the InnoDB engine.</body>
       </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_M3I00KtTEeu0lKn_g5KS9g" annotatedElement="_ttuMsKIFEeuZV_N0fPslHQ">
+        <body>Configurability of Data Access</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_SxlaAKtTEeu0lKn_g5KS9g" annotatedElement="_ttuMsKIFEeuZV_N0fPslHQ">
+        <body>To configure data storage such that it supports different database vendors, we don't want to use any SQL statements in our queries that use vendor specific syntax and can potentially hinder migrating databases. We also use the DAO pattern to abstract away clients from accessing data directly.</body>
+      </ownedComment>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_RFbhIKIGEeuZV_N0fPslHQ" name="AirlineBookingProvider">
       <ownedComment xmi:type="uml:Comment" xmi:id="_nJW14KIHEeu6gtGP4fC_Vw">
         <body>This component represents an external application hosted by an airline partner company. The application provides a SOAP web service to book air travel.
 </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_EY_cMKIxEeuQ_fGpHvaisg" name="iAirlineBookingService" type="_km7K0KIGEeuZV_N0fPslHQ"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_EzpX4KIxEeuQ_fGpHvaisg" name="airlineBookingAdapter" type="__hN18KIlEeuQ_fGpHvaisg"/>
-      <packagedElement xmi:type="uml:Realization" xmi:id="_Ffpm8KqwEeuRiIRzpnEATQ" client="_EzpX4KIxEeuQ_fGpHvaisg" supplier="_EY_cMKIxEeuQ_fGpHvaisg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_nOILIKtdEeu0lKn_g5KS9g" name="airlineBookingAdapter0" type="__hN18KIlEeuQ_fGpHvaisg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_nOJZSKtdEeu0lKn_g5KS9g" name="iAirlineBookingService0" type="_km7K0KIGEeuZV_N0fPslHQ"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_HOSU8KteEeu0lKn_g5KS9g" name="PortAirlineBookingProvider" type="_km7K0KIGEeuZV_N0fPslHQ" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_H8ykQKtfEeu0lKn_g5KS9g" name="PortWebServiceBroker" type="_WHhQAKBbEeuTlOifvX46DQ" aggregation="composite"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_3wr08KtREeu0lKn_g5KS9g" client="_RFbhIKIGEeuZV_N0fPslHQ" supplier="_noKoU6tIEeuzU4l5X74wYQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_o1SeIKIFEeuZV_N0fPslHQ" name="ConsumerWebsite">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_A7KAcKtSEeu0lKn_g5KS9g" annotatedElement="_o1SeIKIFEeuZV_N0fPslHQ">
+        <body>The ConsumerWebsite is a multi-tier application implemented using Java EE technology. It's the client facing part of the Adventure Builder system. It is implemented using GWT code, a number of JSP and html pages, and standard components of the WAF framework. Its primary responsibility is to process the http requests coming from customers browsing the catalog or placing/tracking orders. Requests to place or track orders are relayed to the OPC application via SOAP </body>
+      </ownedComment>
       <packagedElement xmi:type="uml:Usage" xmi:id="_T9U8AKqxEeuKYIiqG3jlgQ" client="_o1SeIKIFEeuZV_N0fPslHQ" supplier="_ttuMsKIFEeuZV_N0fPslHQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_l5ETIKtREeu0lKn_g5KS9g" client="_o1SeIKIFEeuZV_N0fPslHQ" supplier="_noKoV6tIEeuzU4l5X74wYQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_mxw1sKtREeu0lKn_g5KS9g" client="_o1SeIKIFEeuZV_N0fPslHQ" supplier="_noKoVqtIEeuzU4l5X74wYQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_USCAAKIGEeuZV_N0fPslHQ" name="LodgingBookingProvider">
       <ownedComment xmi:type="uml:Comment" xmi:id="_n8h_QKIHEeu6gtGP4fC_Vw">
@@ -59,6 +98,9 @@ To configure data storage such that it supports different database vendors, we d
       <ownedAttribute xmi:type="uml:Property" xmi:id="_YW44kKIyEeuQ_fGpHvaisg" name="iLodgingBookingService" type="_KFQmAKIyEeuQ_fGpHvaisg"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_YW6GuKIyEeuQ_fGpHvaisg" name="lodgingBookingServiceAdapter" type="_PWCjIKIyEeuQ_fGpHvaisg"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_eZ8AIKIyEeuQ_fGpHvaisg" name="lodgingBookingProviderPort" type="_KFQmAKIyEeuQ_fGpHvaisg" aggregation="composite"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_5AuggKtREeu0lKn_g5KS9g" client="_USCAAKIGEeuZV_N0fPslHQ" supplier="_noKoU6tIEeuzU4l5X74wYQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_2ApTUKtUEeu0lKn_g5KS9g" client="_noKoWatIEeuzU4l5X74wYQ" supplier="_eZ8AIKIyEeuQ_fGpHvaisg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_ZfnGUKtVEeu0lKn_g5KS9g" client="_noKoWatIEeuzU4l5X74wYQ" supplier="_eZ8AIKIyEeuQ_fGpHvaisg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_IrKDgKIGEeuZV_N0fPslHQ" name="ServiceRegistry">
       <ownedComment xmi:type="uml:Comment" xmi:id="_j1ppcKIHEeu6gtGP4fC_Vw">
@@ -66,36 +108,88 @@ To configure data storage such that it supports different database vendors, we d
       </ownedComment>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_unUu4KqwEeuKYIiqG3jlgQ" name="WebBrowser">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_9g7VQKtREeu0lKn_g5KS9g" annotatedElement="_unUu4KqwEeuKYIiqG3jlgQ">
+        <body>This component represents the user interface of the application running on a web browser. Consumer Website is a Web 2.0 application implemented using GWT. Therefore, in addition to HTML, the web browser runs JavaScript code that uses Ajax to communicate with the server. Using the web browser, a customer of Adventure Builder opens the web site, browses through the existing catalog of adventure packages, places orders, and tracks the status of existing orders.</body>
+      </ownedComment>
       <packagedElement xmi:type="uml:Usage" xmi:id="_0lBcYKqwEeuKYIiqG3jlgQ" client="_unUu4KqwEeuKYIiqG3jlgQ" supplier="_o1SeIKIFEeuZV_N0fPslHQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_wUrokKqwEeuKYIiqG3jlgQ" name="UserEmailClient"/>
-    <packagedElement xmi:type="uml:Component" xmi:id="_noKoUKtIEeuzU4l5X74wYQ" name="OPC">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_noKoUatIEeuzU4l5X74wYQ">
-        <body>OPC is the order processing center application. It's a Java EE application that communicates with external components using SOAP web services.Internally, it consists of loosely coupled EJBs that communicate with each other using primarily asynchronous messaging. The internal architecture follows the message channel design pattern [Hohpe 2003]. See the OPC C&amp;C View for a description of the internal components of OPC. The core functionality of the Adventure Builder is implemented in this module. Its major functions are:
-
-   - Accept purchase order requests from the ConsumerWebsite for processing.
-   - Fill  a purchase order by communicating with external suppliers.
-   - Provide a mechanism for the Consumer Website to query the current status of a purchase order.
-   - Upon completion of processing a purchase order, send an email to the customer reporting its success or failure.
-
-OPC provides the following interfaces, which are exposed as SOAP web services:
-   * OpcPurchaseOrderService - used to create a purchase order.
-   * OpcOrderTrackingService - used to track the status of a purchase order.
-   * WebServiceBroker - used by external suppliers to submit invoices back to OPC.
-
-OPC requires the following interfaces, which are provided by external partners as SOAP web services:
-
-   * CreditCardService - used to validate the credit card transaction with a bank.
-   * AirlinePOService - used to send purchase orders to external airline suppliers.
-   * LodgingPOService - used to send purchase orders to external lodging suppliers.
-
-ActivityPOService - used to send purchase orders to external activity suppliers.
-
-The UML activity diagram below shows the processing of a purchase order. It uses a split-and-join pattern when filling an order. For simplicity, the diagram does not show interaction with a database. Following is the equivalent diagram using the BPMN notation.
-
-
-TODO: implement activity diagram https://wiki.sei.cmu.edu/confluence/display/SAD/Top+Level+SOA+View
+    <packagedElement xmi:type="uml:Component" xmi:id="_wUrokKqwEeuKYIiqG3jlgQ" name="UserEmailClient">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_IHxisKtTEeu0lKn_g5KS9g" annotatedElement="_wUrokKqwEeuKYIiqG3jlgQ">
+        <body>This is the email inbox of the end user (vacationer) who placed an adventure travel purchase request. OPC sends email notifications to the user via SMTP to inform of the status of the orders.</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_W1U8QKtTEeu0lKn_g5KS9g" annotatedElement="_wUrokKqwEeuKYIiqG3jlgQ">
+        <body>Variability  Guide
 </body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_aZuQEKtTEeu0lKn_g5KS9g" annotatedElement="_wUrokKqwEeuKYIiqG3jlgQ">
+        <body>All email communication parameters (hostname, ports and protocol) should be configurable outside the code via a configuration file. The parameters are read at load time.</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_noKoUKtIEeuzU4l5X74wYQ" name="OPC">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_T4kssKtSEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>OPC is the order processing center application. It's a Java EE application that communicates with external components using SOAP web services.Internally, it consists of loosely coupled EJBs that communicate with each other using primarily asynchronous messaging. The internal architecture follows the message channel design pattern [Hohpe 2003]. See the OPC C&amp;C View for a description of the internal components of OPC. The core functionality of the Adventure Builder is implemented in this module. Its major functions are:</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_Uc2ecKtSEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>   * Accept purchase order requests from the ConsumerWebsite for processing.</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_Uqza4KtSEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>   * Fill a purchase order by communicating with external suppliers.</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_UzjHMKtSEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>   * Provide a mechanism for the Consumer Website to query the current status of a purchase order.</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_U8oKsKtSEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>   * Upon completion of processing a purchase order, send an email to the customer reporting its success or failure.
+</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_VDdLcKtSEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>OPC provides the following interfaces, which are exposed as SOAP web services:</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_VMjdEKtSEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>   * OpcPurchaseOrderService - used to create a purchase order.</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_VVIKQKtSEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>   * OpcOrderTrackingService - used to track the status of a purchase order.</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_VduFkKtSEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>   * WebServiceBroker - used by external suppliers to submit invoices back to OPC.
+</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_VnlzQKtSEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>OPC requires the following interfaces, which are provided by external partners as SOAP web services:</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_VwVfkKtSEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>   * CreditCardService - used to validate the credit card transaction with a bank.</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_V5pzoKtSEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>   * AirlinePOService - used to send purchase orders to external airline suppliers.
+</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_WCQ9EKtSEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>   * LodgingPOService - used to send purchase orders to external lodging suppliers.</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_WLOEwKtSEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>   * ActivityPOService - used to send purchase orders to external activity suppliers.
+</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_j8m7kKtTEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>#Rationale
+</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_kH0tEKtTEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>-We have chosen a Service Oriented Architecture for the Adventure Builder because we desire a high degree of interoperability between internal and external entities in the system. This gives us a great deal of flexibility in terms of implementation platforms.</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_kPxvMKtTEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>	- For example, the Airline Provider component may be implemented using Java, PHP, .NET, IBM CICS or any other technology that supports SOAP web services.</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_kWjsoKtTEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>	- Internally, it's possible, for example, to reimplement and deploy Consumer Website using .NET. OPC doesn't have to change because the SOAP Web services communication allows such level of interoperability.</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_kd9VIKtTEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body>- We have also a clear separation between the user interface and the business logic. The Consumer Website (user interface) and OPC (business logic) are two separate applications that together implement the functionality described in the System Overview.</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_kooUEKtTEeu0lKn_g5KS9g" annotatedElement="_noKoUKtIEeuzU4l5X74wYQ">
+        <body></body>
       </ownedComment>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoUqtIEeuzU4l5X74wYQ" name="portSmtp" aggregation="composite"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoU6tIEeuzU4l5X74wYQ" name="PortIWebServiceBroker" type="_WHhQAKBbEeuTlOifvX46DQ" aggregation="composite"/>
@@ -106,8 +200,7 @@ TODO: implement activity diagram https://wiki.sei.cmu.edu/confluence/display/SAD
       <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoWKtIEeuzU4l5X74wYQ" name="PortAirlinePoService" type="_km7K0KIGEeuZV_N0fPslHQ" aggregation="composite"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoWatIEeuzU4l5X74wYQ" name="PortLodgingPoService" aggregation="composite"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoWqtIEeuzU4l5X74wYQ" name="PortActivityBookingService" type="_cto4YKIcEeuQ_fGpHvaisg" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_UjrjIKImEeuQ_fGpHvaisg" name="airlineBookingProviderPort" type="_km7K0KIGEeuZV_N0fPslHQ" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_A5c0cKtLEeu0lKn_g5KS9g" name="PortCreditCardService" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_A5c0cKtLEeu0lKn_g5KS9g" name="PortCreditCardService" type="_s6MaAKIxEeuQ_fGpHvaisg" aggregation="composite"/>
       <packagedElement xmi:type="uml:Component" xmi:id="_noKoXatIEeuzU4l5X74wYQ" name="CRMBean">
         <ownedComment xmi:type="uml:Comment" xmi:id="_noKoXqtIEeuzU4l5X74wYQ">
           <body>This component is used for customer relationship management. For this application it is only used to communicate with the user. It reads messages from a queue, creates the corresponding email messages according to templates and I18N requirements, and sent them to users.</body>
@@ -225,6 +318,7 @@ TODO: implement activity diagram https://wiki.sei.cmu.edu/confluence/display/SAD
         <ownedAttribute xmi:type="uml:Property" xmi:id="_noKooqtIEeuzU4l5X74wYQ" name="iWebServiceBroker2" type="_WHhQAKBbEeuTlOifvX46DQ"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_noKoo6tIEeuzU4l5X74wYQ" name="brokerServicePort" type="_WHhQAKBbEeuTlOifvX46DQ" aggregation="composite"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_Gq9qoKtMEeu0lKn_g5KS9g" client="_noKonqtIEeuzU4l5X74wYQ" supplier="_noKouqtIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_EA160KtZEeu0lKn_g5KS9g" client="_noKonqtIEeuzU4l5X74wYQ" supplier="_noKoU6tIEeuzU4l5X74wYQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_noKop6tIEeuzU4l5X74wYQ" name="SMTP" client="_noKoUqtIEeuzU4l5X74wYQ" supplier="_VMQWMJxsEeuSfsyhIF5DRw"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoqKtIEeuzU4l5X74wYQ" client="_noKoU6tIEeuzU4l5X74wYQ" supplier="_noKonqtIEeuzU4l5X74wYQ"/>
@@ -272,34 +366,50 @@ https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=146280255</body
         <nestedClassifier xmi:type="uml:Interface" xmi:id="_noKou6tIEeuzU4l5X74wYQ" name="IWorkflowManagerBean"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKovqtIEeuzU4l5X74wYQ" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKod6tIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKov6tIEeuzU4l5X74wYQ" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKofKtIEeuzU4l5X74wYQ"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_noKowKtIEeuzU4l5X74wYQ" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKodKtIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKowatIEeuzU4l5X74wYQ" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKofqtIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_noKowqtIEeuzU4l5X74wYQ" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKoeatIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_9iXj4KtKEeu0lKn_g5KS9g" name="JMS CRMBean" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKoXatIEeuzU4l5X74wYQ"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_E8ZsgKtLEeu0lKn_g5KS9g" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_A5c0cKtLEeu0lKn_g5KS9g"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_Hov-AKtLEeu0lKn_g5KS9g" name="JMS OrderFillerBean" client="_noKouKtIEeuzU4l5X74wYQ" supplier="_noKoaKtIEeuzU4l5X74wYQ"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_A4pXoKtVEeu0lKn_g5KS9g" name="PurchaseOrderBean" client="_qUQ60KtLEeu0lKn_g5KS9g" supplier="_noKoeatIEeuzU4l5X74wYQ"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_noKow6tIEeuzU4l5X74wYQ" name="jdbc" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_GnNOwKIGEeuZV_N0fPslHQ"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoxKtIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_IrKDgKIGEeuZV_N0fPslHQ"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoxatIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_km7K0KIGEeuZV_N0fPslHQ"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_noKoxqtIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_6D6BIJxxEeuSfsyhIF5DRw"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_noKox6tIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_noKoWqtIEeuzU4l5X74wYQ"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_noKoyKtIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_noKoWqtIEeuzU4l5X74wYQ"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_noKoyatIEeuzU4l5X74wYQ" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_UjrjIKImEeuQ_fGpHvaisg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_x7OdcKtREeu0lKn_g5KS9g" client="_noKoUKtIEeuzU4l5X74wYQ" supplier="_IrKDgKIGEeuZV_N0fPslHQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_iXPq0KtUEeu0lKn_g5KS9g" client="_noKoVKtIEeuzU4l5X74wYQ" supplier="_GnNOwKIGEeuZV_N0fPslHQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_y-YcMKtUEeu0lKn_g5KS9g" client="_noKoU6tIEeuzU4l5X74wYQ" supplier="_noKonqtIEeuzU4l5X74wYQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_FaubsKtVEeu0lKn_g5KS9g" client="_noKoVqtIEeuzU4l5X74wYQ" supplier="_noKocKtIEeuzU4l5X74wYQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_FavCwKtVEeu0lKn_g5KS9g" client="_noKoV6tIEeuzU4l5X74wYQ" supplier="_noKoa6tIEeuzU4l5X74wYQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_oF4I8KtREeu0lKn_g5KS9g" client="_noKoUqtIEeuzU4l5X74wYQ" supplier="_wUrokKqwEeuKYIiqG3jlgQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_WMw1gKtVEeu0lKn_g5KS9g" client="_A5c0cKtLEeu0lKn_g5KS9g" supplier="_hYOysKIxEeuQ_fGpHvaisg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_F1GZoKtMEeu0lKn_g5KS9g" client="_noKoU6tIEeuzU4l5X74wYQ" supplier="_noKonqtIEeuzU4l5X74wYQ"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_32waAKtMEeu0lKn_g5KS9g" client="_y4EH4KtLEeu0lKn_g5KS9g" supplier="_noKodKtIEeuzU4l5X74wYQ"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_60sKwKtMEeu0lKn_g5KS9g" client="_qUQ60KtLEeu0lKn_g5KS9g" supplier="_noKoeatIEeuzU4l5X74wYQ"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_dDevUKtNEeu0lKn_g5KS9g" client="_noKoVqtIEeuzU4l5X74wYQ" supplier="_noKocKtIEeuzU4l5X74wYQ"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_dvv_cKtNEeu0lKn_g5KS9g" client="_noKoV6tIEeuzU4l5X74wYQ" supplier="_noKoa6tIEeuzU4l5X74wYQ"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_cmo2cKCFEeuot_tjXed89A" name="UsageLink">
-    <packagedElement xmi:type="uml:Usage" xmi:id="_Mc7V0KBiEeuoXNcr0VwHXg" client="_WHhQAKBbEeuTlOifvX46DQ" supplier="_WHhQAKBbEeuTlOifvX46DQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_9b5AEKtYEeu0lKn_g5KS9g" client="_noKoVKtIEeuzU4l5X74wYQ" supplier="_GnNOwKIGEeuZV_N0fPslHQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_FyookKtZEeu0lKn_g5KS9g" client="_noKoV6tIEeuzU4l5X74wYQ" supplier="_noKoa6tIEeuzU4l5X74wYQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_GfqGoKtZEeu0lKn_g5KS9g" client="_noKoVqtIEeuzU4l5X74wYQ" supplier="_noKocKtIEeuzU4l5X74wYQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_RwuLMKtZEeu0lKn_g5KS9g" client="_y4EH4KtLEeu0lKn_g5KS9g" supplier="_noKodKtIEeuzU4l5X74wYQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_TO7OkKtZEeu0lKn_g5KS9g" client="_qUQ60KtLEeu0lKn_g5KS9g" supplier="_noKoeatIEeuzU4l5X74wYQ"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_zIXacKtbEeu0lKn_g5KS9g" client="_n7ZywKtbEeu0lKn_g5KS9g" supplier="_osaY8KtbEeu0lKn_g5KS9g"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_z1SK0KtbEeu0lKn_g5KS9g" client="_osaY8KtbEeu0lKn_g5KS9g" supplier="_Va-lEKIGEeuZV_N0fPslHQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_xhsiIKtcEeu0lKn_g5KS9g" client="_hYOysKIxEeuQ_fGpHvaisg" supplier="_uTu_0KIxEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_2psWsKtcEeu0lKn_g5KS9g" client="_0vc3mKtcEeu0lKn_g5KS9g" supplier="_uTu_0KIxEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_GDqxYKtdEeu0lKn_g5KS9g" client="_0vbpcKtcEeu0lKn_g5KS9g" supplier="_uTu_0KIxEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Pi4oYKteEeu0lKn_g5KS9g" client="_noKoWKtIEeuzU4l5X74wYQ" supplier="_HOSU8KteEeu0lKn_g5KS9g"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_eKej4KteEeu0lKn_g5KS9g" client="_noKoU6tIEeuzU4l5X74wYQ" supplier="_nOJZSKtdEeu0lKn_g5KS9g"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_fD3C8KteEeu0lKn_g5KS9g" client="_nOILIKtdEeu0lKn_g5KS9g" supplier="_nOJZSKtdEeu0lKn_g5KS9g"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_zh-s8KteEeu0lKn_g5KS9g" client="_HOSU8KteEeu0lKn_g5KS9g" supplier="_nOJZSKtdEeu0lKn_g5KS9g"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Ly0aoKtfEeu0lKn_g5KS9g" client="_nOILIKtdEeu0lKn_g5KS9g" supplier="_RFbhIKIGEeuZV_N0fPslHQ"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_RPCywKtfEeu0lKn_g5KS9g" client="_nOILIKtdEeu0lKn_g5KS9g" supplier="_H8ykQKtfEeu0lKn_g5KS9g"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Model" xmi:id="_zKMyYKHXEeuolPkAC7VaLg" name="2-Modules">
     <ownedComment xmi:type="uml:Comment" xmi:id="_Y0eKwKqpEeuRiIRzpnEATQ">
       <body>Modules views
 </body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_E10JEKtbEeu0lKn_g5KS9g" annotatedElement="_zKMyYKHXEeuolPkAC7VaLg">
+      <body>https://wiki.sei.cmu.edu/confluence/display/SAD/Top+Level+Module+Uses+View</body>
     </ownedComment>
     <packagedElement xmi:type="uml:Package" xmi:id="_1UgsQKFzEeu26-oh2DfeGg" name="OPCApp">
       <ownedComment xmi:type="uml:Comment" xmi:id="_-iRocKHYEeuolPkAC7VaLg">
@@ -314,6 +424,9 @@ A module decomposition refined view and a module uses refined view of OpcApp are
       <ownedComment xmi:type="uml:Comment" xmi:id="_f0LMUKHsEeu0VdhtLJh5Nw" annotatedElement="_-miRQKFzEeu26-oh2DfeGg _aCq2QKF0Eeu26-oh2DfeGg">
         <body>All other modules within Opc dan use these modules
 </body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_I-q00KtbEeu0lKn_g5KS9g" annotatedElement="_1UgsQKFzEeu26-oh2DfeGg">
+        <body></body>
       </ownedComment>
       <packagedElement xmi:type="uml:Package" xmi:id="_1txZcKF2Eeu26-oh2DfeGg" name="ServiceLocator">
         <ownedComment xmi:type="uml:Comment" xmi:id="_b0OgcKqpEeuRiIRzpnEATQ">
@@ -764,7 +877,24 @@ The choice of EJBs in the implementation, including session beans, message-drive
       <ownedComment xmi:type="uml:Comment" xmi:id="_GfHjMKHZEeuolPkAC7VaLg">
         <body>This module represents an external service provided by a partner bank to validate credit card transactions.</body>
       </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_es60gKtcEeu0lKn_g5KS9g" annotatedElement="_-6ES0KHXEeuolPkAC7VaLg">
+        <body>Must support mecanism to connect Adventure builder to multiple bank service provider for billing purpose</body>
+      </ownedComment>
       <packagedElement xmi:type="uml:Interface" xmi:id="_s6MaAKIxEeuQ_fGpHvaisg" name="ICreditCardService"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_-q6QkKtbEeu0lKn_g5KS9g" name="PaypayAdapter">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_C_KUAKtcEeu0lKn_g5KS9g" annotatedElement="_-q6QkKtbEeu0lKn_g5KS9g">
+          <body>Adapter to use Paypal.com service for billing
+</body>
+        </ownedComment>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_L2LYAKtcEeu0lKn_g5KS9g" client="_-q6QkKtbEeu0lKn_g5KS9g" supplier="_s6MaAKIxEeuQ_fGpHvaisg" contract="_s6MaAKIxEeuQ_fGpHvaisg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_AxjM8KtcEeu0lKn_g5KS9g" name="StrypeAdapter">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_GBO94KtcEeu0lKn_g5KS9g" annotatedElement="_AxjM8KtcEeu0lKn_g5KS9g">
+          <body>Adapteur to use Stripe.com service for billing
+</body>
+        </ownedComment>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_LSPkgKtcEeu0lKn_g5KS9g" client="_AxjM8KtcEeu0lKn_g5KS9g" supplier="_s6MaAKIxEeuQ_fGpHvaisg" contract="_s6MaAKIxEeuQ_fGpHvaisg"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_Amjp0KHYEeuolPkAC7VaLg" name="AirlineBookingService">
       <ownedComment xmi:type="uml:Comment" xmi:id="_HdPYUKHZEeuolPkAC7VaLg">
@@ -1181,51 +1311,6 @@ WorkFlowManagerBean also sets a timer with the EJB container so that it is activ
       <message xmi:type="uml:Message" xmi:id="_eWlNUKI2EeufVYq1WyThxA" name="Message50" messageSort="reply" receiveEvent="_eWmbcKI2EeufVYq1WyThxA" sendEvent="_eWl0YKI2EeufVYq1WyThxA"/>
     </packagedElement>
   </packagedElement>
-  <packagedElement xmi:type="uml:Model" xmi:id="_vXcfsKptEeuIwanZSjCYHQ" name="Experimentation">
-    <packagedElement xmi:type="uml:Package" xmi:id="_yyqCUKptEeuIwanZSjCYHQ" name="Package1">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_l8qTYKqFEeuoXa-x57iZ9g">
-        <body>Allo mon coco #333333
-</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_XxeR8KqDEeuoXa-x57iZ9g" annotatedElement="_yyqCUKptEeuIwanZSjCYHQ">
-        <body>Ceci est la documentatin du package #1 qui est transformé en commentaire XXXXXX</body>
-      </ownedComment>
-      <packagedElement xmi:type="uml:Class" xmi:id="_KTFygKqJEeu804Hdqgji2A" name="Class6"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_KtVegKqJEeu804Hdqgji2A" name="Class7">
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_LBgXsKqJEeu804Hdqgji2A" name="Class1"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_LfPckKqJEeu804Hdqgji2A" name="Class8"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_zFkXQKptEeuIwanZSjCYHQ" name="Package2">
-      <ownedComment xmi:type="uml:Comment" xmi:id="__7XtkKqEEeuoXa-x57iZ9g">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_kGoXIKqLEeu804Hdqgji2A" annotatedElement="_zFkXQKptEeuIwanZSjCYHQ __7XtkKqEEeuoXa-x57iZ9g">
-          <body>{@link #_UBWQQKp4EeuoXa-x57iZ9g}</body>
-        </ownedComment>
-        <ownedComment xmi:type="uml:Comment" xmi:id="_oIjUcKqLEeu804Hdqgji2A" annotatedElement="__7XtkKqEEeuoXa-x57iZ9g">
-          <body></body>
-        </ownedComment>
-        <body>Ceci est la documentation du package no 2
-aks;dlkf;asf
-
-asdfasd
-f
-as
-f
-sdaf
-asd
-f
-sad
-</body>
-      </ownedComment>
-      <packagedElement xmi:type="uml:Class" xmi:id="_EDy3UKqMEeu804Hdqgji2A" name="Class2"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_EXa98KqMEeu804Hdqgji2A" name="Class3"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_zfNmUKptEeuIwanZSjCYHQ" name="Package3">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_B6MKsKqFEeuoXa-x57iZ9g">
-        <body>Ceci est la documentation du package 33</body>
-      </ownedComment>
-    </packagedElement>
-  </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_xtpzAKp2EeuoXa-x57iZ9g" name="1-Requirements">
     <packagedElement xmi:type="uml:Package" xmi:id="_XI_vsJxsEeuSfsyhIF5DRw" name="UseCases">
       <ownedComment xmi:type="uml:Comment" xmi:id="_RFRrAJxyEeuSfsyhIF5DRw">
@@ -1239,36 +1324,6 @@ sad
 </body>
         </ownedComment>
       </ownedComment>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_WBk0oJxsEeuSfsyhIF5DRw" name="UC01 Browse Cataloog" classifierBehavior="_-_UvEJxtEeuSfsyhIF5DRw">
-        <ownedComment xmi:type="uml:Comment" xmi:id="__NwhwJxvEeuSfsyhIF5DRw" annotatedElement="_WBk0oJxsEeuSfsyhIF5DRw">
-          <body> The user can visit the Adventure Builder Web site and browse the catalog of travel packages, which include flights to specific destinations, lodging options, and activities that can be purchased in advance. Activities include mountain biking, fishing, surfing classes, hot air balloon tours, and scuba diving. </body>
-        </ownedComment>
-        <ownedBehavior xmi:type="uml:Activity" xmi:id="_-_UvEJxtEeuSfsyhIF5DRw" name="Activity1">
-          <ownedBehavior xmi:type="uml:Activity" xmi:id="_BIAS0JxuEeuSfsyhIF5DRw" name="Activity1"/>
-        </ownedBehavior>
-      </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_WVLtIJxsEeuSfsyhIF5DRw" name="UC2 Order travel package">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_P7fqYJxwEeuSfsyhIF5DRw">
-          <body> The user can place an order for a vacation package. To process this order, the system has to interact with several external entities. A bank will approve the customer payment, airline companies will provide the flights, lodging providers will book the hotel rooms, and businesses that provide vacation activities will schedule the activities selected by the customer.
-</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_UwcAEJxwEeuSfsyhIF5DRw" name="UC3 Track order">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_raOQYJxwEeuSfsyhIF5DRw" annotatedElement="_UwcAEJxwEeuSfsyhIF5DRw">
-          <body>After an order is placed, the user can return to check the status of his/her order. This is necessary because some interactions with external entities are processed in the background and may take hours or days to complete.</body>
-        </ownedComment>
-        <ownedComment xmi:type="uml:Comment" xmi:id="_sgjmUJxwEeuSfsyhIF5DRw">
-          <body> After an order is placed, the user can return to check the status of his/her order. This is necessary because some interactions with external entities are processed in the background and may take hours or days to complete.</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_v1zD0JxwEeuSfsyhIF5DRw" name="UC4 Update Catalogue">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_WdcfAJxxEeuSfsyhIF5DRw">
-          <body>The internal system periodically interacts with its business partners (transportation, lodging, and activity providers) to update the catalog with the most recent offerings.</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_Jxvd4JxwEeuSfsyhIF5DRw" client="_VMQWMJxsEeuSfsyhIF5DRw" supplier="_WBk0oJxsEeuSfsyhIF5DRw"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_TcZlUJxwEeuSfsyhIF5DRw" client="_VMQWMJxsEeuSfsyhIF5DRw" supplier="_WVLtIJxsEeuSfsyhIF5DRw"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_upsdEJxwEeuSfsyhIF5DRw" client="_VMQWMJxsEeuSfsyhIF5DRw" supplier="_UwcAEJxwEeuSfsyhIF5DRw"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_CgvOQKF6Eeu26-oh2DfeGg" client="_upsdEJxwEeuSfsyhIF5DRw" supplier="_v1zD0JxwEeuSfsyhIF5DRw"/>
       <packagedElement xmi:type="uml:Actor" xmi:id="_VMQWMJxsEeuSfsyhIF5DRw" name="Vacationer">
         <ownedComment xmi:type="uml:Comment" xmi:id="_BYpMAKBBEeuTlOifvX46DQ">
@@ -1281,6 +1336,49 @@ After an order is placed, the user can return to check the status of his/her ord
 The internal system periodically interacts with its business partners (transportation, lodging, and activity providers) to update the catalog with the most recent offerings.</body>
         </ownedComment>
       </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_TcZlUJxwEeuSfsyhIF5DRw" client="_VMQWMJxsEeuSfsyhIF5DRw" supplier="_WVLtIJxsEeuSfsyhIF5DRw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_Jxvd4JxwEeuSfsyhIF5DRw" client="_VMQWMJxsEeuSfsyhIF5DRw" supplier="_WBk0oJxsEeuSfsyhIF5DRw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_upsdEJxwEeuSfsyhIF5DRw" client="_VMQWMJxsEeuSfsyhIF5DRw" supplier="_UwcAEJxwEeuSfsyhIF5DRw"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_tSfeIKtZEeu0lKn_g5KS9g" name="Adventure Builder System">
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_WVLtIJxsEeuSfsyhIF5DRw" name="UC2 Order travel package">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_P7fqYJxwEeuSfsyhIF5DRw">
+            <body> The user can place an order for a vacation package. To process this order, the system has to interact with several external entities. A bank will approve the customer payment, airline companies will provide the flights, lodging providers will book the hotel rooms, and businesses that provide vacation activities will schedule the activities selected by the customer.
+</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_WBk0oJxsEeuSfsyhIF5DRw" name="UC01 Browse Cataloog" classifierBehavior="_-_UvEJxtEeuSfsyhIF5DRw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="__NwhwJxvEeuSfsyhIF5DRw" annotatedElement="_WBk0oJxsEeuSfsyhIF5DRw">
+            <body> The user can visit the Adventure Builder Web site and browse the catalog of travel packages, which include flights to specific destinations, lodging options, and activities that can be purchased in advance. Activities include mountain biking, fishing, surfing classes, hot air balloon tours, and scuba diving. </body>
+          </ownedComment>
+          <ownedBehavior xmi:type="uml:Activity" xmi:id="_-_UvEJxtEeuSfsyhIF5DRw" name="Activity1">
+            <ownedBehavior xmi:type="uml:Activity" xmi:id="_BIAS0JxuEeuSfsyhIF5DRw" name="Activity1"/>
+          </ownedBehavior>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_UwcAEJxwEeuSfsyhIF5DRw" name="UC3 Track order">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_raOQYJxwEeuSfsyhIF5DRw" annotatedElement="_UwcAEJxwEeuSfsyhIF5DRw">
+            <body>After an order is placed, the user can return to check the status of his/her order. This is necessary because some interactions with external entities are processed in the background and may take hours or days to complete.</body>
+          </ownedComment>
+          <ownedComment xmi:type="uml:Comment" xmi:id="_sgjmUJxwEeuSfsyhIF5DRw">
+            <body> After an order is placed, the user can return to check the status of his/her order. This is necessary because some interactions with external entities are processed in the background and may take hours or days to complete.</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_v1zD0JxwEeuSfsyhIF5DRw" name="UC4 Update Catalogue">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_WdcfAJxxEeuSfsyhIF5DRw">
+            <body>The internal system periodically interacts with its business partners (transportation, lodging, and activity providers) to update the catalog with the most recent offerings.</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_QbirgKtaEeu0lKn_g5KS9g" client="_WVLtIJxsEeuSfsyhIF5DRw" supplier="_FaFJMKtaEeu0lKn_g5KS9g"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_RgorUKtaEeu0lKn_g5KS9g" client="_WVLtIJxsEeuSfsyhIF5DRw" supplier="_IPU4AKtaEeu0lKn_g5KS9g"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_SJy9EKtaEeu0lKn_g5KS9g" client="_WVLtIJxsEeuSfsyhIF5DRw" supplier="_JExSQKtaEeu0lKn_g5KS9g"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_Tv4KEKtaEeu0lKn_g5KS9g" client="_WVLtIJxsEeuSfsyhIF5DRw" supplier="_MrTUEKtaEeu0lKn_g5KS9g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_FaFJMKtaEeu0lKn_g5KS9g" name="Bank"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_IPU4AKtaEeu0lKn_g5KS9g" name="Airline"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_JExSQKtaEeu0lKn_g5KS9g" name="Lodging Provider"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_MrTUEKtaEeu0lKn_g5KS9g" name="Acitivy Provider"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_VSHY4KtaEeu0lKn_g5KS9g" client="_IPU4AKtaEeu0lKn_g5KS9g" supplier="_v1zD0JxwEeuSfsyhIF5DRw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_WF_F0KtaEeu0lKn_g5KS9g" client="_JExSQKtaEeu0lKn_g5KS9g" supplier="_v1zD0JxwEeuSfsyhIF5DRw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_XAUAEKtaEeu0lKn_g5KS9g" client="_MrTUEKtaEeu0lKn_g5KS9g" supplier="_v1zD0JxwEeuSfsyhIF5DRw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_aDLeAKA_EeuTlOifvX46DQ" name="QualityAttributes">
       <packagedElement xmi:type="uml:Package" xmi:id="_qfmlwJxxEeuSfsyhIF5DRw" name="Modifiability">
