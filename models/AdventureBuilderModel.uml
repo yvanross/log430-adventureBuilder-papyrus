@@ -22,7 +22,7 @@
   <ownedComment xmi:type="uml:Comment" xmi:id="_Nkbb0KtXEeu0lKn_g5KS9g" annotatedElement="_RhFsAJxsEeuSfsyhIF5DRw">
     <body>   * We have also a clear separation between the user interface and the business logic. The Consumer Website (user interface) and OPC (business logic) are two separate applications that together implement the functionality described in the System Overview.</body>
   </ownedComment>
-  <packagedElement xmi:type="uml:Model" xmi:id="_FJkKUKF9Eeu26-oh2DfeGg" name="4-C&amp;C">
+  <packagedElement xmi:type="uml:Model" xmi:id="_FJkKUKF9Eeu26-oh2DfeGg" name="D-C&amp;C">
     <ownedComment xmi:type="uml:Comment" xmi:id="_USJqYKqOEeu804Hdqgji2A">
       <body>Composant &amp; Connector views
 </body>
@@ -52,15 +52,6 @@
       <packagedElement xmi:type="uml:Usage" xmi:id="_57kYIKtREeu0lKn_g5KS9g" client="_Va-lEKIGEeuZV_N0fPslHQ" supplier="_noKoU6tIEeuzU4l5X74wYQ"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_tCi3QKtREeu0lKn_g5KS9g" client="_noKoWqtIEeuzU4l5X74wYQ" supplier="_PdodUKtQEeu0lKn_g5KS9g"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_GnNOwKIGEeuZV_N0fPslHQ" name="AdvendureOPCDB">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_jKOt4KIHEeu6gtGP4fC_Vw">
-        <body>This relational database stores purchase orders, invoices coming from the external suppliers and related information. The database server is MySQL configured to use the InnoDB engine.
-
-Variability guide 
-To configure data storage such that it supports different database vendors, we don't want to use any SQL statements in our queries that use vendor specific syntax and can potentially hinder migrating databases. We also use the DAO pattern to abstract away clients from accessing data directly.
-</body>
-      </ownedComment>
-    </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_ttuMsKIFEeuZV_N0fPslHQ" name="AdventureCatalogDB">
       <ownedComment xmi:type="uml:Comment" xmi:id="_iJHPIKIHEeu6gtGP4fC_Vw">
         <body>This is a relational database that stores the adventure builder catalog containing various adventure packages. It also stores information about users for user authentication and authorization. The database server is MySQL Cluster 7.0 configured to use the InnoDB engine.</body>
@@ -83,6 +74,15 @@ To configure data storage such that it supports different database vendors, we d
       <ownedAttribute xmi:type="uml:Port" xmi:id="_HOSU8KteEeu0lKn_g5KS9g" name="PortAirlineBookingProvider" type="_km7K0KIGEeuZV_N0fPslHQ" aggregation="composite"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_H8ykQKtfEeu0lKn_g5KS9g" name="PortWebServiceBroker" type="_WHhQAKBbEeuTlOifvX46DQ" aggregation="composite"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_3wr08KtREeu0lKn_g5KS9g" client="_RFbhIKIGEeuZV_N0fPslHQ" supplier="_noKoU6tIEeuzU4l5X74wYQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_GnNOwKIGEeuZV_N0fPslHQ" name="AdvendureOPCDB">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_jKOt4KIHEeu6gtGP4fC_Vw">
+        <body>This relational database stores purchase orders, invoices coming from the external suppliers and related information. The database server is MySQL configured to use the InnoDB engine.
+
+Variability guide 
+To configure data storage such that it supports different database vendors, we don't want to use any SQL statements in our queries that use vendor specific syntax and can potentially hinder migrating databases. We also use the DAO pattern to abstract away clients from accessing data directly.
+</body>
+      </ownedComment>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_o1SeIKIFEeuZV_N0fPslHQ" name="ConsumerWebsite">
       <ownedComment xmi:type="uml:Comment" xmi:id="_A7KAcKtSEeu0lKn_g5KS9g" annotatedElement="_o1SeIKIFEeuZV_N0fPslHQ">
@@ -411,7 +411,7 @@ https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=146280255</body
     <packagedElement xmi:type="uml:Dependency" xmi:id="_umUcMLGpEeuyifvvLf9x5w" client="_WMw1gKtVEeu0lKn_g5KS9g" supplier="_9bCVAJxxEeuSfsyhIF5DRw"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_9waAwLGpEeuyifvvLf9x5w" client="_noKoU6tIEeuzU4l5X74wYQ" supplier="_AAWxcJxyEeuSfsyhIF5DRw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Model" xmi:id="_zKMyYKHXEeuolPkAC7VaLg" name="3-Modules">
+  <packagedElement xmi:type="uml:Model" xmi:id="_zKMyYKHXEeuolPkAC7VaLg" name="C-Modules">
     <ownedComment xmi:type="uml:Comment" xmi:id="_Y0eKwKqpEeuRiIRzpnEATQ">
       <body>Modules views
 </body>
@@ -466,6 +466,7 @@ https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=146280255</body
         <ownedOperation xmi:type="uml:Operation" xmi:id="_njfFQK0MEeu0uOIvD0gUvg" name="sendAirlineInvoice"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_zqA1ALGoEeuyifvvLf9x5w" client="_Amjp0KHYEeuolPkAC7VaLg" supplier="_sge4YJxxEeuSfsyhIF5DRw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_1HK-cLHHEeuKIJSoFyOasw" client="_km7K0KIGEeuZV_N0fPslHQ" supplier="_U76wIKs-EeuKYIiqG3jlgQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_Ddk6QKHYEeuolPkAC7VaLg" name="LodgingBookingService">
       <ownedComment xmi:type="uml:Comment" xmi:id="_I0jJgKHZEeuolPkAC7VaLg">
@@ -484,6 +485,7 @@ https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=146280255</body
         <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TPgIAKIyEeuQ_fGpHvaisg" client="_PWCjIKIyEeuQ_fGpHvaisg" supplier="_KFQmAKIyEeuQ_fGpHvaisg" contract="_KFQmAKIyEeuQ_fGpHvaisg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="__2O6QLGoEeuyifvvLf9x5w" client="_Ddk6QKHYEeuolPkAC7VaLg" supplier="_sge4YJxxEeuSfsyhIF5DRw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_E_-DILHIEeuKIJSoFyOasw" client="_KFQmAKIyEeuQ_fGpHvaisg" supplier="_U76wIKs-EeuKYIiqG3jlgQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_FI-FEKHYEeuolPkAC7VaLg" name="ActivityBookingService">
       <ownedComment xmi:type="uml:Comment" xmi:id="_LbRUIKHZEeuolPkAC7VaLg">
@@ -503,6 +505,7 @@ https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=146280255</body
         <ownedOperation xmi:type="uml:Operation" xmi:id="_JMLIkK0MEeu0uOIvD0gUvg" name="processActivityOrder"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_jKoOoK0MEeu0uOIvD0gUvg" name="sendActivityInvoide" concurrency="concurrent"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_DrEswLHIEeuKIJSoFyOasw" client="_cto4YKIcEeuQ_fGpHvaisg" supplier="_U76wIKs-EeuKYIiqG3jlgQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_I3j2sKHYEeuolPkAC7VaLg" name="ConsumerWebSite">
       <ownedComment xmi:type="uml:Comment" xmi:id="_5wnQQKHYEeuolPkAC7VaLg">
@@ -516,33 +519,225 @@ https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=146280255</body
       <packagedElement xmi:type="uml:Dependency" xmi:id="_ykIu8KI6EeunXvFhYSwR_g" client="_I3j2sKHYEeuolPkAC7VaLg" supplier="__qdzcKFzEeu26-oh2DfeGg"/>
       <packagedElement xmi:type="uml:Interface" xmi:id="_UnV-cKzXEeupJ6VLaAK0uw" name="IConsumerWebSite">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_8758gKzZEeupJ6VLaAK0uw" name="receiveOrder"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_gDLGkLHPEeuKIJSoFyOasw" name="browseCatalogue"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Model" xmi:id="_ZD_OIKI9EeunXvFhYSwR_g" name="DataModel">
-        <packagedElement xmi:type="uml:Class" xmi:id="_emLrYKI9EeunXvFhYSwR_g" name="Transportation">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_0EACYKI-EeuUmPKl3HIBrg">
-            <body>
-Each transportation entry is a flight available for booking in our travel packages. For each one, we record: name, departure and arrival airports, days and times, airline name, flight number, rate, cabin class.</body>
+      <packagedElement xmi:type="uml:Class" xmi:id="_asyG8LGeEeu7JNy5ze6hKw" name="Router">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_3-Fd0LGeEeu7JNy5ze6hKw" client="_asyG8LGeEeu7JNy5ze6hKw" supplier="_UnV-cKzXEeupJ6VLaAK0uw" contract="_UnV-cKzXEeupJ6VLaAK0uw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_izQBgLHPEeuKIJSoFyOasw" name="browseCatalogue"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_cLcdULGeEeu7JNy5ze6hKw" name="Controller">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_0JhJwLHPEeuKIJSoFyOasw" name="getPackages()"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_flGgwLGeEeu7JNy5ze6hKw" name="Views">
+        <packagedElement xmi:type="uml:Class" xmi:id="_mQCcALHQEeuKIJSoFyOasw" name="PackagesView"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_lgv_0LGeEeu7JNy5ze6hKw" client="_asyG8LGeEeu7JNy5ze6hKw" supplier="_cLcdULGeEeu7JNy5ze6hKw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_mI2hoLGeEeu7JNy5ze6hKw" client="_cLcdULGeEeu7JNy5ze6hKw" supplier="_flGgwLGeEeu7JNy5ze6hKw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_gPcykLHQEeuKIJSoFyOasw" client="_cLcdULGeEeu7JNy5ze6hKw" supplier="_v6sgIKI9EeunXvFhYSwR_g"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_pw4skLHQEeuKIJSoFyOasw" client="_cLcdULGeEeu7JNy5ze6hKw" supplier="_mQCcALHQEeuKIJSoFyOasw"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_y8V0cLJdEeuzVqzP0AhEww" name="Model">
+        <packagedElement xmi:type="uml:Association" xmi:id="_xC5e4KxwEeupJ6VLaAK0uw" memberEnd="_xC6tAqxwEeupJ6VLaAK0uw _xC7UEqxwEeupJ6VLaAK0uw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xC6tAKxwEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xC6tAaxwEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_xC7UEqxwEeupJ6VLaAK0uw" name="package" type="_v6sgIKI9EeunXvFhYSwR_g" association="_xC5e4KxwEeupJ6VLaAK0uw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_ywjRUKxhEeupJ6VLaAK0uw" memberEnd="_ywltkKxhEeupJ6VLaAK0uw _ywrNIKxhEeupJ6VLaAK0uw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ywkfcKxhEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ywkfcaxhEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_ywrNIKxhEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_ywjRUKxhEeupJ6VLaAK0uw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_iWXaAKxlEeupJ6VLaAK0uw" memberEnd="_iWYBEqxlEeupJ6VLaAK0uw _iWYoIqxlEeupJ6VLaAK0uw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iWYBEKxlEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iWYBEaxlEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_iWYoIqxlEeupJ6VLaAK0uw" name="contactinfo" type="_v2gFkKxiEeupJ6VLaAK0uw" association="_iWXaAKxlEeupJ6VLaAK0uw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_R93zgKxjEeupJ6VLaAK0uw" memberEnd="_R94akqxjEeupJ6VLaAK0uw _R95BoqxjEeupJ6VLaAK0uw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_R94akKxjEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_R94akaxjEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_R95BoqxjEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_R93zgKxjEeupJ6VLaAK0uw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_idIdcKxyEeupJ6VLaAK0uw" memberEnd="_idJrkqxyEeupJ6VLaAK0uw _idJrlaxyEeupJ6VLaAK0uw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_idJrkKxyEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_idJrkaxyEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_idJrlaxyEeupJ6VLaAK0uw" name="useraccount" type="_pavaIKI9EeunXvFhYSwR_g" association="_idIdcKxyEeupJ6VLaAK0uw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_cS5toKxjEeupJ6VLaAK0uw" memberEnd="_cS67wKxjEeupJ6VLaAK0uw _cS67w6xjEeupJ6VLaAK0uw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cS6UsKxjEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cS6UsaxjEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_cS67w6xjEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_cS5toKxjEeupJ6VLaAK0uw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_GjkxgKI-EeunXvFhYSwR_g" memberEnd="_GjlYkqI-EeunXvFhYSwR_g _Gjl_oaI-EeunXvFhYSwR_g">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GjlYkKI-EeunXvFhYSwR_g" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GjlYkaI-EeunXvFhYSwR_g" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_Gjl_oaI-EeunXvFhYSwR_g" name="orderstatushistory" type="_iGskwKI9EeunXvFhYSwR_g" association="_GjkxgKI-EeunXvFhYSwR_g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_PyRoMKxvEeupJ6VLaAK0uw" memberEnd="_PyS2UqxvEeupJ6VLaAK0uw _PyTdYKxvEeupJ6VLaAK0uw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PyS2UKxvEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PyS2UaxvEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_PyTdYKxvEeupJ6VLaAK0uw" name="package" type="_v6sgIKI9EeunXvFhYSwR_g" association="_PyRoMKxvEeupJ6VLaAK0uw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_5t8PUKxjEeupJ6VLaAK0uw" memberEnd="_5t82YqxjEeupJ6VLaAK0uw _5uBu4KxjEeupJ6VLaAK0uw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5t82YKxjEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5t82YaxjEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_5uBu4KxjEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_5t8PUKxjEeupJ6VLaAK0uw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_EMKOMKI-EeunXvFhYSwR_g" memberEnd="_EMK1QqI-EeunXvFhYSwR_g _EMPtwKI-EeunXvFhYSwR_g">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EMK1QKI-EeunXvFhYSwR_g" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EMK1QaI-EeunXvFhYSwR_g" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_EMPtwKI-EeunXvFhYSwR_g" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_EMKOMKI-EeunXvFhYSwR_g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_Yu0Z8KI-EeunXvFhYSwR_g" memberEnd="_Yu1BAKI-EeunXvFhYSwR_g _Yu1BA6I-EeunXvFhYSwR_g">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Yu0Z8aI-EeunXvFhYSwR_g" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yu0Z8qI-EeunXvFhYSwR_g" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_Yu1BA6I-EeunXvFhYSwR_g" name="category" type="_wsLAYKI9EeunXvFhYSwR_g" association="_Yu0Z8KI-EeunXvFhYSwR_g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="__InTYKzTEeupJ6VLaAK0uw" memberEnd="__In6cqzTEeupJ6VLaAK0uw __IohgazTEeupJ6VLaAK0uw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__In6cKzTEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__In6cazTEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="__IohgazTEeupJ6VLaAK0uw" name="orderdetails" type="_gH8QoKzTEeupJ6VLaAK0uw" association="__InTYKzTEeupJ6VLaAK0uw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_vq7SQKxjEeupJ6VLaAK0uw" memberEnd="_vq75UqxjEeupJ6VLaAK0uw _vq8gYaxjEeupJ6VLaAK0uw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vq75UKxjEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vq75UaxjEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_vq8gYaxjEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_vq7SQKxjEeupJ6VLaAK0uw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="__PA9IKxhEeupJ6VLaAK0uw" memberEnd="__PBkMqxhEeupJ6VLaAK0uw __PGcsKxhEeupJ6VLaAK0uw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__PBkMKxhEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__PBkMaxhEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="__PGcsKxhEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="__PA9IKxhEeupJ6VLaAK0uw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_0oLi8KI9EeunXvFhYSwR_g" name="Activity">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_5D0yYKI-EeuUmPKl3HIBrg">
+            <body>An adventure activity available. Examples: snorkeling, fishing, bird watching, rafting, surfing. Activities are available in selected packages. Information stored for each activity include: name, description, rate, and a representative image to show to the user.</body>
           </ownedComment>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_Wx9MkKxuEeupJ6VLaAK0uw" name="carrier">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_9NtFUKxkEeupJ6VLaAK0uw" name="activityId">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_bqWe4KxuEeupJ6VLaAK0uw" name="departureDate"/>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_e4SagKxuEeupJ6VLaAK0uw" name="destination">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_kKbpkKxuEeupJ6VLaAK0uw" name="headCount">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_A6b1wKxlEeupJ6VLaAK0uw" name="endDate"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_DeDpEKxlEeupJ6VLaAK0uw" name="headCount">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_oCSE4KxuEeupJ6VLaAK0uw" name="origin">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_HTaKAKxlEeupJ6VLaAK0uw" name="location">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_uGg4MKxuEeupJ6VLaAK0uw" name="price">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_KtBKIKxlEeupJ6VLaAK0uw" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_OT_34KxlEeupJ6VLaAK0uw" name="price">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_vMKRoKxuEeupJ6VLaAK0uw" name="transportationId">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Rj0C0KxlEeupJ6VLaAK0uw" name="startDate"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_gT5L8KxlEeupJ6VLaAK0uw" name="Address">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ei5OwKxtEeupJ6VLaAK0uw" name="city">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_1yKVQKxuEeupJ6VLaAK0uw" name="travelClass">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_lzzQkKxtEeupJ6VLaAK0uw" name="country">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_l9bGoKxtEeupJ6VLaAK0uw" name="postalCode">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_mDmnIKxtEeupJ6VLaAK0uw" name="state">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_mLsMIKxtEeupJ6VLaAK0uw" name="streetName2">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_mQWCoKxtEeupJ6VLaAK0uw" name="streetName1">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_yE520KxiEeupJ6VLaAK0uw" name="billingInfo" memberEnd="_yE6d4qxiEeupJ6VLaAK0uw _yE7E8qxiEeupJ6VLaAK0uw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yE6d4KxiEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yE6d4axiEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_yE7E8qxiEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_yE520KxiEeupJ6VLaAK0uw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_wsLAYKI9EeunXvFhYSwR_g" name="Category">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_3LpIwKI-EeuUmPKl3HIBrg">
+            <body>A category of adventure travel packages. Examples: island packages, mountain adventures. This categorization helps the user to browse through our catalog of packages. Category data consists of a name, description and a representative image to show on the user screen.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Yu1BAKI-EeunXvFhYSwR_g" name="package" type="_v6sgIKI9EeunXvFhYSwR_g" association="_Yu0Z8KI-EeunXvFhYSwR_g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Yu1BAaI-EeunXvFhYSwR_g"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Yu1BAqI-EeunXvFhYSwR_g" value="*"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_v2gFkKxiEeupJ6VLaAK0uw" name="ContactInfo">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_disPoKxlEeupJ6VLaAK0uw" name="email" visibility="public">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_dpKEAKxlEeupJ6VLaAK0uw" name="familyName" visibility="public">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_dulWkKxlEeupJ6VLaAK0uw" name="phone" visibility="public">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_d2cSEKxlEeupJ6VLaAK0uw" name="givenName" visibility="public">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iWYBEqxlEeupJ6VLaAK0uw" name="address" type="_gT5L8KxlEeupJ6VLaAK0uw" association="_iWXaAKxlEeupJ6VLaAK0uw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iWYoIKxlEeupJ6VLaAK0uw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iWYoIaxlEeupJ6VLaAK0uw" value="1"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_PsY5EKxjEeupJ6VLaAK0uw" name="CreditCard">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_A1EegKxuEeupJ6VLaAK0uw" name="cardExpireDate">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_HJr3MKxuEeupJ6VLaAK0uw" name="cardNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_KAH40KxuEeupJ6VLaAK0uw" name="cardType">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_j0EFgKI9EeunXvFhYSwR_g" name="Document"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_s1Y8EKI9EeunXvFhYSwR_g" name="Lodging">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_0-kNMKI-EeuUmPKl3HIBrg">
+            <body>A hotel, guesthouse or B&amp;B that can be used for lodging in our travel packages. For each type of lodging, we store name, description, location info, room description, rates.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_C0dt8KxvEeupJ6VLaAK0uw" name="location" visibility="public">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_K_RzQKxvEeupJ6VLaAK0uw" name="endDate"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_K_TocKxvEeupJ6VLaAK0uw" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_K_VdoKxvEeupJ6VLaAK0uw" name="startDate"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_YgU9cKxvEeupJ6VLaAK0uw" name="lodgingId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_gJyCIKxvEeupJ6VLaAK0uw" name="noNights">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_lSBHQKxvEeupJ6VLaAK0uw" name="noRooms" visibility="public">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_qQUNQKxvEeupJ6VLaAK0uw" name="pricePerNight">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_gH8QoKzTEeupJ6VLaAK0uw" name="OrderDetails">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="__In6cqzTEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="__InTYKzTEeupJ6VLaAK0uw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__In6c6zTEeupJ6VLaAK0uw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__IohgKzTEeupJ6VLaAK0uw" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_E4x7MKzUEeupJ6VLaAK0uw" name="status">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedAttribute>
         </packagedElement>
@@ -552,8 +747,24 @@ Each transportation entry is a flight available for booking in our travel packag
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Gjl_oKI-EeunXvFhYSwR_g" value="*"/>
           </ownedAttribute>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_j0EFgKI9EeunXvFhYSwR_g" name="Document"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_v6sgIKI9EeunXvFhYSwR_g" name="Package">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_2BFaIKI-EeuUmPKl3HIBrg">
+            <body>A travel package available in our catalog. A package specifies lodging and a list of activities. Attributes of a package include name, description, rate per person, category and a representative image to show to the user.
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_PyS2UqxvEeupJ6VLaAK0uw" name="lodging" type="_s1Y8EKI9EeunXvFhYSwR_g" association="_PyRoMKxvEeupJ6VLaAK0uw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PyS2U6xvEeupJ6VLaAK0uw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PyS2VKxvEeupJ6VLaAK0uw" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_xC6tAqxwEeupJ6VLaAK0uw" name="activity" type="_0oLi8KI9EeunXvFhYSwR_g" association="_xC5e4KxwEeupJ6VLaAK0uw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xC7UEKxwEeupJ6VLaAK0uw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xC7UEaxwEeupJ6VLaAK0uw" value="1"/>
+          </ownedAttribute>
+        </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_oECF4KI9EeunXvFhYSwR_g" name="PurchaseOrder">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_1pUuYLJ5EeuzVqzP0AhEww" annotatedElement="_oECF4KI9EeunXvFhYSwR_g">
+            <body></body>
+          </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_EMK1QqI-EeunXvFhYSwR_g" name="orderstatushistory" type="_iGskwKI9EeunXvFhYSwR_g" association="_EMKOMKI-EeunXvFhYSwR_g">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EMMqcKI-EeunXvFhYSwR_g"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EMOfoKI-EeunXvFhYSwR_g" value="*"/>
@@ -606,6 +817,42 @@ Each transportation entry is a flight available for booking in our travel packag
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
           </ownedAttribute>
         </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_1fqGcKxiEeupJ6VLaAK0uw" name="to ContactInfo" memberEnd="_1fqtgqxiEeupJ6VLaAK0uw _1fqthaxiEeupJ6VLaAK0uw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1fqtgKxiEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1fqtgaxiEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_1fqthaxiEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_1fqGcKxiEeupJ6VLaAK0uw"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_emLrYKI9EeunXvFhYSwR_g" name="Transportation" visibility="protected">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_0EACYKI-EeuUmPKl3HIBrg">
+            <body>
+Each transportation entry is a flight available for booking in our travel packages. For each one, we record: name, departure and arrival airports, days and times, airline name, flight number, rate, cabin class.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Wx9MkKxuEeupJ6VLaAK0uw" name="carrier">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bwG4MLJ6EeuzVqzP0AhEww"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_buypkLJ6EeuzVqzP0AhEww" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_bqWe4KxuEeupJ6VLaAK0uw" name="departureDate"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_e4SagKxuEeupJ6VLaAK0uw" name="destination">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_kKbpkKxuEeupJ6VLaAK0uw" name="headCount">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_oCSE4KxuEeupJ6VLaAK0uw" name="origin">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_uGg4MKxuEeupJ6VLaAK0uw" name="price">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_vMKRoKxuEeupJ6VLaAK0uw" name="transportationId">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_1yKVQKxuEeupJ6VLaAK0uw" name="travelClass">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+        </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_pavaIKI9EeunXvFhYSwR_g" name="UserAccount">
           <ownedComment xmi:type="uml:Comment" xmi:id="_ws4VkKI-EeuUmPKl3HIBrg">
             <body>An end user of the AdventureBuilder application. We store email id, password, and contact info.</body>
@@ -616,240 +863,7 @@ Each transportation entry is a flight available for booking in our travel packag
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_idJrlKxyEeupJ6VLaAK0uw" value="*"/>
           </ownedAttribute>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_s1Y8EKI9EeunXvFhYSwR_g" name="Lodging">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_0-kNMKI-EeuUmPKl3HIBrg">
-            <body>A hotel, guesthouse or B&amp;B that can be used for lodging in our travel packages. For each type of lodging, we store name, description, location info, room description, rates.</body>
-          </ownedComment>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_C0dt8KxvEeupJ6VLaAK0uw" name="location" visibility="public">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_K_RzQKxvEeupJ6VLaAK0uw" name="endDate"/>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_K_TocKxvEeupJ6VLaAK0uw" name="name">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_K_VdoKxvEeupJ6VLaAK0uw" name="startDate"/>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_YgU9cKxvEeupJ6VLaAK0uw" name="lodgingId">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_gJyCIKxvEeupJ6VLaAK0uw" name="noNights">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_lSBHQKxvEeupJ6VLaAK0uw" name="noRooms" visibility="public">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_qQUNQKxvEeupJ6VLaAK0uw" name="pricePerNight">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
-          </ownedAttribute>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_v6sgIKI9EeunXvFhYSwR_g" name="Package">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_2BFaIKI-EeuUmPKl3HIBrg">
-            <body>A travel package available in our catalog. A package specifies lodging and a list of activities. Attributes of a package include name, description, rate per person, category and a representative image to show to the user.
-</body>
-          </ownedComment>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_PyS2UqxvEeupJ6VLaAK0uw" name="lodging" type="_s1Y8EKI9EeunXvFhYSwR_g" association="_PyRoMKxvEeupJ6VLaAK0uw">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PyS2U6xvEeupJ6VLaAK0uw"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PyS2VKxvEeupJ6VLaAK0uw" value="1"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_xC6tAqxwEeupJ6VLaAK0uw" name="activity" type="_0oLi8KI9EeunXvFhYSwR_g" association="_xC5e4KxwEeupJ6VLaAK0uw">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xC7UEKxwEeupJ6VLaAK0uw"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xC7UEaxwEeupJ6VLaAK0uw" value="1"/>
-          </ownedAttribute>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_wsLAYKI9EeunXvFhYSwR_g" name="Category">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_3LpIwKI-EeuUmPKl3HIBrg">
-            <body>A category of adventure travel packages. Examples: island packages, mountain adventures. This categorization helps the user to browse through our catalog of packages. Category data consists of a name, description and a representative image to show on the user screen.</body>
-          </ownedComment>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_Yu1BAKI-EeunXvFhYSwR_g" name="package" type="_v6sgIKI9EeunXvFhYSwR_g" association="_Yu0Z8KI-EeunXvFhYSwR_g">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Yu1BAaI-EeunXvFhYSwR_g"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Yu1BAqI-EeunXvFhYSwR_g" value="*"/>
-          </ownedAttribute>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_0oLi8KI9EeunXvFhYSwR_g" name="Activity">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_5D0yYKI-EeuUmPKl3HIBrg">
-            <body>An adventure activity available. Examples: snorkeling, fishing, bird watching, rafting, surfing. Activities are available in selected packages. Information stored for each activity include: name, description, rate, and a representative image to show to the user.</body>
-          </ownedComment>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_9NtFUKxkEeupJ6VLaAK0uw" name="activityId">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_A6b1wKxlEeupJ6VLaAK0uw" name="endDate"/>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_DeDpEKxlEeupJ6VLaAK0uw" name="headCount">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_HTaKAKxlEeupJ6VLaAK0uw" name="location">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_KtBKIKxlEeupJ6VLaAK0uw" name="name">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_OT_34KxlEeupJ6VLaAK0uw" name="price">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_Rj0C0KxlEeupJ6VLaAK0uw" name="startDate"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_EMKOMKI-EeunXvFhYSwR_g" memberEnd="_EMK1QqI-EeunXvFhYSwR_g _EMPtwKI-EeunXvFhYSwR_g">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EMK1QKI-EeunXvFhYSwR_g" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EMK1QaI-EeunXvFhYSwR_g" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_EMPtwKI-EeunXvFhYSwR_g" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_EMKOMKI-EeunXvFhYSwR_g"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_GjkxgKI-EeunXvFhYSwR_g" memberEnd="_GjlYkqI-EeunXvFhYSwR_g _Gjl_oaI-EeunXvFhYSwR_g">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GjlYkKI-EeunXvFhYSwR_g" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GjlYkaI-EeunXvFhYSwR_g" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_Gjl_oaI-EeunXvFhYSwR_g" name="orderstatushistory" type="_iGskwKI9EeunXvFhYSwR_g" association="_GjkxgKI-EeunXvFhYSwR_g"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_Yu0Z8KI-EeunXvFhYSwR_g" memberEnd="_Yu1BAKI-EeunXvFhYSwR_g _Yu1BA6I-EeunXvFhYSwR_g">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Yu0Z8aI-EeunXvFhYSwR_g" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yu0Z8qI-EeunXvFhYSwR_g" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_Yu1BA6I-EeunXvFhYSwR_g" name="category" type="_wsLAYKI9EeunXvFhYSwR_g" association="_Yu0Z8KI-EeunXvFhYSwR_g"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_ywjRUKxhEeupJ6VLaAK0uw" memberEnd="_ywltkKxhEeupJ6VLaAK0uw _ywrNIKxhEeupJ6VLaAK0uw">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ywkfcKxhEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ywkfcaxhEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_ywrNIKxhEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_ywjRUKxhEeupJ6VLaAK0uw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="__PA9IKxhEeupJ6VLaAK0uw" memberEnd="__PBkMqxhEeupJ6VLaAK0uw __PGcsKxhEeupJ6VLaAK0uw">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__PBkMKxhEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__PBkMaxhEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="__PGcsKxhEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="__PA9IKxhEeupJ6VLaAK0uw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_v2gFkKxiEeupJ6VLaAK0uw" name="ContactInfo">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_disPoKxlEeupJ6VLaAK0uw" name="email" visibility="public">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_dpKEAKxlEeupJ6VLaAK0uw" name="familyName" visibility="public">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_dulWkKxlEeupJ6VLaAK0uw" name="phone" visibility="public">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_d2cSEKxlEeupJ6VLaAK0uw" name="givenName" visibility="public">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_iWYBEqxlEeupJ6VLaAK0uw" name="address" type="_gT5L8KxlEeupJ6VLaAK0uw" association="_iWXaAKxlEeupJ6VLaAK0uw">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iWYoIKxlEeupJ6VLaAK0uw"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iWYoIaxlEeupJ6VLaAK0uw" value="1"/>
-          </ownedAttribute>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_yE520KxiEeupJ6VLaAK0uw" name="billingInfo" memberEnd="_yE6d4qxiEeupJ6VLaAK0uw _yE7E8qxiEeupJ6VLaAK0uw">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yE6d4KxiEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yE6d4axiEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_yE7E8qxiEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_yE520KxiEeupJ6VLaAK0uw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_1fqGcKxiEeupJ6VLaAK0uw" name="to ContactInfo" memberEnd="_1fqtgqxiEeupJ6VLaAK0uw _1fqthaxiEeupJ6VLaAK0uw">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1fqtgKxiEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1fqtgaxiEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_1fqthaxiEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_1fqGcKxiEeupJ6VLaAK0uw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_PsY5EKxjEeupJ6VLaAK0uw" name="CreditCard">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_A1EegKxuEeupJ6VLaAK0uw" name="cardExpireDate">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_HJr3MKxuEeupJ6VLaAK0uw" name="cardNumber">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_KAH40KxuEeupJ6VLaAK0uw" name="cardType">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_R93zgKxjEeupJ6VLaAK0uw" memberEnd="_R94akqxjEeupJ6VLaAK0uw _R95BoqxjEeupJ6VLaAK0uw">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_R94akKxjEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_R94akaxjEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_R95BoqxjEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_R93zgKxjEeupJ6VLaAK0uw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_cS5toKxjEeupJ6VLaAK0uw" memberEnd="_cS67wKxjEeupJ6VLaAK0uw _cS67w6xjEeupJ6VLaAK0uw">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cS6UsKxjEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cS6UsaxjEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_cS67w6xjEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_cS5toKxjEeupJ6VLaAK0uw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_vq7SQKxjEeupJ6VLaAK0uw" memberEnd="_vq75UqxjEeupJ6VLaAK0uw _vq8gYaxjEeupJ6VLaAK0uw">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vq75UKxjEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vq75UaxjEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_vq8gYaxjEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_vq7SQKxjEeupJ6VLaAK0uw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_5t8PUKxjEeupJ6VLaAK0uw" memberEnd="_5t82YqxjEeupJ6VLaAK0uw _5uBu4KxjEeupJ6VLaAK0uw">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5t82YKxjEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5t82YaxjEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_5uBu4KxjEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="_5t8PUKxjEeupJ6VLaAK0uw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_gT5L8KxlEeupJ6VLaAK0uw" name="Address">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_ei5OwKxtEeupJ6VLaAK0uw" name="city">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_lzzQkKxtEeupJ6VLaAK0uw" name="country">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_l9bGoKxtEeupJ6VLaAK0uw" name="postalCode">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_mDmnIKxtEeupJ6VLaAK0uw" name="state">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_mLsMIKxtEeupJ6VLaAK0uw" name="streetName2">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_mQWCoKxtEeupJ6VLaAK0uw" name="streetName1">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_iWXaAKxlEeupJ6VLaAK0uw" memberEnd="_iWYBEqxlEeupJ6VLaAK0uw _iWYoIqxlEeupJ6VLaAK0uw">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iWYBEKxlEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iWYBEaxlEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_iWYoIqxlEeupJ6VLaAK0uw" name="contactinfo" type="_v2gFkKxiEeupJ6VLaAK0uw" association="_iWXaAKxlEeupJ6VLaAK0uw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_PyRoMKxvEeupJ6VLaAK0uw" memberEnd="_PyS2UqxvEeupJ6VLaAK0uw _PyTdYKxvEeupJ6VLaAK0uw">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PyS2UKxvEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PyS2UaxvEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_PyTdYKxvEeupJ6VLaAK0uw" name="package" type="_v6sgIKI9EeunXvFhYSwR_g" association="_PyRoMKxvEeupJ6VLaAK0uw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_xC5e4KxwEeupJ6VLaAK0uw" memberEnd="_xC6tAqxwEeupJ6VLaAK0uw _xC7UEqxwEeupJ6VLaAK0uw">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xC6tAKxwEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xC6tAaxwEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_xC7UEqxwEeupJ6VLaAK0uw" name="package" type="_v6sgIKI9EeunXvFhYSwR_g" association="_xC5e4KxwEeupJ6VLaAK0uw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_idIdcKxyEeupJ6VLaAK0uw" memberEnd="_idJrkqxyEeupJ6VLaAK0uw _idJrlaxyEeupJ6VLaAK0uw">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_idJrkKxyEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_idJrkaxyEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_idJrlaxyEeupJ6VLaAK0uw" name="useraccount" type="_pavaIKI9EeunXvFhYSwR_g" association="_idIdcKxyEeupJ6VLaAK0uw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_gH8QoKzTEeupJ6VLaAK0uw" name="OrderDetails">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="__In6cqzTEeupJ6VLaAK0uw" name="purchaseorder" type="_oECF4KI9EeunXvFhYSwR_g" association="__InTYKzTEeupJ6VLaAK0uw">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__In6c6zTEeupJ6VLaAK0uw"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__IohgKzTEeupJ6VLaAK0uw" value="1"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_E4x7MKzUEeupJ6VLaAK0uw" name="status">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedAttribute>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="__InTYKzTEeupJ6VLaAK0uw" memberEnd="__In6cqzTEeupJ6VLaAK0uw __IohgazTEeupJ6VLaAK0uw">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__In6cKzTEeupJ6VLaAK0uw" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__In6cazTEeupJ6VLaAK0uw" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="__IohgazTEeupJ6VLaAK0uw" name="orderdetails" type="_gH8QoKzTEeupJ6VLaAK0uw" association="__InTYKzTEeupJ6VLaAK0uw"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_YSwUgLGeEeu7JNy5ze6hKw" client="_ZD_OIKI9EeunXvFhYSwR_g" supplier="_1KPvILGcEeu7JNy5ze6hKw"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_asyG8LGeEeu7JNy5ze6hKw" name="Router">
-        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_3-Fd0LGeEeu7JNy5ze6hKw" client="_asyG8LGeEeu7JNy5ze6hKw" supplier="_UnV-cKzXEeupJ6VLaAK0uw" contract="_UnV-cKzXEeupJ6VLaAK0uw"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_cLcdULGeEeu7JNy5ze6hKw" name="Controller"/>
-      <packagedElement xmi:type="uml:Package" xmi:id="_flGgwLGeEeu7JNy5ze6hKw" name="Views"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_lgv_0LGeEeu7JNy5ze6hKw" client="_asyG8LGeEeu7JNy5ze6hKw" supplier="_cLcdULGeEeu7JNy5ze6hKw"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_mI2hoLGeEeu7JNy5ze6hKw" client="_cLcdULGeEeu7JNy5ze6hKw" supplier="_flGgwLGeEeu7JNy5ze6hKw"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_nU428LGeEeu7JNy5ze6hKw" client="_cLcdULGeEeu7JNy5ze6hKw" supplier="_ZD_OIKI9EeunXvFhYSwR_g"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_Kb5XQKHYEeuolPkAC7VaLg" name="Gwt">
       <ownedComment xmi:type="uml:Comment" xmi:id="_EPwIoKHZEeuolPkAC7VaLg">
@@ -1486,7 +1500,11 @@ When InvoiceHandler receives the last invoice confirming completion of the reser
 </body>
           </ownedComment>
         </packagedElement>
-        <packagedElement xmi:type="uml:Model" xmi:id="_f3f7oKF0Eeu26-oh2DfeGg" name="Manager.ejb">
+        <packagedElement xmi:type="uml:Class" xmi:id="_FC7AQKIAEeuZV_N0fPslHQ" name="ProcessManagerBean">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Hq02oKIAEeuZV_N0fPslHQ" name="updateOrderStatus()"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_K6w9YKIAEeuZV_N0fPslHQ" name="getOrderStatus()"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_zWjOwLJeEeuzVqzP0AhEww" name="Manager.ejb1">
           <ownedComment xmi:type="uml:Comment" xmi:id="_eCOWQKHbEeuolPkAC7VaLg">
             <body>Contains an entity bean to persist a purchase order. The entity bean uses container-managed persistence (CMP).
 
@@ -1495,11 +1513,7 @@ The choice of EJBs in the implementation, including session beans, message-drive
    * Developers are familiar with EJB development and component-based development.
    * These highly modular EJB components promote reuse.</body>
           </ownedComment>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Dependency" xmi:id="_ag7xEKHsEeu0VdhtLJh5Nw" client="_clh0kKF0Eeu26-oh2DfeGg" supplier="_-miRQKFzEeu26-oh2DfeGg"/>
-        <packagedElement xmi:type="uml:Class" xmi:id="_FC7AQKIAEeuZV_N0fPslHQ" name="ProcessManagerBean">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_Hq02oKIAEeuZV_N0fPslHQ" name="updateOrderStatus()"/>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_K6w9YKIAEeuZV_N0fPslHQ" name="getOrderStatus()"/>
+          <packagedElement xmi:type="uml:Dependency" xmi:id="_ag7xEKHsEeu0VdhtLJh5Nw" client="_clh0kKF0Eeu26-oh2DfeGg" supplier="_-miRQKFzEeu26-oh2DfeGg"/>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_iOUx8KxdEeujpMJNY2oXzg" name="Exceptions">
@@ -1578,7 +1592,7 @@ The choice of EJBs in the implementation, including session beans, message-drive
       </packagedElement>
     </packagedElement>
   </packagedElement>
-  <packagedElement xmi:type="uml:Model" xmi:id="_EJwoQKF_Eeu26-oh2DfeGg" name="Comportement">
+  <packagedElement xmi:type="uml:Model" xmi:id="_EJwoQKF_Eeu26-oh2DfeGg" name="F-Comportement">
     <packagedElement xmi:type="uml:Interaction" xmi:id="_SWi3EKF_Eeu26-oh2DfeGg" name="Purchase Order within WorkflowManager">
       <ownedComment xmi:type="uml:Comment" xmi:id="_aD_q8KF_Eeu26-oh2DfeGg">
         <body>https://wiki.sei.cmu.edu/confluence/display/SAD/Workflowmanager+Module+Uses+View
@@ -1714,417 +1728,7 @@ WorkFlowManagerBean also sets a timer with the EJB container so that it is activ
       <message xmi:type="uml:Message" xmi:id="_eWlNUKI2EeufVYq1WyThxA" name="Message50" messageSort="reply" receiveEvent="_eWmbcKI2EeufVYq1WyThxA" sendEvent="_eWl0YKI2EeufVYq1WyThxA"/>
     </packagedElement>
   </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_xtpzAKp2EeuoXa-x57iZ9g" name="1-Requirements">
-    <packagedElement xmi:type="uml:Package" xmi:id="_XI_vsJxsEeuSfsyhIF5DRw" name="UseCases">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_RFRrAJxyEeuSfsyhIF5DRw">
-        <body>The system used as an example in this architecture document is an adapted version of the Adventure Builder Reference application, which was developed in the context of the Java BluePrints program at Sun Microsystems. This application was chosen because the functionality is easy to understand, and the source code, documentation, and other artifacts are publicly available for download. Also available is a book on Web services that explains the design and implementation of the application [Singh 2004].
-
-	The architecture documented here does not reflect exactly the implementation provided by Sun. To make it a more interesting and realistic example of an SOA solution, we made several assumptions about the business context and requirements of the system, and documented design elements and relations that deviate from the original implementation. Click for more information.</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="__l3FsKqGEeuoXa-x57iZ9g">
-        <body>Use case comment
-</body>
-      </ownedComment>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_CgvOQKF6Eeu26-oh2DfeGg" client="_upsdEJxwEeuSfsyhIF5DRw" supplier="_v1zD0JxwEeuSfsyhIF5DRw"/>
-      <packagedElement xmi:type="uml:Actor" xmi:id="_VMQWMJxsEeuSfsyhIF5DRw" name="Vacationer">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_BYpMAKBBEeuTlOifvX46DQ">
-          <body>The user can visit the Adventure Builder Web site and browse the catalog of travel packages, which include flights to specific destinations, lodging options, and activities that can be purchased in advance. Activities include mountain biking, fishing, surfing classes, hot air balloon tours, and scuba diving. The user can select transportation, accommodation, and various activities to build his/her own adventure trip.
-
-The user can place an order for a vacation package. To process this order, the system has to interact with several external entities. A bank will approve the customer payment, airline companies will provide the flights, lodging providers will book the hotel rooms, and businesses that provide vacation activities will schedule the activities selected by the customer.
-
-After an order is placed, the user can return to check the status of his/her order. This is necessary because some interactions with external entities are processed in the background and may take hours or days to complete.
-
-The internal system periodically interacts with its business partners (transportation, lodging, and activity providers) to update the catalog with the most recent offerings.</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_TcZlUJxwEeuSfsyhIF5DRw" client="_VMQWMJxsEeuSfsyhIF5DRw" supplier="_WVLtIJxsEeuSfsyhIF5DRw"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_Jxvd4JxwEeuSfsyhIF5DRw" client="_VMQWMJxsEeuSfsyhIF5DRw" supplier="_WBk0oJxsEeuSfsyhIF5DRw"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_upsdEJxwEeuSfsyhIF5DRw" client="_VMQWMJxsEeuSfsyhIF5DRw" supplier="_UwcAEJxwEeuSfsyhIF5DRw"/>
-      <packagedElement xmi:type="uml:Package" xmi:id="_tSfeIKtZEeu0lKn_g5KS9g" name="Adventure Builder System">
-        <packagedElement xmi:type="uml:UseCase" xmi:id="_WVLtIJxsEeuSfsyhIF5DRw" name="UC2 Order travel package">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_P7fqYJxwEeuSfsyhIF5DRw">
-            <body> The user can place an order for a vacation package. To process this order, the system has to interact with several external entities. A bank will approve the customer payment, airline companies will provide the flights, lodging providers will book the hotel rooms, and businesses that provide vacation activities will schedule the activities selected by the customer.
-</body>
-          </ownedComment>
-        </packagedElement>
-        <packagedElement xmi:type="uml:UseCase" xmi:id="_WBk0oJxsEeuSfsyhIF5DRw" name="UC01 Browse Cataloog" classifierBehavior="_-_UvEJxtEeuSfsyhIF5DRw">
-          <ownedComment xmi:type="uml:Comment" xmi:id="__NwhwJxvEeuSfsyhIF5DRw" annotatedElement="_WBk0oJxsEeuSfsyhIF5DRw">
-            <body> The user can visit the Adventure Builder Web site and browse the catalog of travel packages, which include flights to specific destinations, lodging options, and activities that can be purchased in advance. Activities include mountain biking, fishing, surfing classes, hot air balloon tours, and scuba diving. </body>
-          </ownedComment>
-          <ownedBehavior xmi:type="uml:Activity" xmi:id="_-_UvEJxtEeuSfsyhIF5DRw" name="Activity1">
-            <ownedBehavior xmi:type="uml:Activity" xmi:id="_BIAS0JxuEeuSfsyhIF5DRw" name="Activity1"/>
-          </ownedBehavior>
-        </packagedElement>
-        <packagedElement xmi:type="uml:UseCase" xmi:id="_UwcAEJxwEeuSfsyhIF5DRw" name="UC3 Track order">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_raOQYJxwEeuSfsyhIF5DRw" annotatedElement="_UwcAEJxwEeuSfsyhIF5DRw">
-            <body>After an order is placed, the user can return to check the status of his/her order. This is necessary because some interactions with external entities are processed in the background and may take hours or days to complete.</body>
-          </ownedComment>
-          <ownedComment xmi:type="uml:Comment" xmi:id="_sgjmUJxwEeuSfsyhIF5DRw">
-            <body> After an order is placed, the user can return to check the status of his/her order. This is necessary because some interactions with external entities are processed in the background and may take hours or days to complete.</body>
-          </ownedComment>
-        </packagedElement>
-        <packagedElement xmi:type="uml:UseCase" xmi:id="_v1zD0JxwEeuSfsyhIF5DRw" name="UC4 Update Catalogue">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_WdcfAJxxEeuSfsyhIF5DRw">
-            <body>The internal system periodically interacts with its business partners (transportation, lodging, and activity providers) to update the catalog with the most recent offerings.</body>
-          </ownedComment>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_QbirgKtaEeu0lKn_g5KS9g" client="_WVLtIJxsEeuSfsyhIF5DRw" supplier="_FaFJMKtaEeu0lKn_g5KS9g"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_RgorUKtaEeu0lKn_g5KS9g" client="_WVLtIJxsEeuSfsyhIF5DRw" supplier="_IPU4AKtaEeu0lKn_g5KS9g"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_SJy9EKtaEeu0lKn_g5KS9g" client="_WVLtIJxsEeuSfsyhIF5DRw" supplier="_JExSQKtaEeu0lKn_g5KS9g"/>
-        <packagedElement xmi:type="uml:Usage" xmi:id="_Tv4KEKtaEeu0lKn_g5KS9g" client="_WVLtIJxsEeuSfsyhIF5DRw" supplier="_MrTUEKtaEeu0lKn_g5KS9g"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Actor" xmi:id="_FaFJMKtaEeu0lKn_g5KS9g" name="Bank"/>
-      <packagedElement xmi:type="uml:Actor" xmi:id="_IPU4AKtaEeu0lKn_g5KS9g" name="Airline"/>
-      <packagedElement xmi:type="uml:Actor" xmi:id="_JExSQKtaEeu0lKn_g5KS9g" name="Lodging Provider"/>
-      <packagedElement xmi:type="uml:Actor" xmi:id="_MrTUEKtaEeu0lKn_g5KS9g" name="Acitivy Provider"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_VSHY4KtaEeu0lKn_g5KS9g" client="_IPU4AKtaEeu0lKn_g5KS9g" supplier="_v1zD0JxwEeuSfsyhIF5DRw"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_WF_F0KtaEeu0lKn_g5KS9g" client="_JExSQKtaEeu0lKn_g5KS9g" supplier="_v1zD0JxwEeuSfsyhIF5DRw"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_XAUAEKtaEeu0lKn_g5KS9g" client="_MrTUEKtaEeu0lKn_g5KS9g" supplier="_v1zD0JxwEeuSfsyhIF5DRw"/>
-      <packagedElement xmi:type="uml:Actor" xmi:id="_C7EjgKwzEeuvFofxKfAIgw" name="AdventureBuilderSystem"/>
-      <packagedElement xmi:type="uml:Signal" xmi:id="_LWgewKwzEeuvFofxKfAIgw" name="periodicUpdate"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_aDLeAKA_EeuTlOifvX46DQ" name="QualityAttributes">
-      <packagedElement xmi:type="uml:Package" xmi:id="_qfmlwJxxEeuSfsyhIF5DRw" name="Modifiability">
-        <packagedElement xmi:type="uml:UseCase" xmi:id="_sge4YJxxEeuSfsyhIF5DRw" name="QAS1">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_upi2oJxxEeuSfsyhIF5DRw">
-            <body>. A new business partner (airline, lodging, or activity provider) that uses its own web services interface is added to the system in no more than 10 person-days of effort for the implementation. The business goal is easy integration with new business partners.</body>
-          </ownedComment>
-          <ownedComment xmi:type="uml:Comment" xmi:id="_rXeY4J3lEeuOqPdFuM_jqA" annotatedElement="_sge4YJxxEeuSfsyhIF5DRw">
-            <body></body>
-          </ownedComment>
-        </packagedElement>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_xV_10JxxEeuSfsyhIF5DRw" name="Performance">
-        <packagedElement xmi:type="uml:UseCase" xmi:id="_yQDDQJxxEeuSfsyhIF5DRw" name="QAS2">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_1RBg8JxxEeuSfsyhIF5DRw">
-            <body> A user places an order for an adventure travel package to the Consumer Web site. The user is notified on screen that the order has been successfully submitted and is being processed in less than five seconds.</body>
-          </ownedComment>
-        </packagedElement>
-        <packagedElement xmi:type="uml:UseCase" xmi:id="_15TB4JxxEeuSfsyhIF5DRw" name="QAS3">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_4xzgEJxxEeuSfsyhIF5DRw">
-            <body> Up to 500 users click to see the catalog of adventure packages following a random distribution over 1 minute; the system is under normal operating conditions; the maximal latency to serve the first page of content is under 5 seconds; average latency for same is less than 2 seconds.</body>
-          </ownedComment>
-        </packagedElement>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_5KAksJxxEeuSfsyhIF5DRw" name="Reliability">
-        <packagedElement xmi:type="uml:UseCase" xmi:id="_6D6BIJxxEeuSfsyhIF5DRw" name="AQS4">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_8fc2gJxxEeuSfsyhIF5DRw">
-            <body> The Consumer Web site sent a purchase order request to the order processing center (OPC). The OPC processed that request but didnât reply to Consumer Web site within five seconds, so the Consumer Web site resends the request to the OPC. The OPC receives the duplicate request, but the consumer is not double-charged, data remains in a consistent state, and the Consumer Web site is notified that the original request was successful in one hundred percent of the times.</body>
-          </ownedComment>
-        </packagedElement>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_8rK-UJxxEeuSfsyhIF5DRw" name="Security">
-        <packagedElement xmi:type="uml:UseCase" xmi:id="_9bCVAJxxEeuSfsyhIF5DRw" name="QAS5">
-          <ownedComment xmi:type="uml:Comment" xmi:id="__vfD4JxxEeuSfsyhIF5DRw">
-            <body> Credit approval and payment processing are requested for a new order. In one hundred percent of the cases, the transaction is completed securely and cannot be repudiated by either party. The business goals are to provide customers and business partners confidence in security and to meet contractual, legal, and regulatory obligations for secure credit transactions.</body>
-          </ownedComment>
-        </packagedElement>
-        <packagedElement xmi:type="uml:UseCase" xmi:id="_AAWxcJxyEeuSfsyhIF5DRw" name="QAS6">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_GT2IwJxyEeuSfsyhIF5DRw">
-            <body>The OPC experiences a flood of calls through the Web Service Broker endpoint that do not correspond to any current orders. In one hundred percent of the times, the system detects the abnormal level of activity, notifies the system administrator, and continues to service requests in a degraded mode.</body>
-          </ownedComment>
-        </packagedElement>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_Gl_BoJxyEeuSfsyhIF5DRw" name="Availability">
-        <packagedElement xmi:type="uml:UseCase" xmi:id="_H1h98JxyEeuSfsyhIF5DRw" name="QAS7">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_MO_RgJxyEeuSfsyhIF5DRw">
-            <body>The Consumer Web site is available to the user 24x7. If an instance of OPC application fails, the fault is detected and the system administrator is notified in 30 seconds; the system continues taking order requests; another OPC instance is created; and data remains in consistent state.</body>
-          </ownedComment>
-        </packagedElement>
-      </packagedElement>
-    </packagedElement>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_AIyesKqqEeuRiIRzpnEATQ" name="5-Allocation">
-    <packagedElement xmi:type="uml:Model" xmi:id="_GR_K8KF9Eeu26-oh2DfeGg" name="Deploiement">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_tfxkYKISEeuQ_fGpHvaisg">
-        <body>All the components that are SOAP web service providers in the Adventure Builder System are implemented using stateless session beans. This type of EJB component can be replicated across machines in a cluster and each machine can also make available a pool of such EJBs. This feature allows scaling of the number of requests it can handle. Horizontal scalability is achievable by adding more machines to the cluster. Vertical scalability is also an option by increasing the capacity of any machine (and then increasing the number of EJB instances in each EJB pool). See EJB configuration discussion in OPC C&amp;C View#Variability Guide.
-
-</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_0ugWEKqQEeu804Hdqgji2A">
-        <body>Nevertheless, the transactions performed by these stateless session beans ultimately require access to the database. The database cannot be easily replicated and may become a performance bottleneck if the number of calls increases beyond expectation.</body>
-      </ownedComment>
-      <packagedElement xmi:type="uml:Node" xmi:id="_7kMowKIPEeuQ_fGpHvaisg" name="endUserMachine1">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_sWZW8KIREeuQ_fGpHvaisg">
-          <body>This node is used to represent a user who can access the Adventure Builder application using a PC. It is most likely that he is using a web browser to place or track a purchaseorder.
-</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Node" xmi:id="_A9GnIKIQEeuQ_fGpHvaisg" name="endUserMachine2">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_rAi-UKIREeuQ_fGpHvaisg">
-          <body>This node is used to represent a user who can access the Adventure Builder application using a PC. It is most likely that he is using a web browser to place or track a purchaseorder.
-</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Node" xmi:id="_DSHWsKIQEeuQ_fGpHvaisg" name="svr-web1">
-        <nestedClassifier xmi:type="uml:ExecutionEnvironment" xmi:id="_FZFqQKIQEeuQ_fGpHvaisg" name="web1a">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_LhwmwKISEeuQ_fGpHvaisg">
-            <body></body>
-          </ownedComment>
-        </nestedClassifier>
-        <nestedClassifier xmi:type="uml:ExecutionEnvironment" xmi:id="_CoPy8KITEeuQ_fGpHvaisg" name="websphere1">
-          <nestedNode xmi:type="uml:ExecutionEnvironment" xmi:id="_HGg1YKIQEeuQ_fGpHvaisg" name="web1B">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_L1y9EKISEeuQ_fGpHvaisg">
-              <body></body>
-            </ownedComment>
-          </nestedNode>
-        </nestedClassifier>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Node" xmi:id="_WNbKIKIQEeuQ_fGpHvaisg" name="srv-web2">
-        <nestedClassifier xmi:type="uml:ExecutionEnvironment" xmi:id="_J_CaUKITEeuQ_fGpHvaisg" name="websphere2">
-          <nestedNode xmi:type="uml:ExecutionEnvironment" xmi:id="_YBfv0KIQEeuQ_fGpHvaisg" name="web2a">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_MVAooKISEeuQ_fGpHvaisg">
-              <body></body>
-            </ownedComment>
-          </nestedNode>
-          <nestedNode xmi:type="uml:ExecutionEnvironment" xmi:id="_ahEJkKIQEeuQ_fGpHvaisg" name="web2b">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_Nil2EKISEeuQ_fGpHvaisg">
-              <body></body>
-            </ownedComment>
-          </nestedNode>
-        </nestedClassifier>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Node" xmi:id="_c2gW8KIQEeuQ_fGpHvaisg" name="svr-db1"/>
-      <packagedElement xmi:type="uml:Node" xmi:id="_fB3bQKIQEeuQ_fGpHvaisg" name="svr-db2"/>
-      <packagedElement xmi:type="uml:Node" xmi:id="_hZ_wQKIQEeuQ_fGpHvaisg" name="svr-opc">
-        <nestedNode xmi:type="uml:ExecutionEnvironment" xmi:id="_EyZO8KIWEeuQ_fGpHvaisg" name="websphere2"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Node" xmi:id="_nVfeUKIQEeuQ_fGpHvaisg" name="svr-dbopc">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_-tV5EKIREeuQ_fGpHvaisg">
-          <body>This relational database stores purchase orders, invoices coming from the external suppliers and related information. The database server is MySQL configured to use the InnoDB engine.
-</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Node" xmi:id="_pTW5MKIQEeuQ_fGpHvaisg" name="svr-mailer"/>
-      <packagedElement xmi:type="uml:Node" xmi:id="_rKoj4KIQEeuQ_fGpHvaisg" name="bankServerMachine">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_tiyRkKIREeuQ_fGpHvaisg">
-          <body>TODO. This node is external to the system. It represents the server hosted by a bank that provides services to verify a user's account.
-</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Node" xmi:id="_tjht4KIQEeuQ_fGpHvaisg" name="arilineProviderServerMachine">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_ujzpsKIREeuQ_fGpHvaisg">
-          <body>TODO. This node is external to the system. It represents the server hosted by an airlines supplier that provides services to place a transportation purchase order.
-</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Node" xmi:id="_yxwGQKIQEeuQ_fGpHvaisg" name="lodgingProviderServerMachine">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_v3jwkKIREeuQ_fGpHvaisg">
-          <body>TODO. This node is external to the system. It represents the server hosted by a lodging supplier that provides services to place a lodging purchase order.
-</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Node" xmi:id="_1urxcKIQEeuQ_fGpHvaisg" name="activityProviderServerMachine">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_2dOdAKIREeuQ_fGpHvaisg">
-          <body>TODO. This node is external to the system. It represents the server hosted by an activities supplier that provides services to place an activities purchase order.
-</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_SX0VEKIREeuQ_fGpHvaisg" memberEnd="_SX08IqIREeuQ_fGpHvaisg _SX1jMKIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SX08IKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SX08IaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_SX08IqIREeuQ_fGpHvaisg" name="svr-web1" type="_DSHWsKIQEeuQ_fGpHvaisg" association="_SX0VEKIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_SX1jMKIREeuQ_fGpHvaisg" name="endusermachine1" type="_7kMowKIPEeuQ_fGpHvaisg" association="_SX0VEKIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_TUqX0KIREeuQ_fGpHvaisg" memberEnd="_TUq-4qIREeuQ_fGpHvaisg _TUrl8KIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TUq-4KIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TUq-4aIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_TUq-4qIREeuQ_fGpHvaisg" name="srv-web2" type="_WNbKIKIQEeuQ_fGpHvaisg" association="_TUqX0KIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_TUrl8KIREeuQ_fGpHvaisg" name="endusermachine1" type="_7kMowKIPEeuQ_fGpHvaisg" association="_TUqX0KIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_UlUHYKIREeuQ_fGpHvaisg" name="http" memberEnd="_UlUucqIREeuQ_fGpHvaisg _UlVVgKIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UlUucKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UlUucaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_UlUucqIREeuQ_fGpHvaisg" name="svr-web1" type="_DSHWsKIQEeuQ_fGpHvaisg" association="_UlUHYKIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_UlVVgKIREeuQ_fGpHvaisg" name="endusermachine2" type="_A9GnIKIQEeuQ_fGpHvaisg" association="_UlUHYKIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_XbtswKIREeuQ_fGpHvaisg" memberEnd="_XbuT0qIREeuQ_fGpHvaisg _Xbu64KIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XbuT0KIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XbuT0aIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_XbuT0qIREeuQ_fGpHvaisg" name="srv-web2" type="_WNbKIKIQEeuQ_fGpHvaisg" association="_XbtswKIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_Xbu64KIREeuQ_fGpHvaisg" name="endusermachine2" type="_A9GnIKIQEeuQ_fGpHvaisg" association="_XbtswKIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_YhC9IKIREeuQ_fGpHvaisg" memberEnd="_YhDkMqIREeuQ_fGpHvaisg _YhELQKIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YhDkMKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YhDkMaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_YhDkMqIREeuQ_fGpHvaisg" name="svr-db1" type="_c2gW8KIQEeuQ_fGpHvaisg" association="_YhC9IKIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_YhELQKIREeuQ_fGpHvaisg" name="svr-web1" type="_DSHWsKIQEeuQ_fGpHvaisg" association="_YhC9IKIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_a27PYKIREeuQ_fGpHvaisg" memberEnd="_a272cqIREeuQ_fGpHvaisg _a28dgKIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_a272cKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_a272caIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_a272cqIREeuQ_fGpHvaisg" name="svr-db2" type="_fB3bQKIQEeuQ_fGpHvaisg" association="_a27PYKIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_a28dgKIREeuQ_fGpHvaisg" name="svr-web1" type="_DSHWsKIQEeuQ_fGpHvaisg" association="_a27PYKIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_bhEYkKIREeuQ_fGpHvaisg" memberEnd="_bhE_oqIREeuQ_fGpHvaisg _bhFmsKIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bhE_oKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bhE_oaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_bhE_oqIREeuQ_fGpHvaisg" name="svr-db2" type="_fB3bQKIQEeuQ_fGpHvaisg" association="_bhEYkKIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_bhFmsKIREeuQ_fGpHvaisg" name="svr-db1" type="_c2gW8KIQEeuQ_fGpHvaisg" association="_bhEYkKIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_deZA4KIREeuQ_fGpHvaisg" memberEnd="_deZn8aIREeuQ_fGpHvaisg _deaPAKIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_deZA4aIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_deZn8KIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_deZn8aIREeuQ_fGpHvaisg" name="svr-db1" type="_c2gW8KIQEeuQ_fGpHvaisg" association="_deZA4KIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_deaPAKIREeuQ_fGpHvaisg" name="srv-web2" type="_WNbKIKIQEeuQ_fGpHvaisg" association="_deZA4KIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_eQLDIKIREeuQ_fGpHvaisg" memberEnd="_eQLqMqIREeuQ_fGpHvaisg _eQLqM6IREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eQLqMKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eQLqMaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_eQLqMqIREeuQ_fGpHvaisg" name="svr-db2" type="_fB3bQKIQEeuQ_fGpHvaisg" association="_eQLDIKIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_eQLqM6IREeuQ_fGpHvaisg" name="srv-web2" type="_WNbKIKIQEeuQ_fGpHvaisg" association="_eQLDIKIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_gKs2IKIREeuQ_fGpHvaisg" memberEnd="_gKtdMaIREeuQ_fGpHvaisg _gKuEQKIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gKs2IaIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gKtdMKIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_gKtdMaIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_gKs2IKIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_gKuEQKIREeuQ_fGpHvaisg" name="svr-web1" type="_DSHWsKIQEeuQ_fGpHvaisg" association="_gKs2IKIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_iMnqkKIREeuQ_fGpHvaisg" memberEnd="_iMoRoqIREeuQ_fGpHvaisg _iMo4sKIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iMoRoKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iMoRoaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_iMoRoqIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_iMnqkKIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_iMo4sKIREeuQ_fGpHvaisg" name="srv-web2" type="_WNbKIKIQEeuQ_fGpHvaisg" association="_iMnqkKIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_jN3sMKIREeuQ_fGpHvaisg" memberEnd="_jN4TQaIREeuQ_fGpHvaisg _jN4TQqIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jN3sMaIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jN4TQKIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_jN4TQaIREeuQ_fGpHvaisg" name="svr-dbopc" type="_nVfeUKIQEeuQ_fGpHvaisg" association="_jN3sMKIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_jN4TQqIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_jN3sMKIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_j1AksKIREeuQ_fGpHvaisg" memberEnd="_j1BLwqIREeuQ_fGpHvaisg _j1By0KIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_j1BLwKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_j1BLwaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_j1BLwqIREeuQ_fGpHvaisg" name="svr-mailer" type="_pTW5MKIQEeuQ_fGpHvaisg" association="_j1AksKIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_j1By0KIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_j1AksKIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_kvlWkKIREeuQ_fGpHvaisg" memberEnd="_kvl9oqIREeuQ_fGpHvaisg _kvmksKIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kvl9oKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kvl9oaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_kvl9oqIREeuQ_fGpHvaisg" name="activityproviderservermachine" type="_1urxcKIQEeuQ_fGpHvaisg" association="_kvlWkKIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_kvmksKIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_kvlWkKIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_lOYLYKIREeuQ_fGpHvaisg" memberEnd="_lOYycqIREeuQ_fGpHvaisg _lOZZgKIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lOYycKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lOYycaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_lOYycqIREeuQ_fGpHvaisg" name="lodgingproviderservermachine" type="_yxwGQKIQEeuQ_fGpHvaisg" association="_lOYLYKIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_lOZZgKIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_lOYLYKIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_l5oH0KIREeuQ_fGpHvaisg" memberEnd="_l5oH06IREeuQ_fGpHvaisg _l5ou4KIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l5oH0aIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l5oH0qIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_l5oH06IREeuQ_fGpHvaisg" name="arilineproviderservermachine" type="_tjht4KIQEeuQ_fGpHvaisg" association="_l5oH0KIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_l5ou4KIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_l5oH0KIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_mh96MKIREeuQ_fGpHvaisg" memberEnd="_mh-hQqIREeuQ_fGpHvaisg _mh_IUKIREeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mh-hQKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mh-hQaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_mh-hQqIREeuQ_fGpHvaisg" name="bankservermachine" type="_rKoj4KIQEeuQ_fGpHvaisg" association="_mh96MKIREeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_mh_IUKIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_mh96MKIREeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Node" xmi:id="__CGBEKIREeuQ_fGpHvaisg" name="ServiceRegistry">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_Ao3xoKISEeuQ_fGpHvaisg">
-          <body>Data repository that works as a basic registry of the external services used by OPC. More specifically, it has name, location and metadata about all the SOAP web services offered by the banks, airline, lodging, and activity external partners. TBD: use a relational database or XML based files.
-</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_BGFSEKISEeuQ_fGpHvaisg" memberEnd="_BGF5IqISEeuQ_fGpHvaisg _BGGgMKISEeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BGF5IKISEeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BGF5IaISEeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_BGF5IqISEeuQ_fGpHvaisg" name="serviceregistry" type="__CGBEKIREeuQ_fGpHvaisg" association="_BGFSEKISEeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_BGGgMKISEeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_BGFSEKISEeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Node" xmi:id="_FwBRoKISEeuQ_fGpHvaisg" name="AdminUserMachiine"/>
-      <packagedElement xmi:type="uml:Artifact" xmi:id="_RTZ1QKISEeuQ_fGpHvaisg" name="opc.ear">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_TZQHcKISEeuQ_fGpHvaisg">
-          <body>opc.ear
-This is an enterprise archive artifact that is deployed on an application server. It contains the opc application.</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Artifact" xmi:id="_XJKHsKISEeuQ_fGpHvaisg" name="website.ear" fileName="website.ear&#xA;This is an enterprise archive artifact that is deployed on an application server. It contains the consumer website application.">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_gqqTIKISEeuQ_fGpHvaisg">
-          <body>website.ear
-This is an enterprise archive artifact that is deployed on an application server. It contains the consumer website application.</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Manifestation" xmi:id="_b3ffEKISEeuQ_fGpHvaisg" client="_FZFqQKIQEeuQ_fGpHvaisg" supplier="_XJKHsKISEeuQ_fGpHvaisg" utilizedElement="_XJKHsKISEeuQ_fGpHvaisg"/>
-      <packagedElement xmi:type="uml:Manifestation" xmi:id="_cwXAwKISEeuQ_fGpHvaisg" client="_HGg1YKIQEeuQ_fGpHvaisg" supplier="_XJKHsKISEeuQ_fGpHvaisg" utilizedElement="_XJKHsKISEeuQ_fGpHvaisg"/>
-      <packagedElement xmi:type="uml:Manifestation" xmi:id="_dd2_8KISEeuQ_fGpHvaisg" client="_YBfv0KIQEeuQ_fGpHvaisg" supplier="_XJKHsKISEeuQ_fGpHvaisg" utilizedElement="_XJKHsKISEeuQ_fGpHvaisg"/>
-      <packagedElement xmi:type="uml:Manifestation" xmi:id="_eTY5wKISEeuQ_fGpHvaisg" client="_ahEJkKIQEeuQ_fGpHvaisg" supplier="_XJKHsKISEeuQ_fGpHvaisg" utilizedElement="_XJKHsKISEeuQ_fGpHvaisg"/>
-      <packagedElement xmi:type="uml:Artifact" xmi:id="_UkWMIKITEeuQ_fGpHvaisg" name="AdventureDBCatalog">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_XRrNsKIWEeuQ_fGpHvaisg">
-          <body>This is a relational database that stores the adventure builder catalog containing various adventure packages. It also stores information about users for user authentication and authorization. The database server is MySQL Cluster 7.0 configured to use the InnoDB engine.
-</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Manifestation" xmi:id="_XzLfoKITEeuQ_fGpHvaisg" client="_GR_K8KF9Eeu26-oh2DfeGg" supplier="_UkWMIKITEeuQ_fGpHvaisg" utilizedElement="_UkWMIKITEeuQ_fGpHvaisg"/>
-      <packagedElement xmi:type="uml:Manifestation" xmi:id="_ZI9m0KITEeuQ_fGpHvaisg" client="_fB3bQKIQEeuQ_fGpHvaisg" supplier="_UkWMIKITEeuQ_fGpHvaisg" utilizedElement="_UkWMIKITEeuQ_fGpHvaisg"/>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_W70H4KIVEeuQ_fGpHvaisg" memberEnd="_W70u8qIVEeuQ_fGpHvaisg _W71WAKIVEeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_W70u8KIVEeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_W70u8aIVEeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_W70u8qIVEeuQ_fGpHvaisg" name="svr-db1" type="_c2gW8KIQEeuQ_fGpHvaisg" association="_W70H4KIVEeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_W71WAKIVEeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_W70H4KIVEeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Manifestation" xmi:id="_5D5ngKIVEeuQ_fGpHvaisg" client="_CoPy8KITEeuQ_fGpHvaisg" supplier="_XJKHsKISEeuQ_fGpHvaisg" utilizedElement="_XJKHsKISEeuQ_fGpHvaisg"/>
-      <packagedElement xmi:type="uml:Manifestation" xmi:id="_Hvvw4KIWEeuQ_fGpHvaisg" client="_EyZO8KIWEeuQ_fGpHvaisg" supplier="_RTZ1QKISEeuQ_fGpHvaisg" utilizedElement="_RTZ1QKISEeuQ_fGpHvaisg"/>
-      <packagedElement xmi:type="uml:Manifestation" xmi:id="_K1R-cKIWEeuQ_fGpHvaisg" client="_c2gW8KIQEeuQ_fGpHvaisg" supplier="_UkWMIKITEeuQ_fGpHvaisg" utilizedElement="_UkWMIKITEeuQ_fGpHvaisg"/>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_c0Z2cKIWEeuQ_fGpHvaisg" memberEnd="_c0adgqIWEeuQ_fGpHvaisg _c0bEkKIWEeuQ_fGpHvaisg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_c0adgKIWEeuQ_fGpHvaisg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_c0adgaIWEeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_c0adgqIWEeuQ_fGpHvaisg" name="websphere1" type="_DSHWsKIQEeuQ_fGpHvaisg" association="_c0Z2cKIWEeuQ_fGpHvaisg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_c0bEkKIWEeuQ_fGpHvaisg" name="adminusermachiine" type="_FwBRoKISEeuQ_fGpHvaisg" association="_c0Z2cKIWEeuQ_fGpHvaisg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_Sgr0UKqwEeuRiIRzpnEATQ" name="UserMailClient">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_Sgr0UaqwEeuRiIRzpnEATQ">
-          <body>This is the email inbox of the end user (vacationer) who placed an adventure travel purchase request. OPC sends email notifications to the user via SMTP to inform of the status of the orders.
-
-Email communication
-All email communication parameters (hostname, ports and protocol) should be configurable outside the code via a configuration file. The parameters are read at load time.
-</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_SgsbYKqwEeuRiIRzpnEATQ" name="WebBrowser">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_SgsbYaqwEeuRiIRzpnEATQ">
-          <body>This component represents the user interface of the application running on a web browser. Consumer Website is a Web 2.0 application implemented using GWT. Therefore, in addition to HTML, the web browser runs JavaScript code that uses Ajax to communicate with the server. Using the web browser, a customer of Adventure Builder opens the web site, browses through the existing catalog of adventure packages, places orders, and tracks the status of existing orders.</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_Wasy0KqwEeuRiIRzpnEATQ" name="CopyOf_UserMailClient_51">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_Wasy0aqwEeuRiIRzpnEATQ">
-          <body>This is the email inbox of the end user (vacationer) who placed an adventure travel purchase request. OPC sends email notifications to the user via SMTP to inform of the status of the orders.
-
-Email communication
-All email communication parameters (hostname, ports and protocol) should be configurable outside the code via a configuration file. The parameters are read at load time.
-</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_WatZ4KqwEeuRiIRzpnEATQ" name="CopyOf_WebBrowser_51">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_WatZ4aqwEeuRiIRzpnEATQ">
-          <body>This component represents the user interface of the application running on a web browser. Consumer Website is a Web 2.0 application implemented using GWT. Therefore, in addition to HTML, the web browser runs JavaScript code that uses Ajax to communicate with the server. Using the web browser, a customer of Adventure Builder opens the web site, browses through the existing catalog of adventure packages, places orders, and tracks the status of existing orders.</body>
-        </ownedComment>
-      </packagedElement>
-    </packagedElement>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Model" xmi:id="_S4uaYKwwEeuvFofxKfAIgw" name="2-ACOO">
+  <packagedElement xmi:type="uml:Model" xmi:id="_S4uaYKwwEeuvFofxKfAIgw" name="B-ACOO">
     <packagedElement xmi:type="uml:Interaction" xmi:id="_bowFkKwwEeuvFofxKfAIgw" name="CU01-DSS">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_qq_VsKwwEeuvFofxKfAIgw" name="" type="_VMQWMJxsEeuSfsyhIF5DRw"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_v50qsKwzEeuvFofxKfAIgw" name="" type="_C7EjgKwzEeuvFofxKfAIgw"/>
@@ -2300,6 +1904,401 @@ All email communication parameters (hostname, ports and protocol) should be conf
       <message xmi:type="uml:Message" xmi:id="_cp33YK0MEeu0uOIvD0gUvg"/>
       <message xmi:type="uml:Message" xmi:id="_NwkEUK0NEeu0uOIvD0gUvg" name="Message39" receiveEvent="_NwlScK0NEeu0uOIvD0gUvg" sendEvent="_NwkrYK0NEeu0uOIvD0gUvg"/>
       <message xmi:type="uml:Message" xmi:id="_NxXVkK0NEeu0uOIvD0gUvg" name="Message44" messageSort="reply" receiveEvent="_NxX8oa0NEeu0uOIvD0gUvg" sendEvent="_NxX8oK0NEeu0uOIvD0gUvg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_rn6U0LJuEeuzVqzP0AhEww" name="Interaction7">
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_1-1FULJuEeuzVqzP0AhEww" name="Lifeline1"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_GR_K8KF9Eeu26-oh2DfeGg" name="E-Allocation">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_tfxkYKISEeuQ_fGpHvaisg">
+      <body>All the components that are SOAP web service providers in the Adventure Builder System are implemented using stateless session beans. This type of EJB component can be replicated across machines in a cluster and each machine can also make available a pool of such EJBs. This feature allows scaling of the number of requests it can handle. Horizontal scalability is achievable by adding more machines to the cluster. Vertical scalability is also an option by increasing the capacity of any machine (and then increasing the number of EJB instances in each EJB pool). See EJB configuration discussion in OPC C&amp;C View#Variability Guide.
+
+</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_0ugWEKqQEeu804Hdqgji2A">
+      <body>Nevertheless, the transactions performed by these stateless session beans ultimately require access to the database. The database cannot be easily replicated and may become a performance bottleneck if the number of calls increases beyond expectation.</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:Node" xmi:id="_A9GnIKIQEeuQ_fGpHvaisg" name="endUserMachine">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_rAi-UKIREeuQ_fGpHvaisg">
+        <body>This node is used to represent a user who can access the Adventure Builder application using a PC. It is most likely that he is using a web browser to place or track a purchaseorder.
+</body>
+      </ownedComment>
+      <nestedClassifier xmi:type="uml:ExecutionEnvironment" xmi:id="_SgsbYKqwEeuRiIRzpnEATQ" name="WebBrowser">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_SgsbYaqwEeuRiIRzpnEATQ">
+          <body>This component represents the user interface of the application running on a web browser. Consumer Website is a Web 2.0 application implemented using GWT. Therefore, in addition to HTML, the web browser runs JavaScript code that uses Ajax to communicate with the server. Using the web browser, a customer of Adventure Builder opens the web site, browses through the existing catalog of adventure packages, places orders, and tracks the status of existing orders.</body>
+        </ownedComment>
+      </nestedClassifier>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Node" xmi:id="_DSHWsKIQEeuQ_fGpHvaisg" name="svr-web1">
+      <nestedClassifier xmi:type="uml:ExecutionEnvironment" xmi:id="_FZFqQKIQEeuQ_fGpHvaisg" name="web1a">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_LhwmwKISEeuQ_fGpHvaisg">
+          <body></body>
+        </ownedComment>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:ExecutionEnvironment" xmi:id="_CoPy8KITEeuQ_fGpHvaisg" name="websphere1"/>
+      <nestedClassifier xmi:type="uml:Artifact" xmi:id="_XJKHsKISEeuQ_fGpHvaisg" name="website.ear" fileName="website.ear&#xA;This is an enterprise archive artifact that is deployed on an application server. It contains the consumer website application.">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_gqqTIKISEeuQ_fGpHvaisg">
+          <body>website.ear
+This is an enterprise archive artifact that is deployed on an application server. It contains the consumer website application.</body>
+        </ownedComment>
+      </nestedClassifier>
+      <nestedNode xmi:type="uml:ExecutionEnvironment" xmi:id="_HGg1YKIQEeuQ_fGpHvaisg" name="web1B">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_L1y9EKISEeuQ_fGpHvaisg">
+          <body></body>
+        </ownedComment>
+      </nestedNode>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Node" xmi:id="_WNbKIKIQEeuQ_fGpHvaisg" name="srv-web2">
+      <nestedClassifier xmi:type="uml:ExecutionEnvironment" xmi:id="_J_CaUKITEeuQ_fGpHvaisg" name="websphere2">
+        <nestedNode xmi:type="uml:ExecutionEnvironment" xmi:id="_YBfv0KIQEeuQ_fGpHvaisg" name="web2a">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_MVAooKISEeuQ_fGpHvaisg">
+            <body></body>
+          </ownedComment>
+        </nestedNode>
+        <nestedNode xmi:type="uml:ExecutionEnvironment" xmi:id="_ahEJkKIQEeuQ_fGpHvaisg" name="web2b">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_Nil2EKISEeuQ_fGpHvaisg">
+            <body></body>
+          </ownedComment>
+        </nestedNode>
+      </nestedClassifier>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Node" xmi:id="_c2gW8KIQEeuQ_fGpHvaisg" name="svr-db1"/>
+    <packagedElement xmi:type="uml:Node" xmi:id="_fB3bQKIQEeuQ_fGpHvaisg" name="svr-db2"/>
+    <packagedElement xmi:type="uml:Node" xmi:id="_hZ_wQKIQEeuQ_fGpHvaisg" name="svr-opc">
+      <nestedNode xmi:type="uml:ExecutionEnvironment" xmi:id="_EyZO8KIWEeuQ_fGpHvaisg" name="websphere2"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Node" xmi:id="_nVfeUKIQEeuQ_fGpHvaisg" name="svr-dbopc">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_-tV5EKIREeuQ_fGpHvaisg">
+        <body>This relational database stores purchase orders, invoices coming from the external suppliers and related information. The database server is MySQL configured to use the InnoDB engine.
+</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Node" xmi:id="_pTW5MKIQEeuQ_fGpHvaisg" name="svr-mailer"/>
+    <packagedElement xmi:type="uml:Node" xmi:id="_rKoj4KIQEeuQ_fGpHvaisg" name="bankServerMachine">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_tiyRkKIREeuQ_fGpHvaisg">
+        <body>TODO. This node is external to the system. It represents the server hosted by a bank that provides services to verify a user's account.
+</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Node" xmi:id="_tjht4KIQEeuQ_fGpHvaisg" name="arilineProviderServerMachine">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_ujzpsKIREeuQ_fGpHvaisg">
+        <body>TODO. This node is external to the system. It represents the server hosted by an airlines supplier that provides services to place a transportation purchase order.
+</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Node" xmi:id="_yxwGQKIQEeuQ_fGpHvaisg" name="lodgingProviderServerMachine">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_v3jwkKIREeuQ_fGpHvaisg">
+        <body>TODO. This node is external to the system. It represents the server hosted by a lodging supplier that provides services to place a lodging purchase order.
+</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Node" xmi:id="_1urxcKIQEeuQ_fGpHvaisg" name="activityProviderServerMachine">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_2dOdAKIREeuQ_fGpHvaisg">
+        <body>TODO. This node is external to the system. It represents the server hosted by an activities supplier that provides services to place an activities purchase order.
+</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_UlUHYKIREeuQ_fGpHvaisg" name="http" memberEnd="_UlUucqIREeuQ_fGpHvaisg _UlVVgKIREeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UlUucKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UlUucaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_UlUucqIREeuQ_fGpHvaisg" name="svr-web1" type="_DSHWsKIQEeuQ_fGpHvaisg" association="_UlUHYKIREeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_UlVVgKIREeuQ_fGpHvaisg" name="endusermachine2" type="_A9GnIKIQEeuQ_fGpHvaisg" association="_UlUHYKIREeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_XbtswKIREeuQ_fGpHvaisg" memberEnd="_XbuT0qIREeuQ_fGpHvaisg _Xbu64KIREeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XbuT0KIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XbuT0aIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_XbuT0qIREeuQ_fGpHvaisg" name="srv-web2" type="_WNbKIKIQEeuQ_fGpHvaisg" association="_XbtswKIREeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Xbu64KIREeuQ_fGpHvaisg" name="endusermachine2" type="_A9GnIKIQEeuQ_fGpHvaisg" association="_XbtswKIREeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_YhC9IKIREeuQ_fGpHvaisg" memberEnd="_YhDkMqIREeuQ_fGpHvaisg _YhELQKIREeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YhDkMKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YhDkMaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_YhDkMqIREeuQ_fGpHvaisg" name="svr-db1" type="_c2gW8KIQEeuQ_fGpHvaisg" association="_YhC9IKIREeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_YhELQKIREeuQ_fGpHvaisg" name="svr-web1" type="_DSHWsKIQEeuQ_fGpHvaisg" association="_YhC9IKIREeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_a27PYKIREeuQ_fGpHvaisg" memberEnd="_a272cqIREeuQ_fGpHvaisg _a28dgKIREeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_a272cKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_a272caIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_a272cqIREeuQ_fGpHvaisg" name="svr-db2" type="_fB3bQKIQEeuQ_fGpHvaisg" association="_a27PYKIREeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_a28dgKIREeuQ_fGpHvaisg" name="svr-web1" type="_DSHWsKIQEeuQ_fGpHvaisg" association="_a27PYKIREeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_bhEYkKIREeuQ_fGpHvaisg" memberEnd="_bhE_oqIREeuQ_fGpHvaisg _bhFmsKIREeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bhE_oKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bhE_oaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_bhE_oqIREeuQ_fGpHvaisg" name="svr-db2" type="_fB3bQKIQEeuQ_fGpHvaisg" association="_bhEYkKIREeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_bhFmsKIREeuQ_fGpHvaisg" name="svr-db1" type="_c2gW8KIQEeuQ_fGpHvaisg" association="_bhEYkKIREeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_deZA4KIREeuQ_fGpHvaisg" memberEnd="_deZn8aIREeuQ_fGpHvaisg _deaPAKIREeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_deZA4aIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_deZn8KIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_deZn8aIREeuQ_fGpHvaisg" name="svr-db1" type="_c2gW8KIQEeuQ_fGpHvaisg" association="_deZA4KIREeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_deaPAKIREeuQ_fGpHvaisg" name="srv-web2" type="_WNbKIKIQEeuQ_fGpHvaisg" association="_deZA4KIREeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_eQLDIKIREeuQ_fGpHvaisg" memberEnd="_eQLqMqIREeuQ_fGpHvaisg _eQLqM6IREeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eQLqMKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eQLqMaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_eQLqMqIREeuQ_fGpHvaisg" name="svr-db2" type="_fB3bQKIQEeuQ_fGpHvaisg" association="_eQLDIKIREeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_eQLqM6IREeuQ_fGpHvaisg" name="srv-web2" type="_WNbKIKIQEeuQ_fGpHvaisg" association="_eQLDIKIREeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_gKs2IKIREeuQ_fGpHvaisg" memberEnd="_gKtdMaIREeuQ_fGpHvaisg _gKuEQKIREeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gKs2IaIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gKtdMKIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_gKtdMaIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_gKs2IKIREeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_gKuEQKIREeuQ_fGpHvaisg" name="svr-web1" type="_DSHWsKIQEeuQ_fGpHvaisg" association="_gKs2IKIREeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_iMnqkKIREeuQ_fGpHvaisg" memberEnd="_iMoRoqIREeuQ_fGpHvaisg _iMo4sKIREeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iMoRoKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iMoRoaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_iMoRoqIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_iMnqkKIREeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_iMo4sKIREeuQ_fGpHvaisg" name="srv-web2" type="_WNbKIKIQEeuQ_fGpHvaisg" association="_iMnqkKIREeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_jN3sMKIREeuQ_fGpHvaisg" memberEnd="_jN4TQaIREeuQ_fGpHvaisg _jN4TQqIREeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jN3sMaIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jN4TQKIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_jN4TQaIREeuQ_fGpHvaisg" name="svr-dbopc" type="_nVfeUKIQEeuQ_fGpHvaisg" association="_jN3sMKIREeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_jN4TQqIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_jN3sMKIREeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_j1AksKIREeuQ_fGpHvaisg" memberEnd="_j1BLwqIREeuQ_fGpHvaisg _j1By0KIREeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_j1BLwKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_j1BLwaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_j1BLwqIREeuQ_fGpHvaisg" name="svr-mailer" type="_pTW5MKIQEeuQ_fGpHvaisg" association="_j1AksKIREeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_j1By0KIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_j1AksKIREeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_kvlWkKIREeuQ_fGpHvaisg" memberEnd="_kvl9oqIREeuQ_fGpHvaisg _kvmksKIREeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kvl9oKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kvl9oaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_kvl9oqIREeuQ_fGpHvaisg" name="activityproviderservermachine" type="_1urxcKIQEeuQ_fGpHvaisg" association="_kvlWkKIREeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_kvmksKIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_kvlWkKIREeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_lOYLYKIREeuQ_fGpHvaisg" memberEnd="_lOYycqIREeuQ_fGpHvaisg _lOZZgKIREeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lOYycKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lOYycaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_lOYycqIREeuQ_fGpHvaisg" name="lodgingproviderservermachine" type="_yxwGQKIQEeuQ_fGpHvaisg" association="_lOYLYKIREeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_lOZZgKIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_lOYLYKIREeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_l5oH0KIREeuQ_fGpHvaisg" memberEnd="_l5oH06IREeuQ_fGpHvaisg _l5ou4KIREeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l5oH0aIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l5oH0qIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_l5oH06IREeuQ_fGpHvaisg" name="arilineproviderservermachine" type="_tjht4KIQEeuQ_fGpHvaisg" association="_l5oH0KIREeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_l5ou4KIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_l5oH0KIREeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_mh96MKIREeuQ_fGpHvaisg" memberEnd="_mh-hQqIREeuQ_fGpHvaisg _mh_IUKIREeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mh-hQKIREeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mh-hQaIREeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_mh-hQqIREeuQ_fGpHvaisg" name="bankservermachine" type="_rKoj4KIQEeuQ_fGpHvaisg" association="_mh96MKIREeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_mh_IUKIREeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_mh96MKIREeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Node" xmi:id="__CGBEKIREeuQ_fGpHvaisg" name="ServiceRegistry">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_Ao3xoKISEeuQ_fGpHvaisg">
+        <body>Data repository that works as a basic registry of the external services used by OPC. More specifically, it has name, location and metadata about all the SOAP web services offered by the banks, airline, lodging, and activity external partners. TBD: use a relational database or XML based files.
+</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_BGFSEKISEeuQ_fGpHvaisg" memberEnd="_BGF5IqISEeuQ_fGpHvaisg _BGGgMKISEeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BGF5IKISEeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BGF5IaISEeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_BGF5IqISEeuQ_fGpHvaisg" name="serviceregistry" type="__CGBEKIREeuQ_fGpHvaisg" association="_BGFSEKISEeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_BGGgMKISEeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_BGFSEKISEeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Node" xmi:id="_FwBRoKISEeuQ_fGpHvaisg" name="AdminUserMachiine"/>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_RTZ1QKISEeuQ_fGpHvaisg" name="opc.ear">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_TZQHcKISEeuQ_fGpHvaisg">
+        <body>opc.ear
+This is an enterprise archive artifact that is deployed on an application server. It contains the opc application.</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Manifestation" xmi:id="_b3ffEKISEeuQ_fGpHvaisg" name="web1a" client="_FZFqQKIQEeuQ_fGpHvaisg" supplier="_XJKHsKISEeuQ_fGpHvaisg" utilizedElement="_XJKHsKISEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Manifestation" xmi:id="_cwXAwKISEeuQ_fGpHvaisg" name="web1b" client="_HGg1YKIQEeuQ_fGpHvaisg" supplier="_XJKHsKISEeuQ_fGpHvaisg" utilizedElement="_XJKHsKISEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Manifestation" xmi:id="_dd2_8KISEeuQ_fGpHvaisg" client="_YBfv0KIQEeuQ_fGpHvaisg" supplier="_XJKHsKISEeuQ_fGpHvaisg" utilizedElement="_XJKHsKISEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Manifestation" xmi:id="_eTY5wKISEeuQ_fGpHvaisg" client="_ahEJkKIQEeuQ_fGpHvaisg" supplier="_XJKHsKISEeuQ_fGpHvaisg" utilizedElement="_XJKHsKISEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Artifact" xmi:id="_UkWMIKITEeuQ_fGpHvaisg" name="AdventureDBCatalog">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_XRrNsKIWEeuQ_fGpHvaisg">
+        <body>This is a relational database that stores the adventure builder catalog containing various adventure packages. It also stores information about users for user authentication and authorization. The database server is MySQL Cluster 7.0 configured to use the InnoDB engine.
+</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Manifestation" xmi:id="_XzLfoKITEeuQ_fGpHvaisg" client="_GR_K8KF9Eeu26-oh2DfeGg" supplier="_UkWMIKITEeuQ_fGpHvaisg" utilizedElement="_UkWMIKITEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Manifestation" xmi:id="_ZI9m0KITEeuQ_fGpHvaisg" client="_fB3bQKIQEeuQ_fGpHvaisg" supplier="_UkWMIKITEeuQ_fGpHvaisg" utilizedElement="_UkWMIKITEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_W70H4KIVEeuQ_fGpHvaisg" memberEnd="_W70u8qIVEeuQ_fGpHvaisg _W71WAKIVEeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_W70u8KIVEeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_W70u8aIVEeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_W70u8qIVEeuQ_fGpHvaisg" name="svr-db1" type="_c2gW8KIQEeuQ_fGpHvaisg" association="_W70H4KIVEeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_W71WAKIVEeuQ_fGpHvaisg" name="svr-opc" type="_hZ_wQKIQEeuQ_fGpHvaisg" association="_W70H4KIVEeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Manifestation" xmi:id="_5D5ngKIVEeuQ_fGpHvaisg" client="_CoPy8KITEeuQ_fGpHvaisg" supplier="_XJKHsKISEeuQ_fGpHvaisg" utilizedElement="_XJKHsKISEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Manifestation" xmi:id="_Hvvw4KIWEeuQ_fGpHvaisg" client="_EyZO8KIWEeuQ_fGpHvaisg" supplier="_RTZ1QKISEeuQ_fGpHvaisg" utilizedElement="_RTZ1QKISEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Manifestation" xmi:id="_K1R-cKIWEeuQ_fGpHvaisg" client="_c2gW8KIQEeuQ_fGpHvaisg" supplier="_UkWMIKITEeuQ_fGpHvaisg" utilizedElement="_UkWMIKITEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_c0Z2cKIWEeuQ_fGpHvaisg" memberEnd="_c0adgqIWEeuQ_fGpHvaisg _c0bEkKIWEeuQ_fGpHvaisg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_c0adgKIWEeuQ_fGpHvaisg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_c0adgaIWEeuQ_fGpHvaisg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_c0adgqIWEeuQ_fGpHvaisg" name="websphere1" type="_DSHWsKIQEeuQ_fGpHvaisg" association="_c0Z2cKIWEeuQ_fGpHvaisg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_c0bEkKIWEeuQ_fGpHvaisg" name="adminusermachiine" type="_FwBRoKISEeuQ_fGpHvaisg" association="_c0Z2cKIWEeuQ_fGpHvaisg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ExecutionEnvironment" xmi:id="_Sgr0UKqwEeuRiIRzpnEATQ" name="UserMailClient">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_Sgr0UaqwEeuRiIRzpnEATQ">
+        <body>This is the email inbox of the end user (vacationer) who placed an adventure travel purchase request. OPC sends email notifications to the user via SMTP to inform of the status of the orders.
+
+Email communication
+All email communication parameters (hostname, ports and protocol) should be configurable outside the code via a configuration file. The parameters are read at load time.
+</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_KLlLILJyEeuzVqzP0AhEww" client="_hZ_wQKIQEeuQ_fGpHvaisg" supplier="_tjht4KIQEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_rzQFULJyEeuzVqzP0AhEww" client="_hZ_wQKIQEeuQ_fGpHvaisg" supplier="_yxwGQKIQEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_scU3gLJyEeuzVqzP0AhEww" client="_hZ_wQKIQEeuQ_fGpHvaisg" supplier="_1urxcKIQEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_s5LLkLJyEeuzVqzP0AhEww" client="_hZ_wQKIQEeuQ_fGpHvaisg" supplier="_rKoj4KIQEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_ywDfYLJyEeuzVqzP0AhEww" client="_yxwGQKIQEeuQ_fGpHvaisg" supplier="_hZ_wQKIQEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_0aRlgLJyEeuzVqzP0AhEww" client="_tjht4KIQEeuQ_fGpHvaisg" supplier="_hZ_wQKIQEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_1KPC0LJyEeuzVqzP0AhEww" client="_1urxcKIQEeuQ_fGpHvaisg" supplier="_hZ_wQKIQEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_2IA5sLJyEeuzVqzP0AhEww" client="_DSHWsKIQEeuQ_fGpHvaisg" supplier="_hZ_wQKIQEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_29B2ILJyEeuzVqzP0AhEww" client="_hZ_wQKIQEeuQ_fGpHvaisg" supplier="__CGBEKIREeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_3rs6ALJyEeuzVqzP0AhEww" client="_DSHWsKIQEeuQ_fGpHvaisg" supplier="_UkWMIKITEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_5f5bgLJyEeuzVqzP0AhEww" client="_SgsbYKqwEeuRiIRzpnEATQ" supplier="_DSHWsKIQEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_9NFe8LJyEeuzVqzP0AhEww" client="_FwBRoKISEeuQ_fGpHvaisg" supplier="_DSHWsKIQEeuQ_fGpHvaisg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_BMWJ0LJzEeuzVqzP0AhEww" client="_DSHWsKIQEeuQ_fGpHvaisg" supplier="_Sgr0UKqwEeuRiIRzpnEATQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_nAnpULJdEeuzVqzP0AhEww" name="A-Requirements">
+    <packagedElement xmi:type="uml:Package" xmi:id="_aDLeAKA_EeuTlOifvX46DQ" name="QualityAttributes">
+      <packagedElement xmi:type="uml:Package" xmi:id="_qfmlwJxxEeuSfsyhIF5DRw" name="Modifiability">
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_sge4YJxxEeuSfsyhIF5DRw" name="QAS1">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_upi2oJxxEeuSfsyhIF5DRw">
+            <body>. A new business partner (airline, lodging, or activity provider) that uses its own web services interface is added to the system in no more than 10 person-days of effort for the implementation. The business goal is easy integration with new business partners.</body>
+          </ownedComment>
+          <ownedComment xmi:type="uml:Comment" xmi:id="_rXeY4J3lEeuOqPdFuM_jqA" annotatedElement="_sge4YJxxEeuSfsyhIF5DRw">
+            <body></body>
+          </ownedComment>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_xV_10JxxEeuSfsyhIF5DRw" name="Performance">
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_yQDDQJxxEeuSfsyhIF5DRw" name="QAS2">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_1RBg8JxxEeuSfsyhIF5DRw">
+            <body> A user places an order for an adventure travel package to the Consumer Web site. The user is notified on screen that the order has been successfully submitted and is being processed in less than five seconds.</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_15TB4JxxEeuSfsyhIF5DRw" name="QAS3">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_4xzgEJxxEeuSfsyhIF5DRw">
+            <body> Up to 500 users click to see the catalog of adventure packages following a random distribution over 1 minute; the system is under normal operating conditions; the maximal latency to serve the first page of content is under 5 seconds; average latency for same is less than 2 seconds.</body>
+          </ownedComment>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_5KAksJxxEeuSfsyhIF5DRw" name="Reliability">
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_6D6BIJxxEeuSfsyhIF5DRw" name="AQS4">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_8fc2gJxxEeuSfsyhIF5DRw">
+            <body> The Consumer Web site sent a purchase order request to the order processing center (OPC). The OPC processed that request but didnât reply to Consumer Web site within five seconds, so the Consumer Web site resends the request to the OPC. The OPC receives the duplicate request, but the consumer is not double-charged, data remains in a consistent state, and the Consumer Web site is notified that the original request was successful in one hundred percent of the times.</body>
+          </ownedComment>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_8rK-UJxxEeuSfsyhIF5DRw" name="Security">
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_9bCVAJxxEeuSfsyhIF5DRw" name="QAS5">
+          <ownedComment xmi:type="uml:Comment" xmi:id="__vfD4JxxEeuSfsyhIF5DRw">
+            <body> Credit approval and payment processing are requested for a new order. In one hundred percent of the cases, the transaction is completed securely and cannot be repudiated by either party. The business goals are to provide customers and business partners confidence in security and to meet contractual, legal, and regulatory obligations for secure credit transactions.</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_AAWxcJxyEeuSfsyhIF5DRw" name="QAS6">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_GT2IwJxyEeuSfsyhIF5DRw">
+            <body>The OPC experiences a flood of calls through the Web Service Broker endpoint that do not correspond to any current orders. In one hundred percent of the times, the system detects the abnormal level of activity, notifies the system administrator, and continues to service requests in a degraded mode.</body>
+          </ownedComment>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Gl_BoJxyEeuSfsyhIF5DRw" name="Availability">
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_H1h98JxyEeuSfsyhIF5DRw" name="QAS7">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_MO_RgJxyEeuSfsyhIF5DRw">
+            <body>The Consumer Web site is available to the user 24x7. If an instance of OPC application fails, the fault is detected and the system administrator is notified in 30 seconds; the system continues taking order requests; another OPC instance is created; and data remains in consistent state.</body>
+          </ownedComment>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_XI_vsJxsEeuSfsyhIF5DRw" name="UseCases">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_RFRrAJxyEeuSfsyhIF5DRw">
+        <body>The system used as an example in this architecture document is an adapted version of the Adventure Builder Reference application, which was developed in the context of the Java BluePrints program at Sun Microsystems. This application was chosen because the functionality is easy to understand, and the source code, documentation, and other artifacts are publicly available for download. Also available is a book on Web services that explains the design and implementation of the application [Singh 2004].
+
+	The architecture documented here does not reflect exactly the implementation provided by Sun. To make it a more interesting and realistic example of an SOA solution, we made several assumptions about the business context and requirements of the system, and documented design elements and relations that deviate from the original implementation. Click for more information.</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="__l3FsKqGEeuoXa-x57iZ9g">
+        <body>Use case comment
+</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_CgvOQKF6Eeu26-oh2DfeGg" client="_upsdEJxwEeuSfsyhIF5DRw" supplier="_v1zD0JxwEeuSfsyhIF5DRw"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_VMQWMJxsEeuSfsyhIF5DRw" name="Vacationer">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_BYpMAKBBEeuTlOifvX46DQ">
+          <body>The user can visit the Adventure Builder Web site and browse the catalog of travel packages, which include flights to specific destinations, lodging options, and activities that can be purchased in advance. Activities include mountain biking, fishing, surfing classes, hot air balloon tours, and scuba diving. The user can select transportation, accommodation, and various activities to build his/her own adventure trip.&lt;br>
+&lt;br>
+The user can place an order for a vacation package. To process this order, the system has to interact with several external entities. A bank will approve the customer payment, airline companies will provide the flights, lodging providers will book the hotel rooms, and businesses that provide vacation activities will schedule the activities selected by the customer.&lt;br>
+&lt;br>
+After an order is placed, the user can return to check the status of his/her order. This is necessary because some interactions with external entities are processed in the background and may take hours or days to complete.&lt;br>
+&lt;br>
+The internal system periodically interacts with its business partners (transportation, lodging, and activity providers) to update the catalog with the most recent offerings.&lt;br></body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_TcZlUJxwEeuSfsyhIF5DRw" client="_VMQWMJxsEeuSfsyhIF5DRw" supplier="_WVLtIJxsEeuSfsyhIF5DRw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_Jxvd4JxwEeuSfsyhIF5DRw" client="_VMQWMJxsEeuSfsyhIF5DRw" supplier="_WBk0oJxsEeuSfsyhIF5DRw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_upsdEJxwEeuSfsyhIF5DRw" client="_VMQWMJxsEeuSfsyhIF5DRw" supplier="_UwcAEJxwEeuSfsyhIF5DRw"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_tSfeIKtZEeu0lKn_g5KS9g" name="Adventure Builder System">
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_WVLtIJxsEeuSfsyhIF5DRw" name="UC2 Order travel package">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_P7fqYJxwEeuSfsyhIF5DRw">
+            <body> The user can place an order for a vacation package. To process this order, the system has to interact with several external entities. A bank will approve the customer payment, airline companies will provide the flights, lodging providers will book the hotel rooms, and businesses that provide vacation activities will schedule the activities selected by the customer.
+</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_WBk0oJxsEeuSfsyhIF5DRw" name="UC01 Browse Cataloog" classifierBehavior="_-_UvEJxtEeuSfsyhIF5DRw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="__NwhwJxvEeuSfsyhIF5DRw" annotatedElement="_WBk0oJxsEeuSfsyhIF5DRw">
+            <body> The user can visit the Adventure Builder Web site and browse the catalog of travel packages, which include flights to specific destinations, lodging options, and activities that can be purchased in advance. Activities include mountain biking, fishing, surfing classes, hot air balloon tours, and scuba diving. </body>
+          </ownedComment>
+          <ownedBehavior xmi:type="uml:Activity" xmi:id="_-_UvEJxtEeuSfsyhIF5DRw" name="Activity1">
+            <ownedBehavior xmi:type="uml:Activity" xmi:id="_BIAS0JxuEeuSfsyhIF5DRw" name="Activity1"/>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:Activity" xmi:id="_nUvFILHOEeuKIJSoFyOasw" name="Activity3" node="_43d8ELHOEeuKIJSoFyOasw _R2T_QLHPEeuKIJSoFyOasw" group="_syIh8LHOEeuKIJSoFyOasw _-ITjkLHOEeuKIJSoFyOasw">
+            <group xmi:type="uml:ActivityPartition" xmi:id="_syIh8LHOEeuKIJSoFyOasw" name="ConsumerWebSite" node="_43d8ELHOEeuKIJSoFyOasw" represents="_UnV-cKzXEeupJ6VLaAK0uw"/>
+            <group xmi:type="uml:ActivityPartition" xmi:id="_-ITjkLHOEeuKIJSoFyOasw" name="AdventureCatalogueDB" node="_R2T_QLHPEeuKIJSoFyOasw" represents="_1KPvILGcEeu7JNy5ze6hKw"/>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_43d8ELHOEeuKIJSoFyOasw" name="browseCatalogue" inPartition="_syIh8LHOEeuKIJSoFyOasw"/>
+            <node xmi:type="uml:OpaqueAction" xmi:id="_R2T_QLHPEeuKIJSoFyOasw" name="getPackages" inPartition="_-ITjkLHOEeuKIJSoFyOasw"/>
+          </ownedBehavior>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_UwcAEJxwEeuSfsyhIF5DRw" name="UC3 Track order">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_raOQYJxwEeuSfsyhIF5DRw" annotatedElement="_UwcAEJxwEeuSfsyhIF5DRw">
+            <body>After an order is placed, the user can return to check the status of his/her order. This is necessary because some interactions with external entities are processed in the background and may take hours or days to complete.</body>
+          </ownedComment>
+          <ownedComment xmi:type="uml:Comment" xmi:id="_sgjmUJxwEeuSfsyhIF5DRw">
+            <body> After an order is placed, the user can return to check the status of his/her order. This is necessary because some interactions with external entities are processed in the background and may take hours or days to complete.</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:UseCase" xmi:id="_v1zD0JxwEeuSfsyhIF5DRw" name="UC4 Update Catalogue">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_WdcfAJxxEeuSfsyhIF5DRw">
+            <body>The internal system periodically interacts with its business partners (transportation, lodging, and activity providers) to update the catalog with the most recent offerings.</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_QbirgKtaEeu0lKn_g5KS9g" client="_WVLtIJxsEeuSfsyhIF5DRw" supplier="_FaFJMKtaEeu0lKn_g5KS9g"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_RgorUKtaEeu0lKn_g5KS9g" client="_WVLtIJxsEeuSfsyhIF5DRw" supplier="_IPU4AKtaEeu0lKn_g5KS9g"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_SJy9EKtaEeu0lKn_g5KS9g" client="_WVLtIJxsEeuSfsyhIF5DRw" supplier="_JExSQKtaEeu0lKn_g5KS9g"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_Tv4KEKtaEeu0lKn_g5KS9g" client="_WVLtIJxsEeuSfsyhIF5DRw" supplier="_MrTUEKtaEeu0lKn_g5KS9g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_FaFJMKtaEeu0lKn_g5KS9g" name="Bank"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_IPU4AKtaEeu0lKn_g5KS9g" name="Airline"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_JExSQKtaEeu0lKn_g5KS9g" name="Lodging Provider"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_MrTUEKtaEeu0lKn_g5KS9g" name="Acitivy Provider"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_VSHY4KtaEeu0lKn_g5KS9g" client="_IPU4AKtaEeu0lKn_g5KS9g" supplier="_v1zD0JxwEeuSfsyhIF5DRw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_WF_F0KtaEeu0lKn_g5KS9g" client="_JExSQKtaEeu0lKn_g5KS9g" supplier="_v1zD0JxwEeuSfsyhIF5DRw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_XAUAEKtaEeu0lKn_g5KS9g" client="_MrTUEKtaEeu0lKn_g5KS9g" supplier="_v1zD0JxwEeuSfsyhIF5DRw"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_C7EjgKwzEeuvFofxKfAIgw" name="AdventureBuilderSystem"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_LWgewKwzEeuvFofxKfAIgw" name="periodicUpdate"/>
     </packagedElement>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_RkIY8JxsEeuSfsyhIF5DRw">
