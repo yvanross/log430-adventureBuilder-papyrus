@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_RhFsAJxsEeuSfsyhIF5DRw" name="AdventureBuilderSystem" URI="">
   <ownedComment xmi:type="uml:Comment" xmi:id="_1tligKtWEeu0lKn_g5KS9g" annotatedElement="_RhFsAJxsEeuSfsyhIF5DRw">
-    <body>1-&lt;h1>Rationale&lt;/h1></body>
-  </ownedComment>
-  <ownedComment xmi:type="uml:Comment" xmi:id="_2TJGoKtWEeu0lKn_g5KS9g" annotatedElement="_RhFsAJxsEeuSfsyhIF5DRw">
-    <body>   * We have chosen a Service Oriented Architecture for the Adventure Builder because we desire a high degree of interoperability between internal and external entities in the system. This gives us a great deal of flexibility in terms of implementation platforms.
+    <body>&lt;h1>Rationale&lt;/h1>  
+&lt;ul>
+&lt;li>We have chosen a Service Oriented Architecture for the Adventure Builder because we desire a high degree of interoperability between internal and external entities in the system. This gives us a great deal of flexibility in terms of implementation platforms.&lt;/li>
+	&lt;ul>
+		&lt;li>Internally, it's possible, for example, to reimplement and deploy Consumer Website using .NET. OPC doesn't have to change because the SOAP Web services communication allows such level of interoperability.&lt;/li>
+		&lt;li>For example, the Airline Provider component may be implemented using Java, PHP, .NET, IBM CICS or any other technology that supports SOAP web services.&lt;/li>
+	&lt;ul>
+	&lt;li>We chose to implement the service registry using a simple data repository because of ease of implementation. Creating a UDDI registry was an alternative that was rejected because it would bring increased complexity with no apparent benefit, given that the repository is only queried internally (using a standard format is more relevant when the registry will be accessed by external players).&lt;/li>
+&lt;/ul>
+&lt;h1>&lt;a href=&quot;https://wiki.sei.cmu.edu/confluence/display/SAD/Adventure+Builder+Data+Model&quot;>https://wiki.sei.cmu.edu/confluence/display/SAD/Adventure+Builder+Data+Model&lt;/h1>
+ &lt;ul>
+	&lt;li>We have also a clear separation between the user interface and the business logic. The Consumer Website (user interface) and OPC (business logic) are two separate applications that together implement the functionality described in the System Overview.&lt;/li>
+&lt;/ul>
+
+
 </body>
-  </ownedComment>
-  <ownedComment xmi:type="uml:Comment" xmi:id="_CMyOIKtXEeu0lKn_g5KS9g" annotatedElement="_RhFsAJxsEeuSfsyhIF5DRw">
-    <body>      * Internally, it's possible, for example, to reimplement and deploy Consumer Website using .NET. OPC doesn't have to change because the SOAP Web services communication allows such level of interoperability.</body>
-  </ownedComment>
-  <ownedComment xmi:type="uml:Comment" xmi:id="__BQtUKtWEeu0lKn_g5KS9g" annotatedElement="_RhFsAJxsEeuSfsyhIF5DRw">
-    <body>      * For example, the Airline Provider component may be implemented using Java, PHP, .NET, IBM CICS or any other technology that supports SOAP web services.</body>
-  </ownedComment>
-  <ownedComment xmi:type="uml:Comment" xmi:id="_HySeEKtXEeu0lKn_g5KS9g" annotatedElement="_RhFsAJxsEeuSfsyhIF5DRw">
-    <body>   * We chose to implement the service registry using a simple data repository because of ease of implementation. Creating a UDDI registry was an alternative that was rejected because it would bring increased complexity with no apparent benefit, given that the repository is only queried internally (using a standard format is more relevant when the registry will be accessed by external players).</body>
-  </ownedComment>
-  <ownedComment xmi:type="uml:Comment" xmi:id="_hG7LEKtXEeu0lKn_g5KS9g" annotatedElement="_RhFsAJxsEeuSfsyhIF5DRw">
-    <body>2-https://wiki.sei.cmu.edu/confluence/display/SAD/Adventure+Builder+Data+Model</body>
-  </ownedComment>
-  <ownedComment xmi:type="uml:Comment" xmi:id="_Nkbb0KtXEeu0lKn_g5KS9g" annotatedElement="_RhFsAJxsEeuSfsyhIF5DRw">
-    <body>   * We have also a clear separation between the user interface and the business logic. The Consumer Website (user interface) and OPC (business logic) are two separate applications that together implement the functionality described in the System Overview.</body>
   </ownedComment>
   <packagedElement xmi:type="uml:Model" xmi:id="_FJkKUKF9Eeu26-oh2DfeGg" name="D-C&amp;C">
     <ownedComment xmi:type="uml:Comment" xmi:id="_USJqYKqOEeu804Hdqgji2A">
@@ -77,9 +73,9 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_GnNOwKIGEeuZV_N0fPslHQ" name="AdvendureOPCDB">
       <ownedComment xmi:type="uml:Comment" xmi:id="_jKOt4KIHEeu6gtGP4fC_Vw">
-        <body>This relational database stores purchase orders, invoices coming from the external suppliers and related information. The database server is MySQL configured to use the InnoDB engine.
+        <body>&lt;p>This relational database stores purchase orders, invoices coming from the external suppliers and related information. The database server is MySQL configured to use the InnoDB engine.&lt;/p>
 
-Variability guide 
+&lt;h2>Variability guide &lt;/h2>
 To configure data storage such that it supports different database vendors, we don't want to use any SQL statements in our queries that use vendor specific syntax and can potentially hinder migrating databases. We also use the DAO pattern to abstract away clients from accessing data directly.
 </body>
       </ownedComment>
@@ -420,11 +416,10 @@ https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=146280255</body
       <body>https://wiki.sei.cmu.edu/confluence/display/SAD/Top+Level+Module+Uses+View</body>
     </ownedComment>
     <packagedElement xmi:type="uml:Package" xmi:id="_-6ES0KHXEeuolPkAC7VaLg" name="BankCreditCardService">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_GfHjMKHZEeuolPkAC7VaLg">
-        <body>This module represents an external service provided by a partner bank to validate credit card transactions.</body>
-      </ownedComment>
       <ownedComment xmi:type="uml:Comment" xmi:id="_es60gKtcEeu0lKn_g5KS9g" annotatedElement="_-6ES0KHXEeuolPkAC7VaLg">
-        <body>Must support mecanism to connect Adventure builder to multiple bank service provider for billing purpose</body>
+        <body>Must support mecanism to connect Adventure builder to multiple bank service provider for billing purpose&lt;br>
+&lt;br>
+This module represents an external service provided by a partner bank to validate credit card transactions.</body>
       </ownedComment>
       <packagedElement xmi:type="uml:Interface" xmi:id="_s6MaAKIxEeuQ_fGpHvaisg" name="ICreditCardService">
         <ownedOperation xmi:type="uml:Operation" xmi:id="_mKHxUKzaEeupJ6VLaAK0uw" name="checkBalance"/>
@@ -711,6 +706,12 @@ https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=146280255</body
           <ownedComment xmi:type="uml:Comment" xmi:id="_0-kNMKI-EeuUmPKl3HIBrg">
             <body>A hotel, guesthouse or B&amp;B that can be used for lodging in our travel packages. For each type of lodging, we store name, description, location info, room description, rates.</body>
           </ownedComment>
+          <ownedComment xmi:type="uml:Comment" xmi:id="_uuKI8NkOEeuNgpEcYqPK5w" annotatedElement="_s1Y8EKI9EeunXvFhYSwR_g">
+            <body>&lt;ul>
+&lt;li>item 1&lt;/li>
+&lt;li>item2&lt;/li>
+&lt;/ul></body>
+          </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_C0dt8KxvEeupJ6VLaAK0uw" name="location" visibility="public">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedAttribute>
@@ -762,9 +763,6 @@ https://wiki.sei.cmu.edu/confluence/pages/viewpage.action?pageId=146280255</body
           </ownedAttribute>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_oECF4KI9EeunXvFhYSwR_g" name="PurchaseOrder">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_1pUuYLJ5EeuzVqzP0AhEww" annotatedElement="_oECF4KI9EeunXvFhYSwR_g">
-            <body></body>
-          </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_EMK1QqI-EeunXvFhYSwR_g" name="orderstatushistory" type="_iGskwKI9EeunXvFhYSwR_g" association="_EMKOMKI-EeunXvFhYSwR_g">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EMMqcKI-EeunXvFhYSwR_g"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EMOfoKI-EeunXvFhYSwR_g" value="*"/>
@@ -867,40 +865,40 @@ Each transportation entry is a flight available for booking in our travel packag
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_Kb5XQKHYEeuolPkAC7VaLg" name="Gwt">
       <ownedComment xmi:type="uml:Comment" xmi:id="_EPwIoKHZEeuolPkAC7VaLg">
-        <body>Google Web Toolkit (gwt) is an open source framework for development of rich internet applications based on Ajax.
-
-Rational
-   * The GWT framework was chosen for the following reasons:
-   * It is open source, which allows us to go under the hood and fix things when needed.
-   * It provides a rich development environment with powerful trace/debug, IDE integration and build management.
-   * It integrates well with any other frontend technologies since it does not use proprietary standards.
-   * It offers powerful widget construction features.
-   * There are several extension libraries of widget components available.
-   * Code is written in Java (and translated to JavaScript during build), which is an OO language that is familiar to the majority of the team.
-   * Code is compiled into Javascript, which is available on a very high percentage of browsers.
-   * It has a reasonably large support community and is backed by a major player in the industry (Google).
-
-The table below shows the comparative analysis of GWT and competing technologies based on the specific needs of our project.</body>
+        <body>Google Web Toolkit (gwt) is an open source framework for development of rich internet applications based on Ajax.&lt;br>
+&lt;h1>Rational&lt;/h1>
+&lt;h2>The GWT framework was chosen for the following reasons:&lt;/h2>
+&lt;ul>
+   &lt;li>It is open source, which allows us to go under the hood and fix things when needed.&lt;/li>
+   &lt;li>It provides a rich development environment with powerful trace/debug, IDE integration and build management.&lt;/li>
+   &lt;li>It integrates well with any other frontend technologies since it does not use proprietary standards.&lt;/li>
+   &lt;li>It offers powerful widget construction features.&lt;/li>
+   &lt;li>There are several extension libraries of widget components available.&lt;/li>
+   &lt;li>Code is written in Java (and translated to JavaScript during build), which is an OO language that is familiar to the majority of the team.&lt;/li>
+   &lt;li>Code is compiled into Javascript, which is available on a very high percentage of browsers.&lt;/li>
+   &lt;li>It has a reasonably large support community and is backed by a major player in the industry (Google).&lt;/li>
+&lt;/ul>
+&lt;br>
+The table below shows the comparative analysis of GWT and competing technologies based on the specific needs of our project.&lt;br>
+&lt;a href=&quot;http://www.etsmtl.ca'>etsmtl.ca&lt;/a></body>
       </ownedComment>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_K_gaoKHYEeuolPkAC7VaLg" name="waf">
       <ownedComment xmi:type="uml:Comment" xmi:id="_FaQM4KHZEeuolPkAC7VaLg">
-        <body>Waf stands for Web Application Framework. It is a Model View Controller framework similar to Struts. It allows you to specify in configuration files the web screens and action that are associated to user clicks on specific elements of the screen. The configuration file has the mapping of screens and actions to Java classes. The framework provides the engine to display the proper screens and invoke the proper actions.
+        <body>Waf stands for Web Application Framework. It is a Model View Controller framework similar to Struts. It allows you to specify in configuration files the web screens and action that are associated to user clicks on specific elements of the screen. The configuration file has the mapping of screens and actions to Java classes. The framework provides the engine to display the proper screens and invoke the proper actions.&lt;br>
 
-Rationale
-The WAF framework was chosen because it facilitates the implementation of the Consumer Website code by providing template classes for using the MVC pattern. For a given user operation, the developer implements an action class (controller) and JSP pages that correspond to the user screens (view). The developer also uses configuration files to provide a configurable mapping between actions, action classes, events and screens. The WAF infrastructure can then automatically take http requests and invoke the action classes and JSP screens. WAF also provides support for event-based communication and internationalization.
+&lt;h1>Rationale&lt;/h1>
+The WAF framework was chosen because it facilitates the implementation of the Consumer Website code by providing template classes for using the MVC pattern. For a given user operation, the developer implements an action class (controller) and JSP pages that correspond to the user screens (view). The developer also uses configuration files to provide a configurable mapping between actions, action classes, events and screens. The WAF infrastructure can then automatically take http requests and invoke the action classes and JSP screens. WAF also provides support for event-based communication and internationalization.&lt;br>
 
-WAF also provides support for event-based communication and internationalization.
+WAF also provides support for event-based communication and internationalization.&lt;br>
 
 An alternative to WAF was to use the Spring framework. Spring was a more robust and rich solution from a technical standpoint, but it was rejected because the development team is not familiar with Spring and very familiar with WAF.</body>
       </ownedComment>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_NR9lcKHYEeuolPkAC7VaLg" name="Util">
       <ownedComment xmi:type="uml:Comment" xmi:id="__tT4MKHYEeuolPkAC7VaLg">
-        <body>This module contains utilities used by the Adventure Builder system.</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_q43KkK2ZEeuV78vPDIdleQ">
-        <body>See JMS tutorial at </body>
+        <body>This module contains utilities used by the Adventure Builder system.&lt;br>
+See JMS tutorial at </body>
       </ownedComment>
       <packagedElement xmi:type="uml:Package" xmi:id="_kGLkIKHYEeuolPkAC7VaLg" name="Dao">
         <ownedComment xmi:type="uml:Comment" xmi:id="_AyjB8KHZEeuolPkAC7VaLg">
@@ -921,20 +919,14 @@ An alternative to WAF was to use the Spring framework. Spring was a more robust 
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_1UgsQKFzEeu26-oh2DfeGg" name="OPCApp">
       <ownedComment xmi:type="uml:Comment" xmi:id="_-iRocKHYEeuolPkAC7VaLg">
-        <body>OpcApp stands for Order Processing Center Application. The business logic of the Adventure Builder is implemented in this module. It provides the following functionality:
-   * Accepting purchase order requests from the ConsumerWebsite for processing by hosting the Purchase Order Web Service
-   * Provide a mechanism for the Consumer Website to query the current status of a purchase order by hosting the Order Tracking Web Service
-   * Communicate with external suppliers to process and maintain the status of a purchase order.
-   * Upon completion of processing a purchase order, send an email to the customer of its success or failure.
-
+        <body>OpcApp stands for Order Processing Center Application. The business logic of the Adventure Builder is implemented in this module. It provides the following functionality:&lt;br>
+&lt;ul>
+&lt;li>Accepting purchase order requests from the ConsumerWebsite for processing by hosting the Purchase Order Web Service&lt;/li>
+&lt;li>Provide a mechanism for the Consumer Website to query the current status of a purchase order by hosting the Order Tracking Web Service&lt;/li>
+&lt;li>Communicate with external suppliers to process and maintain the status of a purchase order.&lt;/li>
+ &lt;li>Upon completion of processing a purchase order, send an email to the customer of its success or failure.&lt;/li>
+&lt;/ul>
 A module decomposition refined view and a module uses refined view of OpcApp are available.</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_f0LMUKHsEeu0VdhtLJh5Nw" annotatedElement="_-miRQKFzEeu26-oh2DfeGg _aCq2QKF0Eeu26-oh2DfeGg">
-        <body>All other modules within Opc dan use these modules
-</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_I-q00KtbEeu0lKn_g5KS9g" annotatedElement="_1UgsQKFzEeu26-oh2DfeGg">
-        <body></body>
       </ownedComment>
       <packagedElement xmi:type="uml:Package" xmi:id="_1txZcKF2Eeu26-oh2DfeGg" name="ServiceLocator">
         <ownedComment xmi:type="uml:Comment" xmi:id="_b0OgcKqpEeuRiIRzpnEATQ">
@@ -954,16 +946,12 @@ A module decomposition refined view and a module uses refined view of OpcApp are
             <body>This is the Customer Relationship Manager (CRM) module. The job of this module is to send out an email once an order has been completely and successfully processed. It is implemented as a message-driven bean. In the future this module can hold additional information about customers that could assist in providing the customers with a better experience. This could include things like a history of a particular customer's purchases, or sending out periodic emails to customers regarding new and fresh deals.</body>
           </ownedComment>
           <ownedComment xmi:type="uml:Comment" xmi:id="_25COgKtBEeuKYIiqG3jlgQ" annotatedElement="_4c4LYKFzEeu26-oh2DfeGg">
-            <body>For each EJb, a pool of bean instances is provided by the application server. There are three parameters that can be configured separately for each EJB via deployment descriptor:</body>
-          </ownedComment>
-          <ownedComment xmi:type="uml:Comment" xmi:id="_3uIDcKtBEeuKYIiqG3jlgQ" annotatedElement="_4c4LYKFzEeu26-oh2DfeGg">
-            <body>   * minimum (and initial) number of bean instances in the pool</body>
-          </ownedComment>
-          <ownedComment xmi:type="uml:Comment" xmi:id="_38WFoKtBEeuKYIiqG3jlgQ" annotatedElement="_4c4LYKFzEeu26-oh2DfeGg">
-            <body>   * maximum number of bean instances in the pool</body>
-          </ownedComment>
-          <ownedComment xmi:type="uml:Comment" xmi:id="_4Kq1gKtBEeuKYIiqG3jlgQ" annotatedElement="_4c4LYKFzEeu26-oh2DfeGg">
-            <body>   * timeout for an idle instance to be passivated or deleted</body>
+            <body>For each EJb, a pool of bean instances is provided by the application server. There are three parameters that can be configured separately for each EJB via deployment descriptor:&lt;br>
+&lt;ul>
+&lt;li>minimum (and initial) number of bean instances in the pool&lt;/li>
+&lt;li>maximum number of bean instances in the pool&lt;/li>
+&lt;li>timeout for an idle instance to be passivated or deleted&lt;/li>
+&lt;/ul></body>
           </ownedComment>
           <packagedElement xmi:type="uml:Class" xmi:id="_MU1s8KF3Eeu26-oh2DfeGg" name="CrmBean">
             <ownedComment xmi:type="uml:Comment" xmi:id="_76OCsKF4Eeu26-oh2DfeGg">
@@ -971,7 +959,8 @@ A module decomposition refined view and a module uses refined view of OpcApp are
 </body>
             </ownedComment>
             <ownedComment xmi:type="uml:Comment" xmi:id="_sb9LoKtBEeuKYIiqG3jlgQ" annotatedElement="_MU1s8KF3Eeu26-oh2DfeGg">
-              <body>This component is used for customer relationship management. For this application it is only used to communicate with the user. It reads messages from a queue, creates the corresponding email messages according to templates and I18N requirements, and sent them to users.</body>
+              <body>&lt;p>This class is a message-driven bean. It is responsible for handling the communication with customers via email.&lt;/p>
+&lt;p>This component is used for customer relationship management. For this application it is only used to communicate with the user. It reads messages from a queue, creates the corresponding email messages according to templates and I18N requirements, and sent them to users.&lt;/p></body>
             </ownedComment>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_cge1IKF3Eeu26-oh2DfeGg" client="_MU1s8KF3Eeu26-oh2DfeGg" supplier="_UkcysKF3Eeu26-oh2DfeGg" contract="_UkcysKF3Eeu26-oh2DfeGg"/>
           </packagedElement>
@@ -1170,7 +1159,8 @@ A module decomposition refined view and a module uses refined view of OpcApp are
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_5nQT0KFzEeu26-oh2DfeGg" name="Financial">
           <ownedComment xmi:type="uml:Comment" xmi:id="_AbndwKHbEeuolPkAC7VaLg">
-            <body>The financial module is responsible for verifying and charging the customer's credit card. For this purpose it calls the external web services provided by the bank. The verification of the credit card happens in asynchronous manner and the OPC application waits for the external web service to reply before moving on. If the response from the banking service is not positive, the OPC application does not further process the order.</body>
+            <body>The financial module is responsible for verifying and charging the customer's credit card. &lt;br>
+For this purpose it calls the external web services provided by the bank. The verification of the credit card happens in asynchronous manner and the OPC application waits for the external web service to reply before moving on. If the response from the banking service is not positive, the OPC application does not further process the order.</body>
           </ownedComment>
           <packagedElement xmi:type="uml:Class" xmi:id="_h6QWMKF3Eeu26-oh2DfeGg" name="CreditCardVerifier">
             <ownedComment xmi:type="uml:Comment" xmi:id="_9Y5nMKF4Eeu26-oh2DfeGg">
@@ -1194,36 +1184,34 @@ OpcPurchaseOrderService interface documentation</body>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_2F-P4KHrEeu0VdhtLJh5Nw" name="jsm send" client="_7mSzYKFzEeu26-oh2DfeGg" supplier="_3MZ-YKHpEeuolPkAC7VaLg"/>
           <packagedElement xmi:type="uml:Interface" xmi:id="_KcfnoKHtEeu0VdhtLJh5Nw" name="IOpcPurchaseOrderService">
             <ownedComment xmi:type="uml:Comment" xmi:id="_7ID58KzREeupJ6VLaAK0uw">
-              <body>Error handling
-The exceptions raised by this interface are:
-   * InvalidPOException. The service throws this exception if the purchase order is null, or if any of the components that make up the purchase order are null.
-   * ProcessingException. If the processing of the purchase order fails after it has passed its validation, i.e. there is no InvalidPOException, then a ProcessingException is thrown. This indicates that the purchase order is valid but something has gone wrong while placing the order.
-   * RemoteException. A RemoteException is thrown when there is an error in connection.
+              <body>&lt;h1>Error handling&lt;/h1>
+The exceptions raised by this interface are:&lt;br>
+&lt;ul>
+&lt;li>&lt;b>InvalidPOException&lt;/b>: The service throws this exception if the purchase order is null, or if any of the components that make up the purchase order are null.&lt;/li>
+&lt;li>&lt;b>ProcessingException&lt;/b>: If the processing of the purchase order fails after it has passed its validation, i.e. there is no InvalidPOException, then a ProcessingException is thrown. This indicates that the purchase order is valid but something has gone wrong while placing the order.&lt;/li>
+&lt;li>&lt;b>RemoteException&lt;/b>: A RemoteException is thrown when there is an error in connection.&lt;/li>
+&lt;/ul>
 
-Quality attribute characteristics of the interface
-   * Scalability. This interface is internally implemented using Enterprise Java Beans and therefore it is scalable (allows scaling of number of requests it can handle). Also, this service is asynchronous in nature, which means the client can continue after making a call to it.
-   * Security. Security is important since credit card information is part of the PurchaseOrder argument. We choose https for our security requirements because that increases inter-operability (TODO: Not sure if this is a good enough reason, although we did use web services to increase inter-operability. So, in that sense it is a valid reason).
+&lt;h2>Quality attribute characteristics of the interface&lt;/h2>
+&lt;ul>
+&lt;li>&lt;b>Scalability&lt;/b>: This interface is internally implemented using Enterprise Java Beans and therefore it is scalable (allows scaling of number of requests it can handle). Also, this service is asynchronous in nature, which means the client can continue after making a call to it.&lt;/li>
+&lt;li>&lt;b>Security&lt;/b>: Security is important since credit card information is part of the PurchaseOrder argument. We choose https for our security requirements because that increases inter-operability (TODO: Not sure if this is a good enough reason, although we did use web services to increase inter-operability. So, in that sense it is a valid reason).&lt;/li>
+&lt;/ul>
 
-Rationale and design issues
+&lt;h1>Rationale and design issues&lt;/h1>
+Java-WSDL approach for design of interface&lt;br>
+We chose the Java-WSDL approach for design of this interface because we don't care much for the stability of the web service. This is because both the consumer website and the order processing center reside in the same enterprise.&lt;br>
 
-Java-WSDL approach for design of interface
-
-We chose the Java-WSDL approach for design of this interface because we don't care much for the stability of the web service. This is because both the consumer website and the order processing center reside in the same enterprise.
-Using the EJB endpoint type
-
-We chose the EJB endpoint type because the order processing center is implemented using a set of session beans.
-
-Coarse-grained granularity of service
-
-Currently we only expose placing a purchase order as a single web service that includes placing orders for activities, transportation and lodging. We don't provide these services individually and hence have no reason to provide fine-grained versions of the web services.
-
-Using JAX-RPC for passing parameters
-
-Since the consumer website and the order processing center reside in the same enterprise, we avoid using complex XML processing and pass parameters as Java objects. The return type is a simple String that is the purchase order's unique id.
-
-Publishing the web service as a WSDL
-
-This web service is published as a WSDL in a well known location since it is not available for general public use. It is only used by the consumer website.</body>
+&lt;h1>Using the EJB endpoint type&lt;/h1>
+&lt;ul>
+&lt;li>We chose the EJB endpoint type because the order processing center is implemented using a set of session beans.&lt;/li>
+&lt;li>Coarse-grained granularity of service&lt;/li>
+&lt;li>Currently we only expose placing a purchase order as a single web service that includes placing orders for activities, transportation and lodging. We don't provide these services individually and hence have no reason to provide fine-grained versions of the web services.&lt;/li>
+&lt;li>Using JAX-RPC for passing parameters&lt;/li>
+&lt;li>Since the consumer website and the order processing center reside in the same enterprise, we avoid using complex XML processing and pass parameters as Java objects. The return type is a simple String that is the purchase order's unique id.&lt;/li>
+&lt;li>Publishing the web service as a WSDL&lt;/li>
+&lt;/ul>
+&lt;p>This web service is published as a WSDL in a well known location since it is not available for general public use. It is only used by the consumer website.&lt;/p></body>
             </ownedComment>
             <ownedOperation xmi:type="uml:Operation" xmi:id="__I45QKxcEeujpMJNY2oXzg" name="submitPurchaseOrder">
               <ownedComment xmi:type="uml:Comment" xmi:id="_Ng_AMKxdEeujpMJNY2oXzg" annotatedElement="__I45QKxcEeujpMJNY2oXzg">
@@ -1253,19 +1241,25 @@ This web service is published as a WSDL in a well known location since it is not
               <ownedComment xmi:type="uml:Comment" xmi:id="_JQcQsKxgEeupJ6VLaAK0uw" annotatedElement="_7MaxwKxeEeupJ6VLaAK0uw">
                 <body>Cancel the given purchase order. The operation returns true if the order was canceled successfully; it returns false when the purchase order processing is in a state where some bookings are already confirmed and cannot be canceled.
 &lt;br/>
-&lt;b>Pre-conditions&lt;/b>
-   * The orderId argument is not null and corresponds to an existing purchase order.
-&lt;br/>
-&lt;b>Post-conditions&lt;/b>
-   * If the operation returns true, the order is canceled and all reservations corresponding to this order are canceled. Charges to the customer credit card, if any were made, are also canceled.
-   * If the operation returns false, the state of the order remains unchanged.
-&lt;br/>
-&lt;b>Usage restrictions&lt;/b>
-   * Authorization. This operation can only be called by a signed in user. A customer user can only cancel purchase orders he created. A sales representative user can cancel any order.
-&lt;br/>
-&lt;b>Error handling&lt;/b>
-   * &lt;b>InvalidPOException.&lt;/b> The service throws this exception if the order ID is null or the corresponding order doesn't exist.
-   * &lt;b>ProcessingException.&lt;/b> Thrown if the order exists but is already canceled.</body>
+&lt;h2>Pre-conditions&lt;/h2>
+&lt;ul>
+   &lt;li>The orderId argument is not null and corresponds to an existing purchase order.&lt;/li>
+&lt;/ul>
+&lt;h2>Post-conditions&lt;/h2>
+&lt;ul>
+&lt;li>If the operation returns true, the order is canceled and all reservations corresponding to this order are canceled. Charges to the customer credit card, if any were made, are also canceled.&lt;/li>
+&lt;li>If the operation returns false, the state of the order remains unchanged.&lt;/li>
+&lt;/ul>
+&lt;h2>Usage restrictions&lt;/h2>
+&lt;ul>
+&lt;li>Authorization. This operation can only be called by a signed in user. A customer user can only cancel purchase orders he created. A sales representative user can cancel any order.&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;h2>Error handling&lt;/h2>
+ &lt;ul>
+ &lt;li>&lt;b>InvalidPOException.&lt;/b> The service throws this exception if the order ID is null or the corresponding order doesn't exist.&lt;l/i>
+&lt;li>&lt;b>ProcessingException.&lt;/b> Thrown if the order exists but is already canceled.&lt;/li>
+&lt;/ul></body>
               </ownedComment>
               <ownedParameter xmi:type="uml:Parameter" xmi:id="_EwODQKxfEeupJ6VLaAK0uw" name="orderId">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -1318,12 +1312,17 @@ OpcOrderTrackingService interface documentation</body>
             </ownedComment>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_A5DLsKzTEeupJ6VLaAK0uw" name="getOrderDetails">
               <ownedComment xmi:type="uml:Comment" xmi:id="_ze5eQKzTEeupJ6VLaAK0uw" annotatedElement="_A5DLsKzTEeupJ6VLaAK0uw">
-                <body>Pre-conditions
-   * The orderID argument must not be null.
-   * The orderID must be a valid order id.
+                <body>&lt;h1>Pre-conditions&lt;/h1>
+&lt;ul>
+&lt;li>The orderID argument must not be null.&lt;/li>
+&lt;li>The orderID must be a valid order id.&lt;/li>
+&lt;/ul>
 
-Post-conditions
-   * Return the details of the purchase order, which include the status of each of the airline requests (both departing and returning flights), hotel booking request and activity requests.
+&lt;h1>Post-conditions&lt;/h1>
+&lt;ul>
+&lt;li>Return the details of the purchase order, which include the status of each of the airline requests (both departing and returning flights), hotel booking request and activity requests.&lt;/li>
+&lt;/ul>
+
 
 Usage restrictions
    * Authorization. Only a signed in user is authorized to call this operation. A customer user can only get information about orders he created. A sales representative user can get information about any order.
@@ -1350,15 +1349,17 @@ Usage restrictions
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_aCq2QKF0Eeu26-oh2DfeGg" name="PurchaseOrder">
           <ownedComment xmi:type="uml:Comment" xmi:id="_UN8_0KHbEeuolPkAC7VaLg">
-            <body>This package contains the classes that correspond in memory to the data entities required to create a purchase order. For each data entity, there is a POJO and an entity bean. The POJOs are used throughout the application as data transfer objects. The data entities in this package are:
-   * Activity
-   * CreditCard
-   * Lodging
-   * PurchaseOrder
-   * Transportation
-   * ContactInfo
-   * Address
-
+            <body>This package contains the classes that correspond in memory to the data entities required to create a purchase order. For each data entity, there is a POJO and an entity bean. The POJOs are used throughout the application as data transfer objects. The data entities in this package are:&lt;br>
+&lt;ul>
+&lt;li>Activity&lt;/li>
+&lt;li>CreditCard&lt;/li>
+&lt;li>Lodging&lt;/li>
+&lt;li>PurchaseOrder&lt;/li>
+&lt;li>Transportation&lt;/li>
+ &lt;li>ContactInfo&lt;/li>
+ &lt;li>Address&lt;/li>
+&lt;/ul>
+&lt;br>
 See the data model for a description of what each entity represents.</body>
           </ownedComment>
         </packagedElement>
@@ -1429,10 +1430,12 @@ SMTP host, message body contents, subject, sender address and reply-to address f
           <packagedElement xmi:type="uml:Dependency" xmi:id="_VlMP0KHsEeu0VdhtLJh5Nw" client="_3MZ-YKHpEeuolPkAC7VaLg" supplier="_clh0kKF0Eeu26-oh2DfeGg"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_nehhgKHvEeu0VdhtLJh5Nw" name="WorkflowManagrerBean">
             <ownedComment xmi:type="uml:Comment" xmi:id="_9di2MKHyEeu0VdhtLJh5Nw">
-              <body>This class is a message-driven bean. It is activated when there is a message in the queue. It processes two kinds of messages:
-   * purchase order message: in this case it calls the PoHandler class. The sequence diagram down below shows the interactions involved in processing a purchase order.
-   * invoice message: this is a message that came from one of the external suppliers in response for a booking order. WorkFlowManagerBean calls the InvoiceHandler class to take care of this messages.
-
+              <body>This class is a message-driven bean. It is activated when there is a message in the queue. It processes two kinds of messages:&lt;br>
+&lt;ul>
+&lt;li>purchase order message: in this case it calls the PoHandler class. The sequence diagram down below shows the interactions involved in processing a purchase order.&lt;/li>
+&lt;li>invoice message: this is a message that came from one of the external suppliers in response for a booking order. WorkFlowManagerBean calls the InvoiceHandler class to take care of this messages.&lt;/li>
+&lt;/ul>
+&lt;br>
 WorkFlowManagerBean also sets a timer with the EJB container so that it is activated periodically to check the status of all pending orders.</body>
             </ownedComment>
             <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_uALQoKHvEeu0VdhtLJh5Nw" client="_nehhgKHvEeu0VdhtLJh5Nw" supplier="_pMffMKHvEeu0VdhtLJh5Nw" contract="_pMffMKHvEeu0VdhtLJh5Nw"/>
@@ -1448,11 +1451,14 @@ WorkFlowManagerBean also sets a timer with the EJB container so that it is activ
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_ZQ36kKHwEeu0VdhtLJh5Nw" name="InvoiceHandler">
               <ownedComment xmi:type="uml:Comment" xmi:id="_ES2hIKHzEeu0VdhtLJh5Nw">
-                <body>The InvoiceHandler is not visible outside the workflowmanager package. It acts as a delegate of the WorkflowManagerBean class to handle any invoice it receives from any of the suppliers. When an invoice is received, InvoiceHandler basically uses processmanager to update the status of the corresponding order.
-   * A given adventure package order may consist of:
-   * zero or one hotel booking
-   * zero, one or two airline flights (departing and returning flight)
-   * zero or more activity items
+                <body>The InvoiceHandler is not visible outside the workflowmanager package. It acts as a delegate of the WorkflowManagerBean class to handle any invoice it receives from any of the suppliers. When an invoice is received, InvoiceHandler basically uses processmanager to update the status of the corresponding order.&lt;br>
+&lt;ul>
+&lt;h2>A given adventure package order may consist of:&lt;/h2>
+&lt;ul>
+&lt;li>zero or one hotel booking&lt;/li>
+&lt;li>zero, one or two airline flights (departing and returning flight)&lt;/li>
+&lt;li>zero or more activity items&lt;/li>
+&lt;/ul>
 
 When InvoiceHandler receives the last invoice confirming completion of the reservation, it sends a JMS message to CrmBean to notify the customer via email.
 </body>
@@ -1506,12 +1512,14 @@ When InvoiceHandler receives the last invoice confirming completion of the reser
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_zWjOwLJeEeuzVqzP0AhEww" name="Manager.ejb1">
           <ownedComment xmi:type="uml:Comment" xmi:id="_eCOWQKHbEeuolPkAC7VaLg">
-            <body>Contains an entity bean to persist a purchase order. The entity bean uses container-managed persistence (CMP).
+            <body>Contains an entity bean to persist a purchase order. The entity bean uses container-managed persistence (CMP).&lt;br>
 
-Rational
-The choice of EJBs in the implementation, including session beans, message-driven beans and entity beans is based on:
-   * Developers are familiar with EJB development and component-based development.
-   * These highly modular EJB components promote reuse.</body>
+&lt;h1>Rational&lt;/h1>
+The choice of EJBs in the implementation, including session beans, message-driven beans and entity beans is based on:&lt;br>
+&lt;ul>
+&lt;li>Developers are familiar with EJB development and component-based development.&lt;/li>
+&lt;li>These highly modular EJB components promote reuse.&lt;/li>
+&lt;/ul></body>
           </ownedComment>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_ag7xEKHsEeu0VdhtLJh5Nw" client="_clh0kKF0Eeu26-oh2DfeGg" supplier="_-miRQKFzEeu26-oh2DfeGg"/>
         </packagedElement>
@@ -2180,7 +2188,7 @@ All email communication parameters (hostname, ports and protocol) should be conf
       <packagedElement xmi:type="uml:Package" xmi:id="_qfmlwJxxEeuSfsyhIF5DRw" name="Modifiability">
         <packagedElement xmi:type="uml:UseCase" xmi:id="_sge4YJxxEeuSfsyhIF5DRw" name="QAS1">
           <ownedComment xmi:type="uml:Comment" xmi:id="_upi2oJxxEeuSfsyhIF5DRw">
-            <body>. A new business partner (airline, lodging, or activity provider) that uses its own web services interface is added to the system in no more than 10 person-days of effort for the implementation. The business goal is easy integration with new business partners.</body>
+            <body>A new business partner (airline, lodging, or activity provider) that uses its own web services interface is added to the system in no more than 10 person-days of effort for the implementation. The business goal is easy integration with new business partners.</body>
           </ownedComment>
           <ownedComment xmi:type="uml:Comment" xmi:id="_rXeY4J3lEeuOqPdFuM_jqA" annotatedElement="_sge4YJxxEeuSfsyhIF5DRw">
             <body></body>
@@ -2231,10 +2239,6 @@ All email communication parameters (hostname, ports and protocol) should be conf
         <body>The system used as an example in this architecture document is an adapted version of the Adventure Builder Reference application, which was developed in the context of the Java BluePrints program at Sun Microsystems. This application was chosen because the functionality is easy to understand, and the source code, documentation, and other artifacts are publicly available for download. Also available is a book on Web services that explains the design and implementation of the application [Singh 2004].
 
 	The architecture documented here does not reflect exactly the implementation provided by Sun. To make it a more interesting and realistic example of an SOA solution, we made several assumptions about the business context and requirements of the system, and documented design elements and relations that deviate from the original implementation. Click for more information.</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="__l3FsKqGEeuoXa-x57iZ9g">
-        <body>Use case comment
-</body>
       </ownedComment>
       <packagedElement xmi:type="uml:Usage" xmi:id="_CgvOQKF6Eeu26-oh2DfeGg" client="_upsdEJxwEeuSfsyhIF5DRw" supplier="_v1zD0JxwEeuSfsyhIF5DRw"/>
       <packagedElement xmi:type="uml:Actor" xmi:id="_VMQWMJxsEeuSfsyhIF5DRw" name="Vacationer">
